@@ -28,6 +28,6 @@ public class MenteNovaApplication implements CommandLineRunner {
         System.out.print(Minio.list("mente-nova"));
         System.out.println("Введите любую кнопку для выхода");
         input.nextLine();
-        Minio.exit();
+        System.exit(0);
     }
 }

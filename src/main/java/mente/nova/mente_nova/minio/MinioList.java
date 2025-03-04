@@ -8,6 +8,7 @@ public class MinioList {
     
     private final MinioClient minioClient;
     
+    //Построение связи с клиентом MinIO
     public MinioList(MinioClient minioClient) {
         this.minioClient = minioClient;
     }
@@ -24,7 +25,7 @@ public class MinioList {
             this.isDirectory = isDirectory;
         }
         
-        // Getters
+        // Геттеры
         public String getName() { return name; }
         public boolean isDirectory() { return isDirectory; }
         public Map<String, Node> getChildren() { return children; }
@@ -32,10 +33,12 @@ public class MinioList {
         public boolean isBucket() { return isBucket; }
         
         @Override
+        //Перезапись стандартного метода для вывода дерева
         public String toString() {
             return toString(-1);
         }
         
+        //Рекурсивный вывод дерева
         private String toString(int depth) {
 
             String output = "";
@@ -50,13 +53,13 @@ public class MinioList {
         }
     }
 
-    /**
-     * Строит древовидную структуру бакета
-     */
+    //Построение древовидной структуры бакета
     public Node buildBucketTree(String bucketName) throws Exception {
+        //Создание начального узла бакета
         Node root = new Node(bucketName, true);
         root.setIsBucket();
         
+        //Получение списка объектов бакета
         Iterable<Result<Item>> results = minioClient.listObjects(
             ListObjectsArgs.builder()
                 .bucket(bucketName)
@@ -64,27 +67,32 @@ public class MinioList {
                 .build()
         );
 
+        //Обход списка объектов бакета
         for (Result<Item> result : results) {
+            //Получение имени объекта
             String objectName = result.get().objectName();
             
-            // Пропускаем пустые "папки"
+            //Пропуск пустых папок
             if (objectName.isEmpty()) continue;
             
+            //Инициализация двунаправленного списка содержомого пути
             Deque<String> path = new ArrayDeque<>(Arrays.asList(objectName.split("/")));
+            //Вызов рекурсивного обхода
             addToTree(root, path, objectName.endsWith("/"), true);
         }
         
         return root;
     }
 
-        /**
-     * Строит древовидную структуру бакета
-     */
+    //Построение древовидной структуры бакета с указанием пути и функцией рекурсивного обхода
     public Node buildBucketTree(String bucketName, String path, boolean recursive) throws Exception {
+        //Если путь пустой - название бакета не выводить
         boolean isExistPath = false;
+        //Создание начального узла бакета
         Node root = new Node(bucketName, true);
         root.setIsBucket();
         
+        //Получение списка объектов бакета
         Iterable<Result<Item>> results = minioClient.listObjects(
             ListObjectsArgs.builder()
                 .bucket(bucketName)
@@ -92,9 +100,14 @@ public class MinioList {
                 .build()
         );
 
+        //Обход списка объектов бакета
         for (Result<Item> result : results) {
+            //Получение имени объекта
             String objectName = result.get().objectName();
+
+            //Если путь длинее имени объекта - пропуск
             if (path.length() > objectName.length()) continue;
+            //Если путь совпадает с именем объекта - установка флага и обрезка имени объекта
             if (path.equals(objectName.substring(0, path.length()))) {
                 isExistPath = true;
                 objectName = objectName.replaceFirst(path, "");
@@ -102,12 +115,16 @@ public class MinioList {
                 continue;
             }
 
+            //Пропуск пустых папок
             if (objectName.isEmpty()) continue;
             
+            //Инициализация двунаправленного списка содержомого пути
             Deque<String> dequePath = new ArrayDeque<>(Arrays.asList(objectName.split("/")));
+            //Вызов обхода вложенных папок и файлов с функцией рекурсивного обхода
             addToTree(root, dequePath, objectName.endsWith("/"), recursive);
         }
 
+        //Если не был не разу найден - вывод сообщения об отсутствии указанного пути
         if (!isExistPath) {
             System.out.print("Ошибка: указанный путь не найден");
         }
@@ -115,25 +132,28 @@ public class MinioList {
         return root;
     }
 
-
+    //Обход содержимого папки с указанием пути и функцией рекурсивного обхода
     private void addToTree(Node node, Deque<String> path, boolean isDirectory, boolean recursive) {
+        //Если путь пустой - выход
         if (path.isEmpty()) return;
         
+        //Если после пермещения по пути, путь стал пустой - выход
         String current = path.removeFirst();
         if (current.isEmpty()) return;
         
-        // Если это последний элемент и это файл
+        //Если это последний элемент и это файл
         if ((path.isEmpty() && !isDirectory) || (current.equals(".") && !current.contains("/"))) {
             node.getChildren().put(current, new Node(current, false));
             return;
         }
         
-        // Обработка директорий
+        //Обработка директорий и создание узлов в дочерних элементах
         Node child = node.getChildren().computeIfAbsent(
             current, 
             k -> new Node(k, true)
         );
         
+        //Рекурсивный обход дочерних элементов
         if (recursive) {
             addToTree(child, path, isDirectory, recursive);
         }
