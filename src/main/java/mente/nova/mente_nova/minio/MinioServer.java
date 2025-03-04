@@ -2,12 +2,15 @@ package mente.nova.mente_nova.minio;
 
 import org.springframework.context.annotation.Configuration;
 
+import jakarta.annotation.PreDestroy;
+
 import java.net.Socket;
 import java.io.IOException;
 
 @Configuration
 public class MinioServer {
 
+    //Запуск сервера MinIO
     public static void startServer() {
         try {
 
@@ -16,9 +19,10 @@ public class MinioServer {
                 stopServer();
             }
 
-            //("cmd.exe", "/c", "src/main/resources/minio.exe server C:/Users/PC/Projects/mente_nova/src/main/resources/server")
+            //Запуск сервера с поомщью ProcessBuilder и bat-скрипта запуска MinIO
             System.out.println("Запуск MinIO сервера...");
             ProcessBuilder processBuilderStart = new ProcessBuilder("src/main/resources/nova.bat");
+            //Перенаправление вывода ошибок и результатов на стандартные потоки
             processBuilderStart.redirectErrorStream(true);
             processBuilderStart.start();
 
@@ -34,11 +38,16 @@ public class MinioServer {
         }
     }
 
+
+    @PreDestroy
+    //Остановка сервера
     public static void stopServer() {
         try {
             
+            //Остановка сервера с помощью ProcessBuilder и завершения всех процессов по имени minio.exe
             System.out.println("Остановка MinIO сервера...");
             ProcessBuilder processBuilderStop = new ProcessBuilder("cmd.exe", "/C", "taskkill /F /IM minio.exe /T");
+            //Перенаправление вывода ошибок и результатов на стандартные потоки
             processBuilderStop.redirectErrorStream(true);
             processBuilderStop.start();
 
@@ -54,6 +63,7 @@ public class MinioServer {
         }
     }
 
+    //Проверка занятости порта
     public static boolean isPortInUse(int port) {
         try (Socket _ = new Socket("localhost", port)) {
             return true;

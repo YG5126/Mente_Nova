@@ -10,12 +10,15 @@ import jakarta.annotation.PostConstruct;
 @Component
 public class MinioApplication {
 
+    //Инициализация клиента MinIO
     @Autowired
     private MinioClient minioClient;
 
+    //Проверка инициализации клиента MinIO
     @PostConstruct
     public void init() {
         try {
+            //Попытка получения списка бакетов
             minioClient.listBuckets();
         } catch (Exception e) {
             System.err.println("Ошибка подключения к MinIO: " + e.getMessage());
@@ -23,7 +26,9 @@ public class MinioApplication {
         }
     }
 
+    //Рекурсивный обход бакета
     public MinioList.Node list(String bucketName) throws Exception {
+        //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
             MinioList list = new MinioList(minioClient);
             MinioList.Node root = list.buildBucketTree(bucketName);
@@ -34,8 +39,11 @@ public class MinioApplication {
         }
     }
 
+    //Обход бакета с указанием пути и функцией рекурсивного обхода
     public MinioList.Node list(String bucketName, String path, boolean recursive) throws Exception {
+        //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
+            //Проверка на корректный синтаксис полученного пути
             if (!path.endsWith("/") && path.length() != 0) {
                 path += "/";
             }
@@ -48,8 +56,10 @@ public class MinioApplication {
         }
     }
 
+    //Создание бакета
     public void createBucket(String bucketName) throws Exception {
 
+        //Проверка существования бакета
         boolean isExist = minioClient.bucketExists(
                 BucketExistsArgs.builder()
                         .bucket(bucketName)
@@ -57,6 +67,7 @@ public class MinioApplication {
 
         if (!isExist) {
             try {
+                //Создание бакета
                 minioClient.makeBucket(
                         MakeBucketArgs.builder()
                                 .bucket(bucketName)
@@ -70,7 +81,10 @@ public class MinioApplication {
         }
     }
 
+    //Удаление бакета
     public void deleteBucket(String bucketName) throws Exception {
+
+        //Проверка существования бакета
         boolean isExist = minioClient.bucketExists(
                 BucketExistsArgs.builder()
                         .bucket(bucketName)
@@ -79,6 +93,7 @@ public class MinioApplication {
         if (isExist) {
             try {
                 try {
+                    //Удаление бакета
                     minioClient.removeBucket(
                             RemoveBucketArgs.builder()
                                     .bucket(bucketName)
@@ -95,6 +110,7 @@ public class MinioApplication {
         }
     }
 
+    //Остановка сервера и вызод программы
     public void exit() {
         MinioServer.stopServer();
         System.exit(0);
