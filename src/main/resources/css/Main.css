@@ -1,0 +1,58 @@
+.controlPanel {
+    -fx-background-color: #dcfce7;
+}
+.index {
+    -fx-background-color: #f0fdf4;
+}
+.mainNode {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+}
+.panelButton {
+    -fx-background-color: #ffffff;
+    -fx-cursor: hand;
+    -fx-fit-width: 25;
+    -fx-fit-height: 25;
+}
+.nodeButton {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #16a34a;
+    -fx-font-size: 16;
+    -fx-cursor: hand;
+}
+.nodeButton:hover {
+    -fx-underline: true;
+}
+.listSubjects {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+    -fx-border-width: 1;
+    -fx-border-color: #dcfce7;
+    -fx-border-radius: 5;
+    -fx-padding: 15;
+    -fx-pref-width: 300;
+    -fx-cursor: hand;
+}
+.listSubjects:hover {
+    -fx-background-color: #f0fdf4;
+}
+.listSubjects ImageView {
+    -fx-fit-width: 25;
+    -fx-fit-height: 25;
+    -fx-preserve-ratio: true;
+    -fx-padding: 5;
+}
+.title {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #166534;
+}
+.subject {
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+}
+.description {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 14;
+}

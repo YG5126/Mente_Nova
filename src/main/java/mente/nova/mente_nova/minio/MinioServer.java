@@ -21,7 +21,7 @@ public class MinioServer {
 
             //Запуск сервера с поомщью ProcessBuilder и bat-скрипта запуска MinIO
             System.out.println("Запуск MinIO сервера...");
-            ProcessBuilder processBuilderStart = new ProcessBuilder("src/main/resources/nova.bat");
+            ProcessBuilder processBuilderStart = new ProcessBuilder("src/main/resources/MinIO/nova.bat");
             //Перенаправление вывода ошибок и результатов на стандартные потоки
             processBuilderStart.redirectErrorStream(true);
             processBuilderStart.start();

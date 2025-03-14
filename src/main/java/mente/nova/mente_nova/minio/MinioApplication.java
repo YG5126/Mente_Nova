@@ -4,8 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import io.minio.*;
+import io.minio.errors.ErrorResponseException;
+
 
 import jakarta.annotation.PostConstruct;
+
+import java.io.ByteArrayInputStream;
+import java.io.File;
 
 @Component
 public class MinioApplication {
@@ -26,9 +31,105 @@ public class MinioApplication {
         }
     }
 
-    public void loadingFile(String bucketName, String path, String fileName) {
-        
+
+    public void createEmptyFile(String bucketName, String serverFilePath) {
+        try {
+
+            minioClient.putObject(
+                PutObjectArgs.builder()
+                    .bucket(bucketName)
+                    .object(serverFilePath)
+                    .stream(new ByteArrayInputStream(new byte[0]), 0, -1)
+                    .build()
+            );
+            System.out.println("Пустой файл успешно создан: " + serverFilePath);
+        }
+        catch (Exception e) {
+            System.err.println("Ошибка при создании файла: " + e.getMessage());
+        }
     }
+
+    public int countFiles(String bucketName, String path) {
+        try {
+            MinioList.Node root = list(bucketName, path, true);
+            return root.getChildren().size();
+        }
+        catch (Exception e) {
+            System.err.println("Ошибка при подсчёте файлов: " + e.getMessage());
+            return -1;
+        }
+    }
+
+    public void loadingFile(String bucketName, String serverFilePath, String localFilePath) {
+        try {
+            boolean isExist = minioClient.bucketExists(
+                BucketExistsArgs.builder()
+                        .bucket(bucketName)
+                        .build());
+            if (!isExist) {
+                System.out.println("Бакет " + bucketName + " не существует");
+            }
+            else {
+                try {
+                    minioClient.statObject(StatObjectArgs.builder()
+                            .bucket(bucketName)
+                            .object(serverFilePath)
+                            .build());
+                    System.out.println("Ошибка: Файл с таким именем " + serverFilePath + " уже существует в бакете.");
+                    return;
+                }
+                catch (ErrorResponseException e) {
+                    //Бу
+                }
+
+                if (new File(localFilePath).exists()) {
+                    minioClient.uploadObject(
+                        UploadObjectArgs
+                        .builder()
+                        .bucket(bucketName)
+                        .object(serverFilePath)
+                        .filename(localFilePath)
+                        .build()
+                    );
+                    System.out.println("Файл " + serverFilePath + " загружен в бакет " + bucketName);
+                }
+                else {
+                    System.out.println("Файл " + localFilePath + " не существует");
+                }
+            };
+        } catch (Exception e) {
+            System.err.println("Ошибка: " + e.getMessage());
+        }
+    }
+
+    public void deleteFile(String bucketName, String serverFilePath) {
+    try {
+        // Проверяем, существует ли файл перед удалением (опционально)
+        try {
+            System.out.println("Проверка существования файла " + serverFilePath + " в бакете " + bucketName);
+            minioClient.statObject(
+                StatObjectArgs.builder()
+                    .bucket(bucketName)
+                    .object(serverFilePath)
+                    .build()
+            );
+        } catch (ErrorResponseException e) {
+            System.out.println("Файл " + serverFilePath + " не существует в бакете " + bucketName);
+            return;
+        }
+
+        // Удаляем файл
+        minioClient.removeObject(
+            RemoveObjectArgs.builder()
+                .bucket(bucketName)
+                .object(serverFilePath)
+                .build()
+        );
+        System.out.println("Файл " + serverFilePath + " удален из бакета " + bucketName);
+    } catch (Exception e) {
+        System.err.println("Ошибка при удалении файла: " + e.getMessage());
+    }
+}
     
     //Рекурсивный обход бакета
     public MinioList.Node list(String bucketName) throws Exception {
@@ -119,180 +220,4 @@ public class MinioApplication {
         MinioServer.stopServer();
         System.exit(0);
     }
-
-/*
-    public void createFolderStructure(String bucketName) throws Exception {
-        String[] folders = {
-                "docs/2023/reports/",
-                "logs/system/",
-                "temp/"
-        };
-
-        for (String folder : folders) {
-            String objectName = folder + "sample.txt";
-            minioClient.putObject(
-                    PutObjectArgs.builder()
-                            .bucket(bucketName)
-                            .object(objectName)
-                            .stream(new ByteArrayInputStream("".getBytes()), 0, -1)
-                            .contentType("text/plain")
-                            .build());
-            System.out.println("File created: " + objectName);
-        }
-    }
-
-    public void listTest(String bucketName) throws Exception {
-        Set<String> folders = new TreeSet<>();
-        Set<String> files = new TreeSet<>();
-
-        Iterable<Result<Item>> results = minioClient.listObjects(
-                ListObjectsArgs.builder()
-                        .bucket(bucketName)
-                        .recursive(true)
-                        .build());
-
-        for (Result<Item> result : results) {
-            Item item = result.get();
-            String objectName = item.objectName();
-
-            if (objectName.endsWith("/")) {
-
-                folders.add(objectName);
-            } else {
-                files.add(objectName);
-                String parent = getParentFolder(objectName);
-                while (parent != null) {
-                    folders.add(parent);
-                    parent = getParentFolder(parent);
-                }
-            }
-        }
-
-        System.out.println("Папки:");
-        folders.forEach(folder -> System.out.println("[Папка] " + folder));
-
-        System.out.println("\nФайлы:");
-        files.forEach(file -> System.out.println("[Файл] " + file));
-    }
-
-    private String getParentFolder(String objectName) {
-        int lastSlash = objectName.lastIndexOf('/');
-        if (lastSlash == -1)
-            return null;
-        return objectName.substring(0, lastSlash);
-    }
-
-    public ArrayList<String> list() {
-        try {
-            List<Bucket> bucketList = minioClient.listBuckets();
-            ArrayList<String> buckets = new ArrayList<>();
-            for (Bucket bucket : bucketList) {
-                buckets.add(bucket.name());
-            }
-            return buckets;
-        } catch (Exception e) {
-            System.err.println("Ошибка при получении списка бакетов: " + e.getMessage());
-            System.exit(1);
-        }
-        return null;
-    }
-
-    public ArrayList<String> list(String bucketName) {
-        return list(bucketName, "");
-    }
-
-    public ArrayList<String> list(String bucketName, String path) {
-        if (path.contains(".")) {
-            System.out.println("Ошибка: Префиксный путь не может вести к файлу");
-            return null;
-        }
-        try {
-
-            if (!path.endsWith("/") && path.length() != 0) {
-                path += "/";
-            }
-
-            ListObjectsArgs args = ListObjectsArgs.builder()
-                    .bucket(bucketName)
-                    .prefix(path)
-                    .delimiter("/")
-                    .recursive(false)
-                    .build();
-
-            Iterable<Result<Item>> objects = minioClient.listObjects(args);
-            ArrayList<String> items = new ArrayList<>();
-
-            for (Result<Item> itemResult : objects) {
-
-                String way = itemResult.get().objectName();
-
-                if (path.equals(way.substring(0, path.length()))) {
-                    way = way.replaceFirst(path, "");
-                    if (way.contains("/")) {
-                        items.add("folder$" + way.substring(0, way.indexOf('/')));
-                    } else {
-                        items.add("file$" + way);
-                    }
-                } else {
-                    System.out.println("Ошибка: неверный путь");
-                    return null;
-                }
-
-            }
-
-            return items;
-
-        } catch (Exception e) {
-            System.err.println("Ошибка при получении списка объектов: " + e.getMessage());
-        }
-        return null;
-    }
-
-    public LinkedHashMap<String, LinkedHashMap> list(String bucketName, String path, int depth, LinkedHashMap items) {
-        if (path.contains(".")) {
-            System.out.println("Ошибка: Префиксный путь не может вести к файлу");
-            return null;
-        }
-        try {
-
-            if (!path.endsWith("/") && path.length() != 0) {
-                path += "/";
-            }
-
-            ListObjectsArgs args = ListObjectsArgs.builder()
-                    .bucket(bucketName)
-                    .prefix(path)
-                    .delimiter("/")
-                    .recursive(false)
-                    .build();
-
-            Iterable<Result<Item>> objects = minioClient.listObjects(args);
-
-            for (Result<Item> itemResult : objects) {
-
-                String way = itemResult.get().objectName();
-
-                if (path.equals(way.substring(0, path.length()))) {
-                    way = way.replaceFirst(path, "");
-                    if (way.contains("/")) {
-                        String folder = way.substring(0, way.indexOf('/'));
-                        System.out.println("  ".repeat(depth) + "[Папка] " + folder);
-                        //list(bucketName, path + folder, depth + 1);
-                    } else {
-                        System.out.println("  ".repeat(depth) + "[Файл] " + way);
-                    }
-                } else {
-                    System.out.println("Ошибка: неверный путь");
-                    return null;
-                }
-
-            }
-
-        } catch (Exception e) {
-            System.err.println("Ошибка при получении списка объектов: " + e.getMessage());
-        }
-        return null;
-    }
-*/
-
 }

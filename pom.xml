@@ -34,9 +34,26 @@
 
 		<dependency>
 			<groupId>org.openjfx</groupId>
-			<artifactId>javafx</artifactId>
-			<version>25-ea+5</version>
-			<type>pom</type>
+			<artifactId>javafx-base</artifactId>
+			<version>23.0.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-graphics</artifactId>
+			<version>23.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-controls</artifactId>
+			<version>23.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openjfx</groupId>
+			<artifactId>javafx-fxml</artifactId>
+			<version>23.0.2</version>
 		</dependency>
 
 		<dependency>
@@ -87,10 +104,37 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>23</source>
+					<target>23</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-maven-plugin</artifactId>
+				<version>0.0.8</version>
+				<configuration>
+					<mainClass>mente.nova.mente_nova.MenteNovaApplication</mainClass>
+					<options>
+						<option>--module-path</option>
+						<option>C:\JavaSDK\javafx-sdk-23.0.2\lib</option>
+						<option>--add-modules</option>
+						<option>javafx.controls,javafx.fxml</option>
+					</options>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 

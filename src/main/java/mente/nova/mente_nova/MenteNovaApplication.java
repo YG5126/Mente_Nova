@@ -1,33 +1,54 @@
 package mente.nova.mente_nova;
 
-import java.io.IOException;
-import java.util.Scanner;
-
 import mente.nova.mente_nova.minio.*;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
-@SpringBootApplication
-public class MenteNovaApplication implements CommandLineRunner {
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+
+@SpringBootApplication  
+public class MenteNovaApplication extends Application {
+    private static String[] savedArgs;
+    private ConfigurableApplicationContext context;
 
     @Autowired
-    private MinioApplication Minio;
-    
-	static Scanner input = new Scanner(System.in);
-	
-	public static void main(String[] args) throws IOException {
+    private MinioApplication minio;
 
-        SpringApplication.run(MenteNovaApplication.class, args);
+    public static void main(String[] args) {
+        savedArgs = args;
+        launch(args);
+    }
 
-	}
+    @Override
+    public void init() throws Exception {
+        context = SpringApplication.run(MenteNovaApplication.class, savedArgs);
+    }
 
-    public void run(String... args) throws Exception {
-        System.out.print(Minio.list("mente-nova"));
-        System.out.println("Введите любую кнопку для выхода");
-        input.nextLine();
-        System.exit(0);
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        primaryStage.setTitle("Mente-Nova");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+        loader.setControllerFactory(context::getBean);
+        Parent root = loader.load();
+        primaryStage.setTitle("Mente-Nova");
+        primaryStage.setMinHeight(600);
+        primaryStage.setMinWidth(1000);
+        primaryStage.setScene(new Scene(root, 1000, 600));
+        primaryStage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        context.close();
+        super.stop();
     }
 }
