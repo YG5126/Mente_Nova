@@ -4,7 +4,9 @@ import mente.nova.mente_nova.minio.*;
 
 import java.io.IOException;
 
+import org.apache.commons.exec.CommandLine;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -16,19 +18,31 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 @SpringBootApplication  
-public class MenteNovaApplication extends Application {
+public class MenteNovaApplication implements CommandLineRunner {
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
 
     @Autowired
     private MinioApplication minio;
-
+        
     public static void main(String[] args) {
-        savedArgs = args;
-        launch(args);
+        SpringApplication.run(MenteNovaApplication.class, args);
+        /*savedArgs = args;
+        launch(args);*/
     }
 
     @Override
+    public void run(String... args) throws Exception {
+        System.out.println("Приложение запущено");
+        //minio.createBucket("test");
+        //minio.loadingFile("test", "задания.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf");
+        minio.readPDF("test", "задания.pdf");
+        minio.init();
+    }
+
+    
+
+    /*@Override
     public void init() throws Exception {
         context = SpringApplication.run(MenteNovaApplication.class, savedArgs);
     }
@@ -50,5 +64,5 @@ public class MenteNovaApplication extends Application {
     public void stop() throws Exception {
         context.close();
         super.stop();
-    }
+    }*/
 }

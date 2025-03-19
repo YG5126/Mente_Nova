@@ -11,6 +11,15 @@ import jakarta.annotation.PostConstruct;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.IOException;
+
+import org.apache.pdfbox.Loader;
+import org.apache.pdfbox.io.RandomAccessReadBufferedFile;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
 @Component
 public class MinioApplication {
@@ -212,6 +221,46 @@ public class MinioApplication {
             }
         } else {
             System.out.println("Ошибка: Бакет " + bucketName + " не существует");
+        }
+    }
+
+    public void readPDF(String bucketName, String serverFilePath) {
+        try {
+            // Проверка существования файла
+            minioClient.statObject(StatObjectArgs.builder().bucket(bucketName).object(serverFilePath).build());
+    
+            // Загрузка файла в поток
+            try (InputStream stream = minioClient.getObject(
+                    GetObjectArgs.builder()
+                            .bucket(bucketName)
+                            .object(serverFilePath)
+                            .build())) {
+    
+                // Загрузка во временный файл и чтение
+                File tempFile = File.createTempFile("temp", ".pdf");
+                try {
+                    Files.copy(stream, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                    
+                    PDDocument document = Loader.loadPDF(new RandomAccessReadBufferedFile(tempFile));
+                    try {
+                        PDFTextStripper pdfStripper = new PDFTextStripper();
+                        String text = pdfStripper.getText(document);
+                        System.out.println("Содержимое PDF-файла:\n" + text);
+                    } finally {
+                        if (document != null) {
+                            document.close();
+                        }
+                    }
+                } finally {
+                    tempFile.delete();
+                }
+            }
+        } catch (ErrorResponseException e) {
+            System.err.println("Ошибка: Файл " + serverFilePath + " не найден в бакете " + bucketName);
+        } catch (IOException e) {
+            System.err.println("Ошибка при чтении PDF-файла: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Общая ошибка: " + e.getMessage());
         }
     }
 
