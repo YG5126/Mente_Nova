@@ -2,64 +2,75 @@ package mente.nova.mente_nova.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.control.Label;
+import javafx.scene.Node;
+import javafx.fxml.FXMLLoader;
+import java.io.IOException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.springframework.stereotype.Controller;
 
+/**
+ * Главный контроллер приложения, управляющий основным интерфейсом.
+ * Отвечает за загрузку и переключение содержимого главной панели.
+ */
 @Controller
 public class MainController implements Initializable {
+    
     @FXML
-    private TilePane subjectsTilePane;
-
-    private String[] subjectNames = {
-        "Математика", "Физика", "Химия", "Биология", 
-        "История", "География", "Литература", "Информатика"
-    };
+    private VBox mainPanel;
     
-    private int[] filesCount = {12, 8, 7, 5, 9, 6, 4, 10};
+    @Autowired
+    private ApplicationContext applicationContext;
     
+    // Статическая ссылка на экземпляр контроллера
+    private static MainController instance;
+    
+    /**
+     * Инициализация контроллера. Сохраняет ссылку на экземпляр и загружает начальное содержимое.
+     * @param location URL для инициализации
+     * @param resources Ресурсы для инициализации
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        generateSubjectCards();
+        // Сохраняем ссылку на экземпляр
+        instance = this;
+        
+        // Загружаем начальное содержимое
+        loadContent("main-content.fxml");
     }
     
-    private void generateSubjectCards() {
-        // Очищаем TilePane перед заполнением новыми элементами
-        subjectsTilePane.getChildren().clear();
-        
-        // Проходим по массивам и создаем VBox для каждого предмета
-        for (int i = 0; i < subjectNames.length; i++) {
-            VBox subjectCard = createSubjectCard(subjectNames[i], filesCount[i]);
-            subjectsTilePane.getChildren().add(subjectCard);
+    /**
+     * Загружает содержимое из FXML файла в главную панель.
+     * @param fxmlFile Имя FXML файла для загрузки
+     */
+    public void loadContent(String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/" + fxmlFile));
+            loader.setControllerFactory(applicationContext::getBean);
+            Node content = loader.load();
+            
+            mainPanel.getChildren().clear();
+            mainPanel.getChildren().add(content);
+            
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     
-    private VBox createSubjectCard(String subjectName, int fileCount) {
-        // Создаем VBox с нужным CSS классом
-        VBox card = new VBox();
-        card.getStyleClass().add("listSubjects");
-        
-        // Создаем ImageView с иконкой предмета
-        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/image/subjects_book.png")));
-        
-        // Создаем Label с названием предмета
-        Label subjectLabel = new Label(subjectName);
-        subjectLabel.getStyleClass().add("subject");
-        
-        // Создаем Label с количеством файлов
-        Label descriptionLabel = new Label(fileCount + " файлов");
-        descriptionLabel.getStyleClass().add("description");
-        
-        // Добавляем все элементы в карточку
-        card.getChildren().addAll(imageView, subjectLabel, descriptionLabel);
-        
-        return card;
-    } 
+    /**
+     * Статический метод для переключения содержимого главной панели.
+     * @param fxmlFile Имя FXML файла для загрузки
+     */
+    public static void switchContent(String fxmlFile) {
+        if (instance != null) {
+            instance.loadContent(fxmlFile);
+        } else {
+            System.err.println("MainController не инициализирован");
+        }
+    }
 }

@@ -1,19 +1,59 @@
-.controlPanel {
-    -fx-background-color: #dcfce7;
-}
+/* main.fxml */
 .index {
+    -fx-fill-width: true;
+}
+.mainPanel {
     -fx-background-color: #f0fdf4;
 }
-.mainNode {
-    -fx-background-color: #ffffff;
-    -fx-background-radius: 15;
+
+/* control-panel.fxml */
+.controlPanel {
+    -fx-background-color: #dcfce7;
     -fx-padding: 10;
 }
 .panelButton {
-    -fx-background-color: #ffffff;
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-pref-width: 35;
+    -fx-pref-height: 35;
+    -fx-border-color: #dcfce7;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
     -fx-cursor: hand;
-    -fx-fit-width: 25;
-    -fx-fit-height: 25;
+}
+.panelButton ImageView {
+    -fx-fit-width: 35;
+    -fx-fit-height: 35;
+}
+.panelButton:hover {
+    -fx-border-color: #646cff;
+}
+
+/* section-content.fxml */
+.mainNode {
+    -fx-background-color: 
+        linear-gradient(to right, 
+            rgba(34, 197, 94, 0.2) 0%, 
+            rgba(34, 197, 94, 1) 30%, 
+            rgba(34, 197, 94, 1) 70%, 
+            rgba(34, 197, 94, 0.2) 100%),
+        linear-gradient(to bottom, 
+            rgba(34, 197, 94, 1) 0%, 
+            rgba(34, 197, 94, 0.6) 2px, 
+            rgba(34, 197, 94, 0.2) 4px, 
+            transparent 4px, 
+            transparent 100%),
+        #ffffff;
+    -fx-background-insets: 0 0 0 0, 0 0 0 0, 4 0 0 0;
+    -fx-background-radius: 15;
+    -fx-padding: 24;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+    -fx-alignment: top-center;
+}
+.title {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #166534;
 }
 .nodeButton {
     -fx-background-color: #ffffff;
@@ -24,6 +64,8 @@
 .nodeButton:hover {
     -fx-underline: true;
 }
+
+/* section-content.fxml/SectionController */
 .listSubjects {
     -fx-background-color: #ffffff;
     -fx-background-radius: 5;
@@ -33,6 +75,7 @@
     -fx-padding: 15;
     -fx-pref-width: 300;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 4);
 }
 .listSubjects:hover {
     -fx-background-color: #f0fdf4;
@@ -43,11 +86,6 @@
     -fx-preserve-ratio: true;
     -fx-padding: 5;
 }
-.title {
-    -fx-font-size: 20;
-    -fx-font-weight: bold;
-    -fx-text-fill: #166534;
-}
 .subject {
     -fx-font-weight: bold;
     -fx-font-size: 16;
@@ -55,4 +93,95 @@
 .description {
     -fx-text-fill: #6b7280;
     -fx-font-size: 14;
+}
+
+/* subject-content.fxml/SubjectContentController */
+.cardStructure {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+.cardStructure:hover {
+    -fx-background-color: #f0fdf4;
+}
+.imageContainer {
+    -fx-background-color: #dcfce7;
+    -fx-background-radius: 5;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-pref-width: 45;
+    -fx-pref-height: 45;
+    -fx-min-width: 45;
+    -fx-min-height: 45;
+    -fx-max-width: 45;
+    -fx-max-height: 45;
+}
+.imageContainer ImageView {
+    -fx-fit-width: 25;
+    -fx-fit-height: 25;
+    -fx-preserve-ratio: true;
+}
+.arrow-icon {
+    -fx-fit-width: 20;
+    -fx-fit-height: 20;
+}
+.pathPanel {
+    -fx-background-color: 
+        linear-gradient(to bottom, 
+            rgba(34, 197, 94, 0.2) 0%, 
+            rgba(34, 197, 94, 1) 30%, 
+            rgba(34, 197, 94, 1) 70%, 
+            rgba(34, 197, 94, 0.2) 100%),
+        linear-gradient(to right, 
+            rgba(34, 197, 94, 1) 0%, 
+            rgba(34, 197, 94, 0.6) 2px, 
+            rgba(34, 197, 94, 0.2) 4px, 
+            transparent 4px, 
+            transparent 100%),
+        #dcfce7;
+    -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 4;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
+.pathContainer {
+    -fx-alignment: center-left;
+}
+.pathContainer ImageView {
+    -fx-preserve-ratio: true;
+    -fx-fit-width: 20;
+    -fx-fit-height: 20;
+}
+.pathContainer Label {
+    -fx-cursor: hand;
+    -fx-padding: 5;
+    -fx-font-size: 15;
+    -fx-text-fill: #15803d;
+}
+.pathContainer Label:hover {
+    -fx-text-fill: #166534;
+}
+.home-container {
+    -fx-cursor: hand;
+    -fx-alignment: center-left;
+}
+.home-container:hover {
+    -fx-text-fill: #166534;
+}
+.home-container Label {
+    -fx-font-size: 15;
+    -fx-text-fill: #15803d;
+}
+.home-container ImageView {
+    -fx-fit-width: 20;
+    -fx-fit-height: 20;
+}
+.currentPath {
+    -fx-padding: 3 5 3 5;
+    -fx-background-color: #bbf7d0;
+    -fx-background-radius: 5;
+    -fx-cursor: text;
+    -fx-text-fill: #166534;
 }

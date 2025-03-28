@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="mente.nova.mente_nova.controller.SubjectContentController">
+
+    <HBox fx:id="pathPanel" styleClass="pathPanel">
+        <VBox.margin>
+            <Insets top="30" right="30" bottom="0" left="30"/>
+        </VBox.margin>
+    </HBox>
+
+
+    <VBox styleClass="mainNode">
+
+        <VBox.margin>
+            <Insets top="30" right="30" bottom="0" left="30"/>
+        </VBox.margin>
+        
+        <HBox>
+            <VBox.margin>
+                <Insets top="0" right="0" bottom="10" left="0"/>
+            </VBox.margin>
+            <Label fx:id="subjectTitle" styleClass="title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backButton" text="Назад" styleClass="nodeButton"/>
+        </HBox>
+        
+        <VBox fx:id="contentContainer" spacing="10" />
+
+    </VBox>
+</VBox>

@@ -1,10 +1,8 @@
 package mente.nova.mente_nova;
 
-import mente.nova.mente_nova.minio.*;
 
 import java.io.IOException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,9 +18,6 @@ public class MenteNovaApplication extends Application {
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
 
-    @Autowired
-    private MinioApplication minio;
-
     public static void main(String[] args) {
         savedArgs = args;
         launch(args);
@@ -35,7 +30,6 @@ public class MenteNovaApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setTitle("Mente-Nova");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         loader.setControllerFactory(context::getBean);
         Parent root = loader.load();
@@ -50,5 +44,6 @@ public class MenteNovaApplication extends Application {
     public void stop() throws Exception {
         context.close();
         super.stop();
+        System.exit(0);
     }
 }

@@ -7,20 +7,12 @@
 
 <HBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      stylesheets="@../css/Main.css">
+      fx:controller="mente.nova.mente_nova.controller.MainController"
+      stylesheets="@../css/Main.css"
+      styleClass="index">
 
-    <VBox styleClass="controlPanel">
-        <ImageView styleClass="panelButton">
-            <image>
-                <Image url="@/image/list.png"/>
-            </image>
-        </ImageView>
-    </VBox>
+    <fx:include source="control-panel.fxml"/>
     
-    <VBox styleClass="index">
-
-      <fx:include source="subjects-content.fxml"/>
-
-    </VBox>
+    <VBox fx:id="mainPanel" styleClass="mainPanel" HBox.hgrow="ALWAYS"/>
     
 </HBox>

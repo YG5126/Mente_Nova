@@ -4,32 +4,68 @@ import io.minio.*;
 import io.minio.messages.Item;
 import java.util.*;
 
+/**
+ * Класс для работы со списком файлов в MinIO хранилище.
+ * Предоставляет функциональность для построения и обхода древовидной структуры файлов.
+ */
 public class MinioList {
     
     private final MinioClient minioClient;
     
-    //Построение связи с клиентом MinIO
+    /**
+     * Конструктор класса.
+     * @param minioClient Клиент MinIO для работы с хранилищем
+     */
     public MinioList(MinioClient minioClient) {
         this.minioClient = minioClient;
     }
 
-    // Класс для представления узла дерева
+    /**
+     * Внутренний класс для представления узла в дереве файлов.
+     */
     public static class Node {
         private String name;
         private boolean isDirectory;
         private Map<String, Node> children = new TreeMap<>();
         private boolean isBucket = false;
         
+        /**
+         * Конструктор узла.
+         * @param name Имя узла
+         * @param isDirectory Флаг, указывающий является ли узел директорией
+         */
         public Node(String name, boolean isDirectory) {
             this.name = name;
             this.isDirectory = isDirectory;
         }
         
-        // Геттеры
+        /**
+         * Получает имя узла.
+         * @return Имя узла
+         */
         public String getName() { return name; }
+        
+        /**
+         * Проверяет, является ли узел директорией.
+         * @return true если узел является директорией
+         */
         public boolean isDirectory() { return isDirectory; }
+        
+        /**
+         * Получает дочерние узлы.
+         * @return Map дочерних узлов
+         */
         public Map<String, Node> getChildren() { return children; }
+        
+        /**
+         * Устанавливает флаг бакета.
+         */
         public void setIsBucket() { this.isBucket = true; }
+        
+        /**
+         * Проверяет, является ли узел бакетом.
+         * @return true если узел является бакетом
+         */
         public boolean isBucket() { return isBucket; }
         
         @Override
@@ -38,7 +74,11 @@ public class MinioList {
             return toString(-1);
         }
         
-        //Рекурсивный вывод дерева
+        /**
+         * Рекурсивно формирует строковое представление дерева.
+         * @param depth Текущая глубина в дереве
+         * @return Строковое представление узла и его потомков
+         */
         private String toString(int depth) {
 
             String output = "";
@@ -53,7 +93,12 @@ public class MinioList {
         }
     }
 
-    //Построение древовидной структуры бакета
+    /**
+     * Строит древовидную структуру бакета.
+     * @param bucketName Имя бакета
+     * @return Корневой узел дерева
+     * @throws Exception в случае ошибки при построении дерева
+     */
     public Node buildBucketTree(String bucketName) throws Exception {
         //Создание начального узла бакета
         Node root = new Node(bucketName, true);
@@ -84,7 +129,14 @@ public class MinioList {
         return root;
     }
 
-    //Построение древовидной структуры бакета с указанием пути и функцией рекурсивного обхода
+    /**
+     * Строит древовидную структуру бакета с указанием пути.
+     * @param bucketName Имя бакета
+     * @param path Путь к директории
+     * @param recursive Флаг рекурсивного обхода
+     * @return Корневой узел дерева
+     * @throws Exception в случае ошибки при построении дерева
+     */
     public Node buildBucketTree(String bucketName, String path, boolean recursive) throws Exception {
         //Если путь пустой - название бакета не выводить
         boolean isExistPath = false;
@@ -132,7 +184,13 @@ public class MinioList {
         return root;
     }
 
-    //Обход содержимого папки с указанием пути и функцией рекурсивного обхода
+    /**
+     * Добавляет узел в дерево.
+     * @param node Текущий узел
+     * @param path Путь к добавляемому узлу
+     * @param isDirectory Флаг, указывающий является ли узел директорией
+     * @param recursive Флаг рекурсивного обхода
+     */
     private void addToTree(Node node, Deque<String> path, boolean isDirectory, boolean recursive) {
         //Если путь пустой - выход
         if (path.isEmpty()) return;

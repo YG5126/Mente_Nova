@@ -12,14 +12,20 @@ import jakarta.annotation.PostConstruct;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 
+/**
+ * Основной класс для работы с MinIO.
+ * Предоставляет методы для управления файлами и директориями в MinIO хранилище.
+ */
 @Component
 public class MinioApplication {
 
     //Инициализация клиента MinIO
     @Autowired
     private MinioClient minioClient;
-
-    //Проверка инициализации клиента MinIO
+    
+    /**
+     * Проверяет подключение к MinIO при инициализации.
+     */
     @PostConstruct
     public void init() {
         try {
@@ -30,8 +36,12 @@ public class MinioApplication {
             System.exit(1);
         }
     }
-
-
+    
+    /**
+     * Создает пустой файл в указанной директории.
+     * @param bucketName Имя бакета
+     * @param serverFilePath Путь к файлу на сервере
+     */
     public void createEmptyFile(String bucketName, String serverFilePath) {
         try {
 
@@ -48,7 +58,13 @@ public class MinioApplication {
             System.err.println("Ошибка при создании файла: " + e.getMessage());
         }
     }
-
+    
+    /**
+     * Подсчитывает количество файлов в указанной директории.
+     * @param bucketName Имя бакета
+     * @param path Путь к директории
+     * @return Количество файлов или -1 в случае ошибки
+     */
     public int countFiles(String bucketName, String path) {
         try {
             MinioList.Node root = list(bucketName, path, true);
@@ -59,7 +75,13 @@ public class MinioApplication {
             return -1;
         }
     }
-
+    
+    /**
+     * Загружает файл в MinIO хранилище.
+     * @param bucketName Имя бакета
+     * @param serverFilePath Путь к файлу на сервере
+     * @param localFilePath Путь к локальному файлу
+     */
     public void loadingFile(String bucketName, String serverFilePath, String localFilePath) {
         try {
             boolean isExist = minioClient.bucketExists(
@@ -81,7 +103,7 @@ public class MinioApplication {
                 catch (ErrorResponseException e) {
                     //Бу
                 }
-
+    
                 if (new File(localFilePath).exists()) {
                     minioClient.uploadObject(
                         UploadObjectArgs
@@ -101,7 +123,12 @@ public class MinioApplication {
             System.err.println("Ошибка: " + e.getMessage());
         }
     }
-
+    
+    /**
+     * Удаляет файл из MinIO хранилища.
+     * @param bucketName Имя бакета
+     * @param serverFilePath Путь к файлу на сервере
+     */
     public void deleteFile(String bucketName, String serverFilePath) {
     try {
         // Проверяем, существует ли файл перед удалением (опционально)
@@ -117,7 +144,7 @@ public class MinioApplication {
             System.out.println("Файл " + serverFilePath + " не существует в бакете " + bucketName);
             return;
         }
-
+    
         // Удаляем файл
         minioClient.removeObject(
             RemoveObjectArgs.builder()
@@ -131,7 +158,12 @@ public class MinioApplication {
     }
 }
     
-    //Рекурсивный обход бакета
+    /**
+     * Получает список всех файлов в бакете.
+     * @param bucketName Имя бакета
+     * @return Дерево файлов и директорий
+     * @throws Exception в случае ошибки при получении списка
+     */
     public MinioList.Node list(String bucketName) throws Exception {
         //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
@@ -144,80 +176,97 @@ public class MinioApplication {
         }
     }
 
-    //Обход бакета с указанием пути и функцией рекурсивного обхода
+    /**
+     * Получает список файлов в указанной директории бакета.
+     * @param bucketName Имя бакета
+     * @param path Путь к директории
+     * @param recursive Флаг рекурсивного обхода
+     * @return Дерево файлов и директорий
+     * @throws Exception в случае ошибки при получении списка
+     */
     public MinioList.Node list(String bucketName, String path, boolean recursive) throws Exception {
         //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
-            //Проверка на корректный синтаксис полученного пути
-            if (!path.endsWith("/") && path.length() != 0) {
-                path += "/";
-            }
-            MinioList list = new MinioList(minioClient);
-            MinioList.Node root = list.buildBucketTree(bucketName, path, recursive);
-            return root;
-        } else {
-            System.out.println("Бакет " + bucketName + " не существует");
-            return null;
+        //Проверка на корректный синтаксис полученного пути
+        if (!path.endsWith("/") && path.length() != 0) {
+            path += "/";
         }
+        MinioList list = new MinioList(minioClient);
+        MinioList.Node root = list.buildBucketTree(bucketName, path, recursive);
+        return root;
+    } else {
+        System.out.println("Бакет " + bucketName + " не существует");
+        return null;
     }
+}
 
-    //Создание бакета
-    public void createBucket(String bucketName) throws Exception {
+/**
+ * Создает новый бакет.
+ * @param bucketName Имя бакета для создания
+ * @throws Exception в случае ошибки при создании бакета
+ */
+public void createBucket(String bucketName) throws Exception {
 
-        //Проверка существования бакета
-        boolean isExist = minioClient.bucketExists(
-                BucketExistsArgs.builder()
-                        .bucket(bucketName)
-                        .build());
+    //Проверка существования бакета
+    boolean isExist = minioClient.bucketExists(
+            BucketExistsArgs.builder()
+                    .bucket(bucketName)
+                    .build());
 
-        if (!isExist) {
+    if (!isExist) {
+        try {
+            //Создание бакета
+            minioClient.makeBucket(
+                    MakeBucketArgs.builder()
+                            .bucket(bucketName)
+                            .build());
+            System.out.println("Бакет " + bucketName + " создан");
+        } catch (Exception e) {
+            System.err.println("Ошибка при создании бакета: " + e.getMessage());
+        }
+    } else {
+        System.out.println("Бакет " + bucketName + " уже существует");
+    }
+}
+
+/**
+ * Удаляет бакет.
+ * @param bucketName Имя бакета для удаления
+ * @throws Exception в случае ошибки при удалении бакета
+ */
+public void deleteBucket(String bucketName) throws Exception {
+
+    //Проверка существования бакета
+    boolean isExist = minioClient.bucketExists(
+            BucketExistsArgs.builder()
+                    .bucket(bucketName)
+                    .build());
+
+    if (isExist) {
+        try {
             try {
-                //Создание бакета
-                minioClient.makeBucket(
-                        MakeBucketArgs.builder()
+                //Удаление бакета
+                minioClient.removeBucket(
+                        RemoveBucketArgs.builder()
                                 .bucket(bucketName)
                                 .build());
-                System.out.println("Бакет " + bucketName + " создан");
+                System.out.println("Бакет " + bucketName + " удалён");
             } catch (Exception e) {
-                System.err.println("Ошибка при создании бакета: " + e.getMessage());
+                System.out.println("Ошибка: Бакет " + bucketName + " не пустой");
             }
-        } else {
-            System.out.println("Бакет " + bucketName + " уже существует");
+        } catch (Exception e) {
+            System.err.println("Ошибка: Не удалось удалить бакет" + e.getMessage());
         }
+    } else {
+        System.out.println("Ошибка: Бакет " + bucketName + " не существует");
     }
+}
 
-    //Удаление бакета
-    public void deleteBucket(String bucketName) throws Exception {
-
-        //Проверка существования бакета
-        boolean isExist = minioClient.bucketExists(
-                BucketExistsArgs.builder()
-                        .bucket(bucketName)
-                        .build());
-
-        if (isExist) {
-            try {
-                try {
-                    //Удаление бакета
-                    minioClient.removeBucket(
-                            RemoveBucketArgs.builder()
-                                    .bucket(bucketName)
-                                    .build());
-                    System.out.println("Бакет " + bucketName + " удалён");
-                } catch (Exception e) {
-                    System.out.println("Ошибка: Бакет " + bucketName + " не пустой");
-                }
-            } catch (Exception e) {
-                System.err.println("Ошибка: Не удалось удалить бакет" + e.getMessage());
-            }
-        } else {
-            System.out.println("Ошибка: Бакет " + bucketName + " не существует");
-        }
-    }
-
-    //Остановка сервера и вызод программы
-    public void exit() {
-        MinioServer.stopServer();
-        System.exit(0);
-    }
+/**
+ * Останавливает сервер MinIO и завершает работу приложения.
+ */
+public void exit() {
+    MinioServer.stopServer();
+    System.exit(0);
+}
 }
