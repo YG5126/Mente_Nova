@@ -11,11 +11,10 @@ import jakarta.annotation.PostConstruct;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
-/**
- * Основной класс для работы с MinIO.
- * Предоставляет методы для управления файлами и директориями в MinIO хранилище.
- */
 @Component
 public class MinioApplication {
 
@@ -36,12 +35,42 @@ public class MinioApplication {
             System.exit(1);
         }
     }
-    
-    /**
-     * Создает пустой файл в указанной директории.
-     * @param bucketName Имя бакета
-     * @param serverFilePath Путь к файлу на сервере
-     */
+
+    public File returnFile(String bucketName, String serverFilePath) {
+        File tempFile = null;
+        try {
+            // Получаем имя файла из пути
+            String fileName;
+            if (serverFilePath.indexOf('.') != -1) {
+                fileName = serverFilePath.substring(serverFilePath.lastIndexOf("/") + 1);
+            } else {
+                System.out.println("Предупреждение: файл без расширения: " + serverFilePath);
+                fileName = serverFilePath;
+            }
+            
+            // Создаем файл в временной директории с оригинальным именем
+            tempFile = new File(System.getProperty("java.io.tmpdir"), fileName);
+            
+            // Получаем поток из MinIO и копируем его во временный файл
+            try (InputStream stream = minioClient.getObject(
+                    GetObjectArgs.builder()
+                        .bucket(bucketName)
+                        .object(serverFilePath)
+                        .build())) {
+                Files.copy(stream, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            }
+            
+            return tempFile;
+            
+        } catch (Exception e) {
+            System.err.println("Ошибка при получении файла: " + e.getMessage());
+            if (tempFile != null && tempFile.exists()) {
+                tempFile.delete();
+            }
+            return null;
+        }
+    }
+
     public void createEmptyFile(String bucketName, String serverFilePath) {
         try {
 

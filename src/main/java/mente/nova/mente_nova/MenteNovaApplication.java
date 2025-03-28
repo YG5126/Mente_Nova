@@ -1,8 +1,11 @@
 package mente.nova.mente_nova;
 
+import mente.nova.mente_nova.minio.*;
+import mente.nova.mente_nova.pdf.pdfApplication;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,10 +21,32 @@ public class MenteNovaApplication extends Application {
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
 
+    @Autowired
+    private MinioApplication minio;
+
+    @Autowired
+    private pdfApplication pdf;
+
     public static void main(String[] args) {
         savedArgs = args;
         launch(args);
     }
+
+    /*@Override
+    public void run(String... args) throws Exception {
+        System.out.println("Приложение запущено");
+        //minio.createBucket("test");
+        //minio.deleteFile("test", "задания.pdf");
+        //minio.deleteFile("test", "задания2.pdf");
+        //minio.loadingFile("test", "задания2.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания2.pdf");
+        //minio.loadingFile("test", "задания.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf");
+        //pdf.uploadPDF("test", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf", "задания.pdf");
+        //pdf.uploadPDF("test", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания2.pdf", "задания2.pdf");
+        //pdf.readPDF("test", "задания.pdf");
+        //pdf.joinPDF("test", "задания.pdf", "задания2.pdf");
+    }*/
+
+    
 
     @Override
     public void init() throws Exception {
@@ -44,6 +69,7 @@ public class MenteNovaApplication extends Application {
     public void stop() throws Exception {
         context.close();
         super.stop();
+        System.exit(0);
         System.exit(0);
     }
 }
