@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.3</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>mente.nova</groupId>
 	<artifactId>mente_nova</artifactId>
@@ -31,6 +31,12 @@
 		<spring-ai.version>1.0.0-M6</spring-ai.version>
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
@@ -134,8 +140,6 @@
 				<configuration>
 					<mainClass>mente.nova.mente_nova.MenteNovaApplication</mainClass>
 					<options>
-						<option>--module-path</option>
-						<option>C:\JavaSDK\javafx-sdk-23.0.2\lib</option>
 						<option>--add-modules</option>
 						<option>javafx.controls,javafx.fxml</option>
 					</options>

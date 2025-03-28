@@ -1,12 +1,11 @@
 package mente.nova.mente_nova;
 
 import mente.nova.mente_nova.minio.*;
+import mente.nova.mente_nova.pdf.pdfApplication;
 
 import java.io.IOException;
 
-import org.apache.commons.exec.CommandLine;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,38 +17,44 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 @SpringBootApplication  
-public class MenteNovaApplication implements CommandLineRunner {
+public class MenteNovaApplication extends Application {
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
 
     @Autowired
     private MinioApplication minio;
-        
+
+    @Autowired
+    private pdfApplication pdf;
+
     public static void main(String[] args) {
-        SpringApplication.run(MenteNovaApplication.class, args);
-        /*savedArgs = args;
-        launch(args);*/
+        savedArgs = args;
+        launch(args);
     }
 
-    @Override
+    /*@Override
     public void run(String... args) throws Exception {
         System.out.println("Приложение запущено");
         //minio.createBucket("test");
+        //minio.deleteFile("test", "задания.pdf");
+        //minio.deleteFile("test", "задания2.pdf");
+        //minio.loadingFile("test", "задания2.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания2.pdf");
         //minio.loadingFile("test", "задания.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf");
-        minio.readPDF("test", "задания.pdf");
-        minio.init();
-    }
+        //pdf.uploadPDF("test", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf", "задания.pdf");
+        //pdf.uploadPDF("test", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания2.pdf", "задания2.pdf");
+        //pdf.readPDF("test", "задания.pdf");
+        //pdf.joinPDF("test", "задания.pdf", "задания2.pdf");
+    }*/
 
     
 
-    /*@Override
+    @Override
     public void init() throws Exception {
         context = SpringApplication.run(MenteNovaApplication.class, savedArgs);
     }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setTitle("Mente-Nova");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         loader.setControllerFactory(context::getBean);
         Parent root = loader.load();
@@ -64,5 +69,6 @@ public class MenteNovaApplication implements CommandLineRunner {
     public void stop() throws Exception {
         context.close();
         super.stop();
-    }*/
+        System.exit(0);
+    }
 }
