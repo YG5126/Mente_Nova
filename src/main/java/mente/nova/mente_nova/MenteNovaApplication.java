@@ -1,11 +1,7 @@
 package mente.nova.mente_nova;
 
-import mente.nova.mente_nova.minio.*;
-import mente.nova.mente_nova.pdf.pdfApplication;
-
 import java.io.IOException;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,12 +16,6 @@ import javafx.scene.Parent;
 public class MenteNovaApplication extends Application {
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
-
-    @Autowired
-    private MinioApplication minio;
-
-    @Autowired
-    private pdfApplication pdf;
 
     public static void main(String[] args) {
         savedArgs = args;
@@ -69,7 +59,6 @@ public class MenteNovaApplication extends Application {
     public void stop() throws Exception {
         context.close();
         super.stop();
-        System.exit(0);
         System.exit(0);
     }
 }

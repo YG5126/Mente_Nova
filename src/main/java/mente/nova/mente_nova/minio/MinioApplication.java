@@ -58,6 +58,8 @@ public class MinioApplication {
                         .object(serverFilePath)
                         .build())) {
                 Files.copy(stream, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            } catch (Exception e) {
+                System.err.println("Ошибка при получении файла по пути " + serverFilePath + " из бакета " + bucketName + ": " + e.getMessage());
             }
             
             return tempFile;
@@ -216,17 +218,17 @@ public class MinioApplication {
     public MinioList.Node list(String bucketName, String path, boolean recursive) throws Exception {
         //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
-        //Проверка на корректный синтаксис полученного пути
-        if (!path.endsWith("/") && path.length() != 0) {
-            path += "/";
+            //Проверка на корректный синтаксис полученного пути
+            if (!path.endsWith("/") && path.length() != 0) {
+                path += "/";
+            }
+            MinioList list = new MinioList(minioClient);
+            MinioList.Node root = list.buildBucketTree(bucketName, path, recursive);
+            return root;
+        } else {
+            System.out.println("Бакет " + bucketName + " не существует");
+            return null;
         }
-        MinioList list = new MinioList(minioClient);
-        MinioList.Node root = list.buildBucketTree(bucketName, path, recursive);
-        return root;
-    } else {
-        System.out.println("Бакет " + bucketName + " не существует");
-        return null;
-    }
 }
 
 /**
