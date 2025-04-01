@@ -31,8 +31,8 @@ public class animationController {
         Timeline exitTimeline = createExitTimeline(card, initialShadow);
         
         // Добавляем обработчики событий
-        card.setOnMouseEntered(event -> hoverTimeline.play());
-        card.setOnMouseExited(event -> exitTimeline.play());
+        card.setOnMouseEntered(_ -> hoverTimeline.play());
+        card.setOnMouseExited(_ -> exitTimeline.play());
     }
     
     /**
@@ -66,8 +66,8 @@ public class animationController {
         );
         
         // Добавляем обработчики событий
-        card.setOnMouseEntered(event -> hoverTimeline.play());
-        card.setOnMouseExited(event -> exitTimeline.play());
+        card.setOnMouseEntered(_ -> hoverTimeline.play());
+        card.setOnMouseExited(_ -> exitTimeline.play());
     }
     
     /**
@@ -102,8 +102,8 @@ public class animationController {
         );
         
         // Добавляем обработчики событий
-        label.setOnMouseEntered(event -> hoverTimeline.play());
-        label.setOnMouseExited(event -> exitTimeline.play());
+        label.setOnMouseEntered(_ -> hoverTimeline.play());
+        label.setOnMouseExited(_ -> exitTimeline.play());
     }
     
     /**

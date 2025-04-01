@@ -40,10 +40,10 @@ public class SectionController implements Initializable {
     @PostConstruct
     private void initSubjects() {
         try {
-            for (MinioList.Node subjectName : minio.list("mente-nova", ConfigManager.getValue("semester") + " семестр", false).getChildren().values()) {
+            for (MinioList.Node subjectName : minio.list(ConfigManager.getValue("semester") + " семестр", false).getChildren().values()) {
                 if (subjectName.isDirectory()) {
                     subjectNames.add(subjectName.getName());
-                    filesCount.add(minio.list("mente-nova", ConfigManager.getValue("semester") + " семестр/" + subjectName.getName(), true).getChildren().values().size());
+                    filesCount.add(minio.list(ConfigManager.getValue("semester") + " семестр/" + subjectName.getName(), true).getChildren().values().size());
                 }
             }
         } catch (Exception e) {
@@ -138,7 +138,7 @@ public class SectionController implements Initializable {
         card.getChildren().addAll(imageView, subjectLabel, descriptionLabel);
         // Добавляем обработчик нажатия на карточку
         final String finalSubjectName = subjectName.replace("\n", " ");
-        card.setOnMouseClicked(event -> openSubjectContent(finalSubjectName));
+        card.setOnMouseClicked(_ -> openSubjectContent(finalSubjectName));
         
         return card;
     }

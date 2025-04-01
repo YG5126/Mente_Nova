@@ -3,6 +3,7 @@ package mente.nova.mente_nova.minio;
 import io.minio.*;
 import io.minio.messages.Item;
 import java.util.*;
+import mente.nova.mente_nova.config.ConfigManager;
 
 /**
  * Класс для работы со списком файлов в MinIO хранилище.
@@ -99,7 +100,8 @@ public class MinioList {
      * @return Корневой узел дерева
      * @throws Exception в случае ошибки при построении дерева
      */
-    public Node buildBucketTree(String bucketName) throws Exception {
+    public Node buildBucketTree() throws Exception {
+        String bucketName = ConfigManager.getValue("bucket");
         //Создание начального узла бакета
         Node root = new Node(bucketName, true);
         root.setIsBucket();
@@ -137,7 +139,8 @@ public class MinioList {
      * @return Корневой узел дерева
      * @throws Exception в случае ошибки при построении дерева
      */
-    public Node buildBucketTree(String bucketName, String path, boolean recursive) throws Exception {
+    public Node buildBucketTree(String path, boolean recursive) throws Exception {
+        String bucketName = ConfigManager.getValue("bucket");
         //Если путь пустой - название бакета не выводить
         boolean isExistPath = false;
         //Создание начального узла бакета

@@ -21,7 +21,7 @@
             <Insets top="30" right="30" bottom="0" left="30"/>
         </VBox.margin>
         
-        <HBox>
+        <HBox fx:id="header" styleClass="headerPanel">
             <VBox.margin>
                 <Insets top="0" right="0" bottom="10" left="0"/>
             </VBox.margin>

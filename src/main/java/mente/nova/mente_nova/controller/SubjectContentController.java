@@ -18,6 +18,11 @@ import javafx.scene.image.PixelWriter;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.scene.control.ProgressIndicator;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -32,6 +37,7 @@ import java.util.ResourceBundle;
 import java.util.List;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.io.File;
 
 /**
  * Контроллер для отображения содержимого предмета и навигации по файловой структуре.
@@ -51,6 +57,9 @@ public class SubjectContentController implements Initializable {
 
     @FXML
     private HBox pathPanel;
+
+    @FXML
+    private HBox header;
     
     @Autowired
     private MinioApplication minio;
@@ -66,7 +75,7 @@ public class SubjectContentController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         String path = ConfigManager.getValue("path");
-        backButton.setOnAction(event -> goBack());
+        backButton.setOnAction(_ -> goBack());
         createPathContainer(path);
 
         if (path.lastIndexOf("/") == path.length() - 1) {
@@ -92,7 +101,7 @@ public class SubjectContentController implements Initializable {
         homeContainer.getStyleClass().add("home-container");
 
         animationController.setupCardAnimationIncrease(homeContainer);
-        homeContainer.setOnMouseClicked(event -> openSubjectCard("", true));
+        homeContainer.setOnMouseClicked(_ -> openSubjectCard("", true));
 
         pathItem.getChildren().add(homeContainer);
         pathItem.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream("/image/arrow_path.png"))));
@@ -103,7 +112,7 @@ public class SubjectContentController implements Initializable {
             if (i < pathParts.length - 1) {
                 animationController.setupCardAnimationIncrease(pathLabel);
                 final String finalPath = currentPath;
-                pathLabel.setOnMouseClicked(event -> openSubjectCard(finalPath, true));
+                pathLabel.setOnMouseClicked(_ -> openSubjectCard(finalPath, true));
                 pathItem.getChildren().add(pathLabel);
                 pathItem.getChildren().add(new ImageView(new Image(getClass().getResourceAsStream("/image/arrow_path.png"))));
             } else {
@@ -145,7 +154,7 @@ public class SubjectContentController implements Initializable {
     private void loadSubjectContent() {
         try {
             // Загружаем файлы предмета из MinIO
-            Node list = minio.list(ConfigManager.getValue("bucket"), ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path"), false);
+            Node list = minio.list(ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path"), false);
             
             for (Node subjectName : list.getChildren().values()) {
                 HBox subjectCard = createFileCard(subjectName.getName(), subjectName.isDirectory());
@@ -170,8 +179,7 @@ public class SubjectContentController implements Initializable {
             ProgressIndicator progress = new ProgressIndicator();
             progress.setPrefSize(50, 50);
             VBox loadingBox = new VBox(progress, new Label("Загрузка PDF..."));
-            loadingBox.setAlignment(Pos.CENTER);
-            loadingBox.setSpacing(10);
+            loadingBox.getStyleClass().add("loading-box");
             contentContainer.getChildren().add(loadingBox);
             VBox.setVgrow(loadingBox, Priority.ALWAYS);
             
@@ -179,11 +187,60 @@ public class SubjectContentController implements Initializable {
             Task<List<PdfPageData>> renderTask = new Task<>() {
                 @Override
                 protected List<PdfPageData> call() throws Exception {
-                    return pdf.renderPdfPages(ConfigManager.getValue("bucket"), ConfigManager.getValue("path"));
+                    return pdf.readPDF(ConfigManager.getValue("path"));
                 }
             };
             
-            renderTask.setOnSucceeded(event -> {
+            renderTask.setOnSucceeded(_ -> {
+
+                StackPane homeIcon = new StackPane(new ImageView(new Image(getClass().getResourceAsStream("/image/download_pdf_icon.png"))));
+                homeIcon.setOnMouseClicked(_ -> {
+                    String serverPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
+                    File pdfFile = minio.returnFile(serverPath);
+
+                    if (pdfFile != null && pdfFile.exists()) {
+                        // Получаем Stage из компонента homeIcon
+                        Stage stage = (Stage) homeIcon.getScene().getWindow();
+                        
+                        // Создаем диалог сохранения файла
+                        FileChooser fileChooser = new FileChooser();
+                        fileChooser.setTitle("Mente Nova - Сохранение PDF файла");
+                        
+                        // Устанавливаем имя файла по умолчанию
+                        String pdfName = pdfFile.getName();
+                        fileChooser.setInitialFileName(pdfName);
+                        
+                        // Добавляем фильтр файлов PDF
+                        FileChooser.ExtensionFilter extFilter =
+                            new FileChooser.ExtensionFilter("PDF файлы (*.pdf)", "*.pdf");
+                        fileChooser.getExtensionFilters().add(extFilter);
+                        
+                        // Показываем диалог сохранения
+                        File saveFile = fileChooser.showSaveDialog(stage);
+                        
+                        if (saveFile != null) {
+                            try {
+                                // Копируем временный файл в выбранное место
+                                Files.copy(pdfFile.toPath(), saveFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                                System.out.println("Файл успешно сохранен: " + saveFile.getAbsolutePath());
+                            } catch (IOException e) {
+                                System.err.println("Ошибка при сохранении файла: " + e.getMessage());
+                                // Показываем сообщение об ошибке пользователю
+                                Label errorLabel = new Label("Ошибка при сохранении файла: " + e.getMessage());
+                                errorLabel.getStyleClass().add("error-message");
+                                contentContainer.getChildren().add(errorLabel);
+                            }
+                        }
+                    } else {
+                        System.err.println("Ошибка: Файл не был загружен с сервера");
+                        Label errorLabel = new Label("Ошибка: Файл не был загружен с сервера");
+                        errorLabel.getStyleClass().add("error-message");
+                        contentContainer.getChildren().add(errorLabel);
+                    }
+                });
+                header.getChildren().add(homeIcon);
+
+
                 List<PdfPageData> pagesData = renderTask.getValue();
                 
                 // Выполняем обработку всех изображений страниц сразу в фоновом потоке
@@ -205,7 +262,8 @@ public class SubjectContentController implements Initializable {
                     }
                 };
                 
-                processImagesTask.setOnSucceeded(imageEvent -> {
+                processImagesTask.setOnSucceeded(_ -> {
+
                     List<Image> images = processImagesTask.getValue();
                     
                     Platform.runLater(() -> {
@@ -227,7 +285,6 @@ public class SubjectContentController implements Initializable {
                         // Создаем контейнер для страниц с фиксированной шириной
                         VBox pagesContainer = new VBox();
                         pagesContainer.getStyleClass().add("pdf-pages-container");
-                        pagesContainer.setPrefWidth(900);
                         
                         // Добавляем все страницы сразу
                         for (int i = 0; i < images.size(); i++) {
@@ -241,8 +298,6 @@ public class SubjectContentController implements Initializable {
                             
                             // Создаем ImageView с оптимизированными настройками
                             ImageView imageView = new ImageView(images.get(i));
-                            imageView.setPreserveRatio(true);
-                            imageView.setFitWidth(800);
                             imageView.setCache(true);
                             imageView.setCacheHint(javafx.scene.CacheHint.SPEED);
                             imageView.getStyleClass().add("pdf-image");
@@ -259,7 +314,7 @@ public class SubjectContentController implements Initializable {
                 });
                 
                 // Обработка ошибок при обработке изображений
-                processImagesTask.setOnFailed(imageEvent -> {
+                processImagesTask.setOnFailed(_ -> {
                     Platform.runLater(() -> {
                         contentContainer.getChildren().clear();
                         Label errorLabel = new Label("Ошибка при обработке PDF: " + processImagesTask.getException().getMessage());
@@ -272,7 +327,7 @@ public class SubjectContentController implements Initializable {
                 new Thread(processImagesTask).start();
             });
             
-            renderTask.setOnFailed(event -> {
+            renderTask.setOnFailed(_ -> {
                 Platform.runLater(() -> {
                     contentContainer.getChildren().clear();
                     Label errorLabel = new Label("Ошибка загрузки PDF: " + renderTask.getException().getMessage());
@@ -353,7 +408,7 @@ public class SubjectContentController implements Initializable {
 
         subjectCard.getChildren().addAll(imageContainer, cardStructure, arrowImage);
 
-        subjectCard.setOnMouseClicked(event -> openSubjectCard(ConfigManager.getValue("path") + (ConfigManager.getValue("path").lastIndexOf("/") != -1 ? "" : "/") + fileName, isDirectory));
+        subjectCard.setOnMouseClicked(_ -> openSubjectCard(ConfigManager.getValue("path") + (ConfigManager.getValue("path").lastIndexOf("/") != -1 ? "" : "/") + fileName, isDirectory));
 
         return subjectCard;
     }

@@ -185,6 +185,16 @@
     -fx-cursor: text;
     -fx-text-fill: #166534;
 }
+.headerPanel ImageView {
+    -fx-fit-width: 20;
+    -fx-fit-height: 20;
+    -fx-preserve-ratio: true;
+}
+.headerPanel StackPane {
+    -fx-pref-width: 20;
+    -fx-pref-height: 20;
+    -fx-cursor: hand;
+}
 
 /* PDF Стили */
 .pdf-title {
@@ -203,7 +213,7 @@
 
 .pdf-page {
     -fx-background-color: white;
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 4, 0, 0, 2);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
     -fx-background-radius: 6px;
     -fx-padding: 10px;
     -fx-spacing: 10px;
@@ -224,11 +234,27 @@
 
 .pdf-image {
     -fx-smooth: false;
+    -fx-preserve-ratio: true;
+    -fx-fit-width: 800;
+}
+.loading-box {
+    -fx-spacing: 10;
+    -fx-alignment: center;
 }
 
-я
-
 /* Оптимизированный стиль скроллера */
+.pdf-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.pdf-scroll-pane:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
 .pdf-scroll-pane .scroll-bar:vertical {
     -fx-background-color: transparent;
     -fx-pref-width: 12px;

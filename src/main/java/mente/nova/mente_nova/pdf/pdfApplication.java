@@ -49,14 +49,14 @@ public class pdfApplication {
      * @param serverFilePath Путь к файлу на сервере
      * @return Список объектов с изображениями и текстом страниц PDF
      */
-    public List<PdfPageData> renderPdfPages(String bucketName, String serverFilePath) {
+    public List<PdfPageData> readPDF(String serverFilePath) {
         List<PdfPageData> pageData = new ArrayList<>();
         File pdfFile = null;
         
         try {
             serverFilePath = ConfigManager.getValue("semester") + " семестр/" + serverFilePath;
             
-            pdfFile = minioClient.returnFile(bucketName, serverFilePath);
+            pdfFile = minioClient.returnFile(serverFilePath);
             if (pdfFile == null) {
                 System.err.println("Не удалось получить файл");
                 return pageData;
@@ -106,7 +106,7 @@ public class pdfApplication {
      * @param serverFilePath Путь к файлу на сервере
      * @return Список строк, где каждая строка - содержимое одной страницы
      */
-    public List<String> readPDF(String bucketName, String serverFilePath) {
+    /*public List<String> readPDF(String bucketName, String serverFilePath) {
         List<String> pages = new ArrayList<>();
         try {
             serverFilePath = ConfigManager.getValue("semester") + " семестр/" + serverFilePath;
@@ -141,15 +141,15 @@ public class pdfApplication {
             System.err.println("Ошибка при чтении PDF-файла: " + e.getMessage());
         }
         return pages;
-    }
+    }*/
 
-    public void joinPDF(String bucketName, String serverFilePath, String serverFilePath2) {
+    public void joinPDF(String serverFilePath, String serverFilePath2) {
         File file1 = null;
         File file2 = null;
         try {
             // Получаем файлы из MinIO
-            file1 = minioClient.returnFile(bucketName, serverFilePath);
-            file2 = minioClient.returnFile(bucketName, serverFilePath2);
+            file1 = minioClient.returnFile(serverFilePath);
+            file2 = minioClient.returnFile(serverFilePath2);
             
             if (file1 == null || file2 == null) {
                 System.err.println("Не удалось получить один или оба файла");
@@ -167,7 +167,7 @@ public class pdfApplication {
             merger.mergeDocuments(null);
 
             // Загружаем объединенный файл обратно в MinIO
-            minioClient.loadingFile(bucketName, "merged_" + serverFilePath, mergedFile.getAbsolutePath());
+            minioClient.loadingFile("merged_" + serverFilePath, mergedFile.getAbsolutePath());
             System.out.println("PDF файлы успешно объединены и сохранены как merged_" + serverFilePath);
             
         } catch (Exception e) {
