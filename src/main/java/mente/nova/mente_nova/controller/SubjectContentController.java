@@ -1,5 +1,6 @@
 package mente.nova.mente_nova.controller;
 
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,24 +21,26 @@ import javafx.concurrent.Task;
 import javafx.scene.control.ProgressIndicator;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
 import java.io.IOException;
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.List;
+import java.util.ArrayList;
+import java.awt.image.BufferedImage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.tinylog.Logger;
 
 import mente.nova.mente_nova.config.ConfigManager;
 import mente.nova.mente_nova.minio.MinioApplication;
 import mente.nova.mente_nova.minio.MinioList.Node;
 import mente.nova.mente_nova.pdf.pdfApplication;
 import mente.nova.mente_nova.pdf.pdfApplication.PdfPageData;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.List;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.io.File;
 
 /**
  * Контроллер для отображения содержимого предмета и навигации по файловой структуре.
@@ -162,7 +165,7 @@ public class SubjectContentController implements Initializable {
             }
             
         } catch (Exception e) {
-            System.err.println("Ошибка при загрузке содержимого предмета: " + e.getMessage());
+            Logger.error("Ошибка при загрузке содержимого предмета: " + e.getMessage());
         }
     }
 
@@ -222,9 +225,9 @@ public class SubjectContentController implements Initializable {
                             try {
                                 // Копируем временный файл в выбранное место
                                 Files.copy(pdfFile.toPath(), saveFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                                System.out.println("Файл успешно сохранен: " + saveFile.getAbsolutePath());
+                                Logger.info("Файл успешно сохранен: " + saveFile.getAbsolutePath());
                             } catch (IOException e) {
-                                System.err.println("Ошибка при сохранении файла: " + e.getMessage());
+                                Logger.error("Ошибка при сохранении файла: " + e.getMessage());
                                 // Показываем сообщение об ошибке пользователю
                                 Label errorLabel = new Label("Ошибка при сохранении файла: " + e.getMessage());
                                 errorLabel.getStyleClass().add("error-message");
@@ -232,7 +235,7 @@ public class SubjectContentController implements Initializable {
                             }
                         }
                     } else {
-                        System.err.println("Ошибка: Файл не был загружен с сервера");
+                        Logger.error("Ошибка: Файл не был загружен с сервера");
                         Label errorLabel = new Label("Ошибка: Файл не был загружен с сервера");
                         errorLabel.getStyleClass().add("error-message");
                         contentContainer.getChildren().add(errorLabel);
@@ -401,7 +404,7 @@ public class SubjectContentController implements Initializable {
         Label fileNameLabel = new Label(fileName);
         fileNameLabel.getStyleClass().add("subject");
 
-        Label fileWeight = new Label("Последнее изменение: + -00:00 · 1000МБ");
+        Label fileWeight = new Label("Последнее изменение: 00:00 · 1000МБ");
         fileWeight.getStyleClass().add("description");
 
         cardStructure.getChildren().addAll(fileNameLabel, fileWeight);
@@ -463,7 +466,7 @@ public class SubjectContentController implements Initializable {
             }
             
         } catch (Exception e) {
-            System.err.println("Ошибка при открытии страницы предмета: " + e.getMessage());
+            Logger.error("Ошибка при открытии страницы предмета: " + e.getMessage());
             e.printStackTrace();
         }
     }

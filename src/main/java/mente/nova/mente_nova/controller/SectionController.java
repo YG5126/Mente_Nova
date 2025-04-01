@@ -12,6 +12,7 @@ import javafx.scene.layout.VBox;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.tinylog.Logger;
 
 import jakarta.annotation.PostConstruct;
 
@@ -47,7 +48,7 @@ public class SectionController implements Initializable {
                 }
             }
         } catch (Exception e) {
-            System.err.println("Ошибка при получении списка предметов: " + e.getMessage());
+            Logger.error("Ошибка при получении списка предметов: " + e.getMessage());
         }
     }
     
@@ -155,7 +156,7 @@ public class SectionController implements Initializable {
             MainController.switchContent("subject-content.fxml");
             
         } catch (Exception e) {
-            System.err.println("Ошибка при открытии страницы предмета: " + e.getMessage());
+            Logger.error("Ошибка при открытии страницы предмета: " + e.getMessage());
             e.printStackTrace();
         }
     }

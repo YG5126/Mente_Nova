@@ -3,6 +3,9 @@ package mente.nova.mente_nova.minio;
 import io.minio.*;
 import io.minio.messages.Item;
 import java.util.*;
+
+import org.tinylog.Logger;
+
 import mente.nova.mente_nova.config.ConfigManager;
 
 /**
@@ -181,7 +184,7 @@ public class MinioList {
 
         //Если не был не разу найден - вывод сообщения об отсутствии указанного пути
         if (!isExistPath) {
-            System.out.print("Ошибка: указанный путь не найден");
+            Logger.error("Ошибка: указанный путь " + path + " не найден");
         }
 
         return root;

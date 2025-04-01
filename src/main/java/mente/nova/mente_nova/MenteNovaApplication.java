@@ -12,31 +12,18 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
+import org.tinylog.Logger;
+
 @SpringBootApplication  
 public class MenteNovaApplication extends Application {
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
 
     public static void main(String[] args) {
+        Logger.info("НАЧАЛО РАБОТЫ");
         savedArgs = args;
         launch(args);
-    }
-
-    /*@Override
-    public void run(String... args) throws Exception {
-        System.out.println("Приложение запущено");
-        //minio.createBucket("test");
-        //minio.deleteFile("test", "задания.pdf");
-        //minio.deleteFile("test", "задания2.pdf");
-        //minio.loadingFile("test", "задания2.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания2.pdf");
-        //minio.loadingFile("test", "задания.pdf", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf");
-        //pdf.uploadPDF("test", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания.pdf", "задания.pdf");
-        //pdf.uploadPDF("test", "C:/Users/Redmi G Pro/Desktop/Т-банк/задания2.pdf", "задания2.pdf");
-        //pdf.readPDF("test", "задания.pdf");
-        //pdf.joinPDF("test", "задания.pdf", "задания2.pdf");
-    }*/
-
-    
+    }    
 
     @Override
     public void init() throws Exception {

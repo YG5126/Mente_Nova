@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import org.springframework.stereotype.Controller;
+import org.tinylog.Logger;
 
 /**
  * Главный контроллер приложения, управляющий основным интерфейсом.
@@ -70,7 +71,7 @@ public class MainController implements Initializable {
         if (instance != null) {
             instance.loadContent(fxmlFile);
         } else {
-            System.err.println("MainController не инициализирован");
+            Logger.error("MainController не инициализирован");
         }
     }
 }

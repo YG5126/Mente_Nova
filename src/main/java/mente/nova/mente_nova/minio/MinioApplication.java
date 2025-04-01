@@ -2,6 +2,7 @@ package mente.nova.mente_nova.minio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.tinylog.Logger;
 
 import io.minio.*;
 import io.minio.errors.ErrorResponseException;
@@ -31,8 +32,9 @@ public class MinioApplication {
         try {
             //Попытка получения списка бакетов
             minioClient.listBuckets();
+            Logger.info("Подключение к MinIO успешно установлено");
         } catch (Exception e) {
-            System.err.println("Ошибка подключения к MinIO: " + e.getMessage());
+            Logger.error("Ошибка подключения к MinIO: " + e.getMessage());
             System.exit(1);
         }
     }
@@ -46,7 +48,7 @@ public class MinioApplication {
             if (serverFilePath.indexOf('.') != -1) {
                 fileName = serverFilePath.substring(serverFilePath.lastIndexOf("/") + 1);
             } else {
-                System.out.println("Предупреждение: файл без расширения: " + serverFilePath);
+                Logger.warn("Предупреждение: файл без расширения: " + serverFilePath);
                 fileName = serverFilePath;
             }
             
@@ -61,13 +63,13 @@ public class MinioApplication {
                         .build())) {
                 Files.copy(stream, tempFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
             } catch (Exception e) {
-                System.err.println("Ошибка при получении файла по пути " + serverFilePath + " из бакета " + bucketName + ": " + e.getMessage());
+                Logger.error("Ошибка при получении файла по пути " + serverFilePath + " из бакета " + bucketName + ": " + e.getMessage());
             }
             
             return tempFile;
             
         } catch (Exception e) {
-            System.err.println("Ошибка при получении файла: " + e.getMessage());
+            Logger.error("Ошибка при получении файла: " + e.getMessage());
             if (tempFile != null && tempFile.exists()) {
                 tempFile.delete();
             }
@@ -86,10 +88,10 @@ public class MinioApplication {
                     .stream(new ByteArrayInputStream(new byte[0]), 0, -1)
                     .build()
             );
-            System.out.println("Пустой файл успешно создан: " + serverFilePath);
+            Logger.info("Пустой файл успешно создан: " + serverFilePath);
         }
         catch (Exception e) {
-            System.err.println("Ошибка при создании файла: " + e.getMessage());
+            Logger.error("Ошибка при создании файла: " + e.getMessage());
         }
     }
     
@@ -105,7 +107,7 @@ public class MinioApplication {
             return root.getChildren().size();
         }
         catch (Exception e) {
-            System.err.println("Ошибка при подсчёте файлов: " + e.getMessage());
+            Logger.error("Ошибка при подсчёте файлов: " + e.getMessage());
             return -1;
         }
     }
@@ -124,7 +126,7 @@ public class MinioApplication {
                         .bucket(bucketName)
                         .build());
             if (!isExist) {
-                System.out.println("Бакет " + bucketName + " не существует");
+                Logger.error("Бакет " + bucketName + " не существует");
             }
             else {
                 try {
@@ -132,7 +134,7 @@ public class MinioApplication {
                             .bucket(bucketName)
                             .object(serverFilePath)
                             .build());
-                    System.out.println("Ошибка: Файл с таким именем " + serverFilePath + " уже существует в бакете.");
+                    Logger.error("Ошибка: Файл с таким именем " + serverFilePath + " уже существует в бакете.");
                     return;
                 }
                 catch (ErrorResponseException e) {
@@ -148,14 +150,14 @@ public class MinioApplication {
                         .filename(localFilePath)
                         .build()
                     );
-                    System.out.println("Файл " + serverFilePath + " загружен в бакет " + bucketName);
+                    Logger.info("Файл " + serverFilePath + " загружен в бакет " + bucketName);
                 }
                 else {
-                    System.out.println("Файл " + localFilePath + " не существует");
+                    Logger.error("Файл " + localFilePath + " не существует");
                 }
             };
         } catch (Exception e) {
-            System.err.println("Ошибка: " + e.getMessage());
+            Logger.error("Ошибка: " + e.getMessage());
         }
     }
     
@@ -168,7 +170,7 @@ public class MinioApplication {
         try {
             // Проверяем, существует ли файл перед удалением (опционально)
             try {
-            System.out.println("Проверка существования файла " + serverFilePath + " в бакете " + bucketName);
+            Logger.info("Проверка существования файла " + serverFilePath + " в бакете " + bucketName);
             minioClient.statObject(
                 StatObjectArgs.builder()
                     .bucket(bucketName)
@@ -176,7 +178,7 @@ public class MinioApplication {
                     .build()
             );
         } catch (ErrorResponseException e) {
-            System.out.println("Файл " + serverFilePath + " не существует в бакете " + bucketName);
+            Logger.error("Файл " + serverFilePath + " не существует в бакете " + bucketName);
             return;
         }
     
@@ -187,9 +189,9 @@ public class MinioApplication {
                 .object(serverFilePath)
                 .build()
         );
-        System.out.println("Файл " + serverFilePath + " удален из бакета " + bucketName);
+        Logger.info("Файл " + serverFilePath + " удален из бакета " + bucketName);
     } catch (Exception e) {
-            System.err.println("Ошибка при удалении файла: " + e.getMessage());
+            Logger.error("Ошибка при удалении файла: " + e.getMessage());
         }
     }
     
@@ -207,7 +209,7 @@ public class MinioApplication {
             MinioList.Node root = list.buildBucketTree();
             return root;
         } else {
-            System.out.println("Бакет " + bucketName + " не существует");
+            Logger.error("Бакет " + bucketName + " не существует");
             return null;
         }
     }
@@ -232,7 +234,7 @@ public class MinioApplication {
             MinioList.Node root = list.buildBucketTree(path, recursive);
             return root;
         } else {
-            System.out.println("Бакет " + bucketName + " не существует");
+            Logger.error("Бакет " + bucketName + " не существует");
             return null;
         }
     }
@@ -257,12 +259,12 @@ public class MinioApplication {
                         MakeBucketArgs.builder()
                                 .bucket(bucketName)
                                 .build());
-                System.out.println("Бакет " + bucketName + " создан");
+                Logger.info("Бакет " + bucketName + " создан");
             } catch (Exception e) {
-                System.err.println("Ошибка при создании бакета: " + e.getMessage());
+                Logger.error("Ошибка при создании бакета: " + e.getMessage());
             }
         } else {
-            System.out.println("Бакет " + bucketName + " уже существует");
+            Logger.error("Бакет " + bucketName + " уже существует");
         }
     }
 
@@ -287,15 +289,15 @@ public class MinioApplication {
                             RemoveBucketArgs.builder()
                                     .bucket(bucketName)
                                     .build());
-                    System.out.println("Бакет " + bucketName + " удалён");
+                    Logger.info("Бакет " + bucketName + " удалён");
                 } catch (Exception e) {
-                    System.out.println("Ошибка: Бакет " + bucketName + " не пустой");
+                    Logger.error("Ошибка: Бакет " + bucketName + " не пустой");
                 }
             } catch (Exception e) {
-                System.err.println("Ошибка: Не удалось удалить бакет" + e.getMessage());
+                Logger.error("Ошибка: Не удалось удалить бакет" + e.getMessage());
             }
         } else {
-            System.out.println("Ошибка: Бакет " + bucketName + " не существует");
+            Logger.error("Ошибка: Бакет " + bucketName + " не существует");
         }
     }
 

@@ -9,6 +9,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.tinylog.Logger;
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
 
 import java.io.File;
@@ -58,7 +59,7 @@ public class pdfApplication {
             
             pdfFile = minioClient.returnFile(serverFilePath);
             if (pdfFile == null) {
-                System.err.println("Не удалось получить файл");
+                Logger.error("Не удалось получить файл");
                 return pageData;
             }
             
@@ -89,7 +90,7 @@ public class pdfApplication {
                 document.close();
             }
         } catch (Exception e) {
-            System.err.println("Ошибка при рендеринге PDF: " + e.getMessage());
+            Logger.error("Ошибка при рендеринге PDF: " + e.getMessage());
             e.printStackTrace();
         } finally {
             if (pdfFile != null && pdfFile.exists()) {
@@ -113,7 +114,7 @@ public class pdfApplication {
             
             File pdfFile = minioClient.returnFile(bucketName, serverFilePath);
             if (pdfFile == null) {
-                System.err.println("Не удалось получить файл");
+                Logger.error("Не удалось получить файл");
                 return pages;
             }
 
@@ -138,11 +139,16 @@ public class pdfApplication {
                 pdfFile.delete();
             }
         } catch (Exception e) {
-            System.err.println("Ошибка при чтении PDF-файла: " + e.getMessage());
+            Logger.error("Ошибка при чтении PDF-файла: " + e.getMessage());
         }
         return pages;
     }*/
 
+    /**
+     * Объединяет два PDF-файла и сохраняет результат в MinIO.
+     * @param serverFilePath Путь к первому PDF-файлу на сервере
+     * @param serverFilePath2 Путь ко второму PDF-файлу на сервере
+     */
     public void joinPDF(String serverFilePath, String serverFilePath2) {
         File file1 = null;
         File file2 = null;
@@ -152,7 +158,7 @@ public class pdfApplication {
             file2 = minioClient.returnFile(serverFilePath2);
             
             if (file1 == null || file2 == null) {
-                System.err.println("Не удалось получить один или оба файла");
+                Logger.error("Не удалось получить один или оба файла");
                 return;
             }
 
@@ -168,10 +174,10 @@ public class pdfApplication {
 
             // Загружаем объединенный файл обратно в MinIO
             minioClient.loadingFile("merged_" + serverFilePath, mergedFile.getAbsolutePath());
-            System.out.println("PDF файлы успешно объединены и сохранены как merged_" + serverFilePath);
+            Logger.info("PDF файлы успешно объединены и сохранены как merged_" + serverFilePath);
             
         } catch (Exception e) {
-            System.err.println("Ошибка при объединении PDF-файлов: " + e.getMessage());
+            Logger.error("Ошибка при объединении PDF-файлов: " + e.getMessage());
             e.printStackTrace();
         } finally {
             // Удаляем все временные файлы
