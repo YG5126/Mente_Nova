@@ -31,6 +31,9 @@ public class SectionController implements Initializable {
     private List<String> subjectNames = new ArrayList<>();
     private List<Integer> filesCount = new ArrayList<>();
 
+    @FXML
+    private TilePane subjectsTilePane;
+
     @Autowired
     private MinioApplication minio;
 
@@ -51,9 +54,6 @@ public class SectionController implements Initializable {
             Logger.error("Ошибка при получении списка предметов: " + e.getMessage());
         }
     }
-    
-    @FXML
-    private TilePane subjectsTilePane;
 
     /**
      * Инициализация контроллера. Загружает начальное содержимое в зависимости от выбранного семестра.

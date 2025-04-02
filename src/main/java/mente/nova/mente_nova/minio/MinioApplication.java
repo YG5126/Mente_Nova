@@ -20,6 +20,8 @@ import java.nio.file.StandardCopyOption;
 @Component
 public class MinioApplication {
 
+    private static final String bucketName = ConfigManager.getValue("bucket");
+
     //Инициализация клиента MinIO
     @Autowired
     private MinioClient minioClient;
@@ -40,7 +42,6 @@ public class MinioApplication {
     }
 
     public File returnFile(String serverFilePath) {
-        String bucketName = ConfigManager.getValue("bucket");
         File tempFile = null;
         try {
             // Получаем имя файла из пути
@@ -77,8 +78,7 @@ public class MinioApplication {
         }
     }
 
-    public void createEmptyFile(String serverFilePath) {
-        String bucketName = ConfigManager.getValue("bucket");
+    public void createEmptyFolder(String serverFilePath) {
         try {
 
             minioClient.putObject(
@@ -88,10 +88,10 @@ public class MinioApplication {
                     .stream(new ByteArrayInputStream(new byte[0]), 0, -1)
                     .build()
             );
-            Logger.info("Пустой файл успешно создан: " + serverFilePath);
+            Logger.info("Пустая папка успешно создана: " + serverFilePath);
         }
         catch (Exception e) {
-            Logger.error("Ошибка при создании файла: " + e.getMessage());
+            Logger.error("Ошибка при создании папки: " + e.getMessage());
         }
     }
     
@@ -119,7 +119,6 @@ public class MinioApplication {
      * @param localFilePath Путь к локальному файлу
      */
     public void loadingFile(String serverFilePath, String localFilePath) {
-        String bucketName = ConfigManager.getValue("bucket");
         try {
             boolean isExist = minioClient.bucketExists(
                 BucketExistsArgs.builder()
@@ -166,7 +165,6 @@ public class MinioApplication {
      * @param serverFilePath Путь к файлу на сервере
      */
     public void deleteFile(String serverFilePath) {
-        String bucketName = ConfigManager.getValue("bucket");
         try {
             // Проверяем, существует ли файл перед удалением (опционально)
             try {
@@ -202,7 +200,6 @@ public class MinioApplication {
      * @throws Exception в случае ошибки при получении списка
      */
     public MinioList.Node list() throws Exception {
-        String bucketName = ConfigManager.getValue("bucket");
         //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
             MinioList list = new MinioList(minioClient);
@@ -223,7 +220,6 @@ public class MinioApplication {
      * @throws Exception в случае ошибки при получении списка
      */
     public MinioList.Node list(String path, boolean recursive) throws Exception {
-        String bucketName = ConfigManager.getValue("bucket");
         //Проверка существования бакета
         if (minioClient.bucketExists(BucketExistsArgs.builder().bucket(bucketName).build())) {
             //Проверка на корректный синтаксис полученного пути
@@ -244,12 +240,12 @@ public class MinioApplication {
      * @param bucketName Имя бакета для создания
      * @throws Exception в случае ошибки при создании бакета
      */
-    public void createBucket(String bucketName) throws Exception {
+    public void createBucket(String createBucketName) throws Exception {
 
         //Проверка существования бакета
         boolean isExist = minioClient.bucketExists(
                 BucketExistsArgs.builder()
-                        .bucket(bucketName)
+                        .bucket(createBucketName)
                         .build());
 
         if (!isExist) {
@@ -257,14 +253,14 @@ public class MinioApplication {
                 //Создание бакета
                 minioClient.makeBucket(
                         MakeBucketArgs.builder()
-                                .bucket(bucketName)
+                                .bucket(createBucketName)
                                 .build());
-                Logger.info("Бакет " + bucketName + " создан");
+                Logger.info("Бакет " + createBucketName + " создан");
             } catch (Exception e) {
                 Logger.error("Ошибка при создании бакета: " + e.getMessage());
             }
         } else {
-            Logger.error("Бакет " + bucketName + " уже существует");
+            Logger.error("Бакет " + createBucketName + " уже существует");
         }
     }
 
@@ -273,12 +269,12 @@ public class MinioApplication {
      * @param bucketName Имя бакета для удаления
      * @throws Exception в случае ошибки при удалении бакета
      */
-    public void deleteBucket(String bucketName) throws Exception {
+    public void deleteBucket(String deleteBucketName) throws Exception {
 
         //Проверка существования бакета
         boolean isExist = minioClient.bucketExists(
                 BucketExistsArgs.builder()
-                        .bucket(bucketName)
+                        .bucket(deleteBucketName)
                         .build());
 
         if (isExist) {
@@ -287,17 +283,17 @@ public class MinioApplication {
                     //Удаление бакета
                     minioClient.removeBucket(
                             RemoveBucketArgs.builder()
-                                    .bucket(bucketName)
+                                    .bucket(deleteBucketName)
                                     .build());
-                    Logger.info("Бакет " + bucketName + " удалён");
+                    Logger.info("Бакет " + deleteBucketName + " удалён");
                 } catch (Exception e) {
-                    Logger.error("Ошибка: Бакет " + bucketName + " не пустой");
+                    Logger.error("Ошибка: Бакет " + deleteBucketName + " не пустой");
                 }
             } catch (Exception e) {
                 Logger.error("Ошибка: Не удалось удалить бакет" + e.getMessage());
             }
         } else {
-            Logger.error("Ошибка: Бакет " + bucketName + " не существует");
+            Logger.error("Ошибка: Бакет " + deleteBucketName + " не существует");
         }
     }
 

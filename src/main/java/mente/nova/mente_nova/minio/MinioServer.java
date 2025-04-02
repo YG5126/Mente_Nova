@@ -58,7 +58,6 @@ public class MinioServer {
             }
             
             Logger.info("MinIO сервер остановлен");
-            Logger.tag("work").info("КОНЕЦ РАБОТЫ");
 
         } catch (IOException e) {
             Logger.error("Ошибка: " + e.getMessage());

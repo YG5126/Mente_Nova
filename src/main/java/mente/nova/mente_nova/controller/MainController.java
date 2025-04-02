@@ -49,7 +49,7 @@ public class MainController implements Initializable {
      * Загружает содержимое из FXML файла в главную панель.
      * @param fxmlFile Имя FXML файла для загрузки
      */
-    public void loadContent(String fxmlFile) {
+    private void loadContent(String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/" + fxmlFile));
             loader.setControllerFactory(applicationContext::getBean);
@@ -59,7 +59,7 @@ public class MainController implements Initializable {
             mainPanel.getChildren().add(content);
             
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.error("Ошибка при загрузке содержимого: " + e.getMessage());
         }
     }
     

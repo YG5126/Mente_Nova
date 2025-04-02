@@ -273,6 +273,7 @@ public class SubjectContentController implements Initializable {
                         contentContainer.getChildren().clear();
                         
                         if (images.isEmpty() || pagesData.isEmpty()) {
+                            Logger.error("Не удалось загрузить PDF файл.");
                             Label errorLabel = new Label("Не удалось загрузить PDF файл.");
                             errorLabel.getStyleClass().add("error-message");
                             contentContainer.getChildren().add(errorLabel);
@@ -319,6 +320,7 @@ public class SubjectContentController implements Initializable {
                 // Обработка ошибок при обработке изображений
                 processImagesTask.setOnFailed(_ -> {
                     Platform.runLater(() -> {
+                        Logger.error("Ошибка при обработке PDF: " + processImagesTask.getException().getMessage());
                         contentContainer.getChildren().clear();
                         Label errorLabel = new Label("Ошибка при обработке PDF: " + processImagesTask.getException().getMessage());
                         errorLabel.getStyleClass().add("error-message");
@@ -332,6 +334,7 @@ public class SubjectContentController implements Initializable {
             
             renderTask.setOnFailed(_ -> {
                 Platform.runLater(() -> {
+                    Logger.error("Ошибка при загрузке PDF файла: " + renderTask.getException().getMessage());
                     contentContainer.getChildren().clear();
                     Label errorLabel = new Label("Ошибка загрузки PDF: " + renderTask.getException().getMessage());
                     errorLabel.getStyleClass().add("error-message");
@@ -343,6 +346,7 @@ public class SubjectContentController implements Initializable {
             new Thread(renderTask).start();
             
         } catch (Exception e) {
+            Logger.error("Ошибка при загрузке PDF файла: " + e.getMessage());
             contentContainer.getChildren().clear();
             Label errorLabel = new Label("Ошибка: " + e.getMessage());
             errorLabel.getStyleClass().add("error-message");
@@ -467,7 +471,6 @@ public class SubjectContentController implements Initializable {
             
         } catch (Exception e) {
             Logger.error("Ошибка при открытии страницы предмета: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 

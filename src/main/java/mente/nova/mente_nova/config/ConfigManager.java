@@ -3,6 +3,9 @@ package mente.nova.mente_nova.config;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Properties;
+
+import org.tinylog.Logger;
+
 import java.io.File;
 
 /**
@@ -33,7 +36,7 @@ public class ConfigManager {
                 fis.close();
             }
         } catch (Exception e) {
-            System.err.println("Ошибка при загрузке конфигурации: " + e.getMessage());
+            Logger.error("Ошибка при загрузке конфигурации: " + e.getMessage());
         }
     }
     
@@ -46,7 +49,7 @@ public class ConfigManager {
             properties.store(fos, "Mente-Nova Settings");
             fos.close();
         } catch (Exception e) {
-            System.err.println("Ошибка при сохранении конфигурации: " + e.getMessage());
+            Logger.error("Ошибка при сохранении конфигурации: " + e.getMessage());
         }
     }
     
@@ -77,6 +80,7 @@ public class ConfigManager {
     public static void setValue(String key, String value) {
         properties.setProperty(key, value);
         saveProperties();
+        Logger.info("Значение для ключа {} установлено: {}", key, value);
     }
 
     /**
@@ -86,5 +90,6 @@ public class ConfigManager {
     public static void deleteValue(String key) {
         properties.remove(key);
         saveProperties();
+        Logger.info("Значение для ключа {} удалено", key);
     }
 }

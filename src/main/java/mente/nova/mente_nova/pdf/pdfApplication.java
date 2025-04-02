@@ -147,15 +147,15 @@ public class pdfApplication {
     /**
      * Объединяет два PDF-файла и сохраняет результат в MinIO.
      * @param serverFilePath Путь к первому PDF-файлу на сервере
-     * @param serverFilePath2 Путь ко второму PDF-файлу на сервере
+     * @param serverFilePath1 Путь ко второму PDF-файлу на сервере
      */
-    public void joinPDF(String serverFilePath, String serverFilePath2) {
+    public void joinPDF(String serverFilePath, String serverFilePath1) {
         File file1 = null;
         File file2 = null;
         try {
             // Получаем файлы из MinIO
             file1 = minioClient.returnFile(serverFilePath);
-            file2 = minioClient.returnFile(serverFilePath2);
+            file2 = minioClient.returnFile(serverFilePath1);
             
             if (file1 == null || file2 == null) {
                 Logger.error("Не удалось получить один или оба файла");

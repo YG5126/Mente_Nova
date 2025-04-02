@@ -13,6 +13,8 @@ import mente.nova.mente_nova.config.ConfigManager;
  * Предоставляет функциональность для построения и обхода древовидной структуры файлов.
  */
 public class MinioList {
+
+    private static final String bucketName = ConfigManager.getValue("bucket");
     
     private final MinioClient minioClient;
     
@@ -104,7 +106,6 @@ public class MinioList {
      * @throws Exception в случае ошибки при построении дерева
      */
     public Node buildBucketTree() throws Exception {
-        String bucketName = ConfigManager.getValue("bucket");
         //Создание начального узла бакета
         Node root = new Node(bucketName, true);
         root.setIsBucket();
@@ -143,7 +144,6 @@ public class MinioList {
      * @throws Exception в случае ошибки при построении дерева
      */
     public Node buildBucketTree(String path, boolean recursive) throws Exception {
-        String bucketName = ConfigManager.getValue("bucket");
         //Если путь пустой - название бакета не выводить
         boolean isExistPath = false;
         //Создание начального узла бакета

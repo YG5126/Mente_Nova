@@ -46,6 +46,7 @@ public class MenteNovaApplication extends Application {
     public void stop() throws Exception {
         context.close();
         super.stop();
+        Logger.info("КОНЕЦ РАБОТЫ");
         System.exit(0);
     }
 }
