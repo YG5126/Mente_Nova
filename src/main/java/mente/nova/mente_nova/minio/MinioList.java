@@ -99,6 +99,51 @@ public class MinioList {
         }
     }
 
+    List<String> getSubjects(String path) {
+        try {
+            boolean isExistPath = false;
+            List<String> subjects = new ArrayList<>();
+            
+            Iterable<Result<Item>> results = minioClient.listObjects(
+                ListObjectsArgs.builder()
+                    .bucket(bucketName)
+                    .recursive(true)
+                    .build()
+            );
+
+            //Обход списка объектов бакета
+            for (Result<Item> result : results) {
+                //Получение имени объекта
+                String objectName = result.get().objectName();
+
+                //Если путь длинее имени объекта - пропуск
+                if (path.length() > objectName.length()) continue;
+                //Если путь совпадает с именем объекта - установка флага и обрезка имени объекта
+                if (path.equals(objectName.substring(0, path.length()))) {
+                    isExistPath = true;
+                } else {
+                    continue;
+                }
+
+                //Пропуск пустых папок
+                if (objectName.isEmpty()) continue;
+                
+                subjects.add(objectName);
+            }
+
+            //Если не был не разу найден - вывод сообщения об отсутствии указанного пути
+            if (!isExistPath) {
+                Logger.error("Ошибка: указанный путь " + path + " не найден");
+                return null;
+            }
+
+            return subjects;
+        } catch (Exception e) {
+            Logger.error("Ошибка при получении списка предметов: " + e.getMessage());
+            return null;
+        }
+    }
+
     /**
      * Строит древовидную структуру бакета.
      * @param bucketName Имя бакета

@@ -11,7 +11,11 @@ import java.io.IOException;
 @Configuration
 public class MinioServer {
 
-    //Запуск сервера MinIO
+    /**
+     * Запускает сервер MinIO.
+     * Метод проверяет, что порт 9000 не занят, затем запускает сервер и ожидает его доступности.
+     * Если порт занят, вызывает метод остановки сервера.
+     */
     public static void startServer() {
         try {
 
@@ -41,7 +45,11 @@ public class MinioServer {
 
 
     @PreDestroy
-    //Остановка сервера
+    /**
+     * Останавливает сервер MinIO.
+     * Метод использует ProcessBuilder для выполнения команды завершения процесса minio.exe
+     * и ожидает, пока порт 9000 не будет освобожден.
+     */
     public static void stopServer() {
         try {
             
@@ -64,7 +72,12 @@ public class MinioServer {
         }
     }
 
-    //Проверка занятости порта
+    /**
+     * Проверяет, занят ли указанный порт.
+     * 
+     * @param port номер порта для проверки
+     * @return true если порт занят (доступен для подключения), иначе false
+     */
     public static boolean isPortInUse(int port) {
         try (Socket _ = new Socket("localhost", port)) {
             return true;

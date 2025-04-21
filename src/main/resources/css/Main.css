@@ -56,10 +56,11 @@
     -fx-text-fill: #166534;
 }
 .nodeButton {
-    -fx-background-color: #ffffff;
+    -fx-background-color: transparent;
     -fx-text-fill: #16a34a;
     -fx-font-size: 16;
     -fx-cursor: hand;
+    -fx-padding: 0;
 }
 .nodeButton:hover {
     -fx-underline: true;
@@ -93,6 +94,24 @@
 .description {
     -fx-text-fill: #6b7280;
     -fx-font-size: 14;
+}
+.searchTextField {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+    -fx-border-width: 1;
+    -fx-border-color: #dcfce7;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 4);
+    -fx-highlight-fill: #dcfce7;
+    -fx-highlight-text-fill: #166534;
+}
+.sectionMenu {
+    -fx-cursor: hand;
+}
+.sectionMenu ImageView {
+    -fx-fit-width: 25;
+    -fx-fit-height: 25;
+    -fx-preserve-ratio: true;
 }
 
 /* subject-content.fxml/SubjectContentController */
@@ -185,12 +204,13 @@
     -fx-cursor: text;
     -fx-text-fill: #166534;
 }
-.headerPanel ImageView {
+.headerMenu ImageView {
     -fx-fit-width: 20;
     -fx-fit-height: 20;
     -fx-preserve-ratio: true;
 }
-.headerPanel StackPane {
+.headerMenu StackPane {
+    -fx-padding: 0 0 0 10;
     -fx-pref-width: 20;
     -fx-pref-height: 20;
     -fx-cursor: hand;

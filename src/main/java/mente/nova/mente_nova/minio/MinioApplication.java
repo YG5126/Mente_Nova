@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.List;
 
 @Component
 public class MinioApplication {
@@ -28,6 +29,8 @@ public class MinioApplication {
     
     /**
      * Проверяет подключение к MinIO при инициализации.
+     * Пытается получить список бакетов для проверки соединения.
+     * В случае неудачи завершает приложение с кодом 1.
      */
     @PostConstruct
     public void init() {
@@ -41,6 +44,45 @@ public class MinioApplication {
         }
     }
 
+    /**
+     * Удаляет папку и все её содержимое из хранилища MinIO.
+     * 
+     * @param serverFilePath путь к папке на сервере
+     */
+    public void annihilateFolder(String serverFilePath) {
+        String semester = ConfigManager.getValue("semester") + " семестр/";
+        if (!serverFilePath.startsWith(semester)) {
+            serverFilePath = semester + serverFilePath;
+        }
+        try {
+            List<String> subjects = new MinioList(minioClient).getSubjects(serverFilePath);
+            if (subjects != null) {
+            for (String subject : subjects) {
+                minioClient.removeObject(RemoveObjectArgs.builder()
+                    .bucket(bucketName)
+                    .object(subject)
+                    .build());
+            }
+            minioClient.removeObject(RemoveObjectArgs.builder()
+                .bucket(bucketName)
+                .object(serverFilePath)
+                    .build());
+                Logger.info("Папка " + serverFilePath + " удалена со всеми вложенными файлами");
+            } else {
+                Logger.error("Ошибка: Папка " + serverFilePath + " не найдена");
+            }
+        } catch (Exception e) {
+            Logger.error("Ошибка при удалении папки: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Скачивает файл из MinIO и возвращает его как объект File.
+     * Создает временный файл с таким же именем, как в хранилище.
+     * 
+     * @param serverFilePath путь к файлу на сервере
+     * @return объект File, содержащий скачанный файл, или null в случае ошибки
+     */
     public File returnFile(String serverFilePath) {
         File tempFile = null;
         try {
@@ -78,8 +120,17 @@ public class MinioApplication {
         }
     }
 
+    /**
+     * Создает пустую папку в хранилище MinIO.
+     * 
+     * @param serverFilePath путь к создаваемой папке
+     */
     public void createEmptyFolder(String serverFilePath) {
         try {
+
+            if (!serverFilePath.endsWith("/")) {
+                serverFilePath = serverFilePath + "/";
+            }
 
             minioClient.putObject(
                 PutObjectArgs.builder()
@@ -97,9 +148,9 @@ public class MinioApplication {
     
     /**
      * Подсчитывает количество файлов в указанной директории.
-     * @param bucketName Имя бакета
-     * @param path Путь к директории
-     * @return Количество файлов или -1 в случае ошибки
+     * 
+     * @param path путь к директории
+     * @return количество файлов или -1 в случае ошибки
      */
     public int countFiles(String path) {
         try {
@@ -114,9 +165,10 @@ public class MinioApplication {
     
     /**
      * Загружает файл в MinIO хранилище.
-     * @param bucketName Имя бакета
-     * @param serverFilePath Путь к файлу на сервере
-     * @param localFilePath Путь к локальному файлу
+     * Проверяет существование бакета и файла с таким именем перед загрузкой.
+     * 
+     * @param serverFilePath путь к файлу на сервере
+     * @param localFilePath путь к локальному файлу
      */
     public void loadingFile(String serverFilePath, String localFilePath) {
         try {
@@ -162,7 +214,9 @@ public class MinioApplication {
     
     /**
      * Удаляет файл из MinIO хранилища.
-     * @param serverFilePath Путь к файлу на сервере
+     * Проверяет существование файла перед удалением.
+     * 
+     * @param serverFilePath путь к файлу на сервере
      */
     public void deleteFile(String serverFilePath) {
         try {
@@ -195,8 +249,8 @@ public class MinioApplication {
     
     /**
      * Получает список всех файлов в бакете.
-     * @param bucketName Имя бакета
-     * @return Дерево файлов и директорий
+     * 
+     * @return корневой узел дерева файлов и директорий
      * @throws Exception в случае ошибки при получении списка
      */
     public MinioList.Node list() throws Exception {
@@ -213,10 +267,10 @@ public class MinioApplication {
 
     /**
      * Получает список файлов в указанной директории бакета.
-     * @param bucketName Имя бакета
-     * @param path Путь к директории
-     * @param recursive Флаг рекурсивного обхода
-     * @return Дерево файлов и директорий
+     * 
+     * @param path путь к директории
+     * @param recursive флаг рекурсивного обхода
+     * @return корневой узел дерева файлов и директорий
      * @throws Exception в случае ошибки при получении списка
      */
     public MinioList.Node list(String path, boolean recursive) throws Exception {
@@ -237,7 +291,9 @@ public class MinioApplication {
 
     /**
      * Создает новый бакет.
-     * @param bucketName Имя бакета для создания
+     * Проверяет, что бакет с таким именем не существует.
+     * 
+     * @param createBucketName имя бакета для создания
      * @throws Exception в случае ошибки при создании бакета
      */
     public void createBucket(String createBucketName) throws Exception {
@@ -266,7 +322,9 @@ public class MinioApplication {
 
     /**
      * Удаляет бакет.
-     * @param bucketName Имя бакета для удаления
+     * Проверяет, что бакет существует и пустой перед удалением.
+     * 
+     * @param deleteBucketName имя бакета для удаления
      * @throws Exception в случае ошибки при удалении бакета
      */
     public void deleteBucket(String deleteBucketName) throws Exception {
@@ -299,6 +357,7 @@ public class MinioApplication {
 
     /**
      * Останавливает сервер MinIO и завершает работу приложения.
+     * Вызывает метод остановки сервера и завершает JVM с кодом 0.
      */
     public void exit() {
         MinioServer.stopServer();

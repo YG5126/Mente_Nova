@@ -8,7 +8,9 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      styleClass="controlPanel">
+      styleClass="controlPanel"
+      fx:controller="mente.nova.mente_nova.controller.ControlPanelController"
+      fx:id="controlPanel">
 
     <StackPane styleClass="panelButton">
         <ImageView>
