@@ -274,12 +274,13 @@ public class SectionController implements Initializable, DataReceiver {
         // Обрабатываем полученные данные в зависимости от их типа
         if (data instanceof String) {
             String dataString = (String) data;
-            if (dataString.substring(0, dataString.indexOf('_')).equals("deleteFolder")) {
+            String command = dataString.indexOf('_') != -1 ?  dataString.substring(0, dataString.indexOf('_')) : dataString;
+            String message = dataString.indexOf('_') != -1 ?  dataString.substring(dataString.indexOf('_') + 1) : "";
+            if (command.equals("deleteFolder")) {
                 // Удаляем предмет
-                dataString = dataString.substring(dataString.lastIndexOf('_') + 1);
                 initSubjects();
                 generateSubjectCards();
-            } else if (dataString.substring(0, dataString.indexOf('_')).equals("updateSubjects")) {
+            } else if (command.equals("updateSubjects")) {
                 // Обновляем список предметов
                 initSubjects();
                 generateSubjectCards();

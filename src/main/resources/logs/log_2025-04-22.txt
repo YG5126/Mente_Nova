@@ -1,0 +1,699 @@
+10:44:31.067 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:44:32.605 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:44:32.621 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:44:33.258 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:44:33.628 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:45:08.142 INFO: MinioApplication.java - 142 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Привет/
+10:45:08.156 INFO: MainController.java - 134 - MainController.showNotification - Предмет "Привет" создан
+10:45:14.905 WARN: MainController.java - 142 - MainController.showNotification - Название предмета содержит недопустимые символы
+10:45:17.587 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/
+10:45:19.780 INFO: MinioApplication.java - 70 - MinioApplication.annihilateFolder - Папка 1 семестр/Привет/ удалена со всеми вложенными файлами
+10:45:19.792 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: deleteFolder_Привет/
+10:45:20.702 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:45:20.726 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:45:20.897 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:45:20.899 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:49:35.264 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:49:36.791 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:49:36.806 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:49:37.185 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:49:37.481 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:49:42.193 WARN: MainController.java - 142 - MainController.showNotification - Название предмета содержит недопустимые символы
+10:49:50.942 INFO: MinioApplication.java - 142 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Привет/
+10:49:50.949 INFO: MainController.java - 134 - MainController.showNotification - Предмет "Привет" создан
+10:49:56.613 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/
+10:49:58.188 INFO: MinioApplication.java - 70 - MinioApplication.annihilateFolder - Папка 1 семестр/Привет/ удалена со всеми вложенными файлами
+10:49:58.200 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: deleteFolder_Привет/
+10:50:01.902 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:50:01.924 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:50:02.076 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:50:02.077 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:50:15.725 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:50:17.226 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:50:17.240 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:50:17.661 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:50:17.958 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:50:21.807 WARN: MainController.java - 142 - MainController.showNotification - Название предмета содержит недопустимые символы
+10:50:25.664 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:50:25.686 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:50:25.829 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:50:25.830 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:50:43.603 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:50:45.106 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:50:45.122 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:50:45.539 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:50:45.842 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:50:50.133 WARN: MainController.java - 142 - MainController.showNotification - Название предмета содержит недопустимые символы
+10:50:56.663 WARN: MainController.java - 142 - MainController.showNotification - Название предмета содержит недопустимые символы
+10:51:02.675 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+10:51:03.543 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+10:51:03.558 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+10:51:04.107 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+10:51:04.937 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+10:51:04.950 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+10:51:05.435 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+10:51:05.973 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+10:51:05.985 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+10:51:06.333 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+10:51:06.866 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+10:51:06.880 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+10:51:07.520 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:51:07.539 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:51:07.698 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:51:07.700 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:01:52.455 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:01:54.016 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:01:54.034 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:01:54.826 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:01:55.205 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:01:59.371 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:02:09.536 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:02:09.556 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:02:09.750 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:02:09.751 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:05:59.566 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:06:01.002 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:06:01.016 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:06:01.436 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:06:01.723 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:06:05.220 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:06:12.075 INFO: SubjectContentController.java - 155 - SubjectContentController.lambda$2 - Выбор файла отменен
+11:06:12.474 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:06:12.495 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:06:12.705 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:06:12.707 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:08:22.487 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:08:23.958 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:08:23.973 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:08:24.392 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:08:24.728 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:08:37.376 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:08:43.452 INFO: SubjectContentController.java - 150 - SubjectContentController.lambda$2 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Проектирование баз данных\ODT\Гнесь_ПБД_Отчёт I (практическая работа №1).odt
+11:08:43.452 INFO: MainController.java - 134 - MainController.showNotification - Файл выбран: Гнесь_ПБД_Отчёт I (практическая работа №1).odt
+11:08:46.547 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:08:46.567 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:08:46.769 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:08:46.770 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:09:56.841 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:09:58.386 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:09:58.400 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:09:58.828 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:09:59.120 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:10:01.676 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:10:03.122 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:10:03.141 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:10:03.299 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:10:03.300 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:11:56.978 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:11:58.551 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:11:58.567 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:11:58.985 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:11:59.282 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:12:01.754 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:12:06.206 INFO: SubjectContentController.java - 150 - SubjectContentController.lambda$2 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Модели безопасности компьютерных систем\Практика I.ods
+11:12:06.225 INFO: MinioApplication.java - 204 - MinioApplication.loadingFile - Файл 1 семестр/Введение в профессиональную деятельность/Практика I.ods загружен в бакет mente-nova
+11:12:06.231 INFO: MainController.java - 134 - MainController.showNotification - Загружен файл "Практика I.ods"
+11:12:12.600 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:12:12.622 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:12:12.829 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:12:12.831 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:12:19.269 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:12:20.774 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:12:20.789 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:12:21.212 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:12:21.491 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:12:23.991 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:12:27.874 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+11:12:28.896 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:12:29.361 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+11:12:30.164 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:12:34.700 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+11:12:37.521 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:12:40.646 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+11:12:44.111 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:12:49.961 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:12:49.981 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:12:50.126 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:12:50.127 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:12:58.492 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:12:59.963 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:12:59.979 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:13:00.390 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:13:00.690 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:13:04.962 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:13:11.621 INFO: SubjectContentController.java - 150 - SubjectContentController.lambda$2 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Проектирование баз данных\PDF\Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+11:13:11.644 INFO: MinioApplication.java - 204 - MinioApplication.loadingFile - Файл 1 семестр/Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf загружен в бакет mente-nova
+11:13:11.651 INFO: MainController.java - 134 - MainController.showNotification - Загружен файл "Гнесь_ПБД_Отчёт V (практическая работа №5).pdf"
+11:13:12.909 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+11:13:27.301 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:13:27.324 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:13:27.472 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:13:27.473 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:15:01.294 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:15:02.762 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:15:02.774 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:15:03.182 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:15:03.470 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:15:07.490 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:15:09.187 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+11:15:14.032 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:15:23.161 INFO: SubjectContentController.java - 150 - SubjectContentController.lambda$2 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Проектирование баз данных\PDF\Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+11:15:23.186 INFO: MinioApplication.java - 204 - MinioApplication.loadingFile - Файл 1 семестр/Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf загружен в бакет mente-nova
+11:15:23.191 INFO: MainController.java - 134 - MainController.showNotification - Загружен файл "Гнесь_ПБД_Отчёт I (практическая работа №1).pdf"
+11:15:31.458 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+11:15:33.517 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:15:38.734 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:15:39.794 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:15:39.808 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:15:42.958 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:15:46.236 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+11:15:47.081 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:15:48.163 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:16:42.716 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:16:44.425 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:16:49.150 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:16:50.415 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:17:15.399 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:17:17.276 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:17:20.296 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:21.431 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:17:21.985 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:22.805 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+11:17:23.547 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:17:24.452 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:25.119 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+11:17:25.606 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:26.339 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+11:17:27.046 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:30.043 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:17:30.057 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:17:30.826 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:31.562 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+11:17:33.561 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:34.407 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+11:17:34.879 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:36.070 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+11:17:36.438 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:17:42.608 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:17:42.633 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:17:42.826 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:17:42.826 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:19:53.405 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:19:54.832 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:19:54.849 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:19:55.301 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:19:55.602 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:19:57.984 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:19:58.821 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:20:00.484 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:20:00.506 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:20:00.687 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:20:00.688 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:20:06.919 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:20:08.363 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:20:08.377 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:20:08.780 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:20:09.072 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:20:13.235 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:20:14.549 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:20:16.430 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:20:16.453 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:20:16.625 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:20:16.626 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:20:23.006 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:20:24.467 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:20:24.482 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:20:24.905 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:20:25.211 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:20:28.733 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:20:30.487 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:20:31.659 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:20:31.861 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:20:32.023 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:20:48.488 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:20:52.444 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:20:52.469 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:20:52.674 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:20:52.675 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:34:38.479 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:34:39.959 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:34:39.976 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:34:40.393 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:34:40.689 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:34:46.058 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:34:46.658 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:34:50.349 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:34:50.375 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:34:50.576 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:34:50.577 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:36:10.694 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:36:12.135 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:36:12.152 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:36:12.583 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:36:12.883 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:36:17.691 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:36:18.241 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:36:18.241 ERROR: MainController.java - 138 - MainController.showNotification - -1
+11:36:20.275 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:36:20.300 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:36:20.483 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:36:20.483 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:37:56.189 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:37:57.689 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:37:57.706 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:37:58.114 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:37:58.423 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:38:00.906 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:38:01.751 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:38:01.751 ERROR: MainController.java - 138 - MainController.showNotification - -1
+11:38:06.073 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:38:06.093 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:38:06.250 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:38:06.251 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:40:47.929 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:40:49.362 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:40:49.377 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:40:49.805 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:40:50.118 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:40:52.608 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:40:53.982 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:40:55.071 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:40:56.415 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:40:56.440 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:40:56.664 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:40:56.665 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:42:33.643 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:42:35.082 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:42:35.096 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:42:35.499 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:42:35.772 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:42:38.693 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:42:38.719 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:42:38.901 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:42:38.902 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:53:03.831 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:53:05.324 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:53:05.340 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:53:05.775 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:53:06.071 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:54:33.577 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:54:35.442 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:54:39.703 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:54:43.408 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+11:54:54.467 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:54:54.499 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:54:54.709 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:54:54.709 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:55:11.199 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:55:12.746 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:55:12.761 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:55:13.210 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:55:13.518 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:55:15.716 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:55:17.244 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+11:55:18.306 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:55:18.328 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:55:18.490 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:55:18.491 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:55:29.877 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:55:31.345 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:55:31.361 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:55:31.767 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:55:32.055 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:55:37.272 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:55:39.230 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+11:55:42.833 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:55:42.855 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:55:43.055 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:55:43.056 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:56:06.638 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:56:08.100 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:56:08.114 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:56:08.527 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:56:08.817 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:56:12.903 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:56:13.429 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+11:56:22.738 INFO: MainController.java - 134 - MainController.showNotification - 1 семестр/Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+11:56:27.300 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:56:27.321 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:56:27.476 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:56:27.476 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:57:39.960 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:57:41.477 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:57:41.489 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:57:41.911 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:57:42.210 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:57:45.736 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:57:48.761 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+11:57:52.497 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+11:57:52.541 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Введение в профессиональную деятельность/ в бакете mente-nova
+11:57:52.545 ERROR: MinioApplication.java - 233 - MinioApplication.deleteFile - Файл 1 семестр/Введение в профессиональную деятельность/ не существует в бакете mente-nova
+11:57:54.644 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:57:54.667 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:57:54.858 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:57:54.859 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+12:01:43.173 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+12:01:45.132 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+12:01:45.154 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+12:01:45.645 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+12:01:46.074 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:13:55.076 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:13:56.660 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:13:56.686 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:13:57.260 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:13:57.661 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:14:03.006 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:14:03.090 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:14:03.091 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:14:08.469 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+18:14:10.967 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:14:11.011 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:14:11.042 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Введение в профессиональную деятельность/ в бакете mente-nova
+18:14:11.049 ERROR: MinioApplication.java - 233 - MinioApplication.deleteFile - Файл 1 семестр/Введение в профессиональную деятельность/ не существует в бакете mente-nova
+18:14:13.679 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:14:13.712 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:14:13.947 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:14:13.947 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:15:46.486 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:15:48.002 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:15:48.017 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:15:48.511 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:15:48.838 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:15:52.368 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:15:52.452 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:15:52.452 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:15:53.609 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+18:15:55.477 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:15:55.514 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:15:58.764 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+18:16:03.364 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:16:03.402 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:16:05.676 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+18:16:07.303 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:16:07.342 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:16:09.026 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:16:09.051 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:16:09.315 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:16:09.315 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:16:20.801 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:16:22.207 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:16:22.222 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:16:22.600 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:16:22.913 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:16:26.370 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:16:26.455 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:16:26.456 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:16:28.183 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+18:16:30.037 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:16:30.083 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:16:31.766 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:16:31.792 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:16:31.953 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:16:31.955 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:16:52.763 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:16:54.264 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:16:54.282 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:16:54.710 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:16:55.011 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:16:59.333 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:16:59.400 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:16:59.400 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:17:01.802 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf
+18:17:03.626 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf в бакете mente-nova
+18:17:03.669 INFO: MinioApplication.java - 244 - MinioApplication.deleteFile - Файл 1 семестр/Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт I (практическая работа №1).pdf удален из бакета mente-nova
+18:17:03.670 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:17:03.743 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:17:06.199 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:17:06.221 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:17:07.265 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:17:07.302 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:17:07.302 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:17:09.000 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Практика I.ods
+18:17:11.450 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Введение в профессиональную деятельность/Практика I.ods в бакете mente-nova
+18:17:11.456 INFO: MinioApplication.java - 244 - MinioApplication.deleteFile - Файл 1 семестр/Введение в профессиональную деятельность/Практика I.ods удален из бакета mente-nova
+18:17:11.457 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:17:11.487 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:17:12.590 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf
+18:17:16.865 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf в бакете mente-nova
+18:17:16.876 INFO: MinioApplication.java - 244 - MinioApplication.deleteFile - Файл 1 семестр/Введение в профессиональную деятельность/Гнесь_ПБД_Отчёт V (практическая работа №5).pdf удален из бакета mente-nova
+18:17:16.877 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:17:16.898 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:17:19.921 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:17:19.932 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:17:26.808 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:17:26.836 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Английский язык
+18:17:26.836 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Английский язык
+18:17:34.705 INFO: SubjectContentController.java - 168 - SubjectContentController.lambda$3 - Выбор файла отменен
+18:17:35.993 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/
+18:17:38.230 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:17:40.243 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:17:40.259 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:17:41.008 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:17:41.028 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:17:41.028 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:17:42.450 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:17:42.471 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:17:43.521 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:17:43.541 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+18:17:43.541 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+18:17:44.652 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:17:44.664 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:18:05.057 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:18:05.080 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:18:05.080 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:18:06.346 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:18:06.360 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:18:07.130 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:18:07.147 INFO: SubjectContentController.java - 577 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:18:07.148 ERROR: SubjectContentController.java - 589 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:18:07.707 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/Введение в ПД_ИКБО-61-23_Гнесь Я.Э..docx
+18:18:09.420 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:18:09.446 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:18:09.646 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:18:09.647 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:23:10.058 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:23:11.557 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:23:11.572 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:23:11.956 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:23:12.274 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:23:15.514 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:23:15.590 INFO: SubjectContentController.java - 584 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:23:15.590 ERROR: SubjectContentController.java - 596 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:23:19.314 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:20.513 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:21.397 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:22.188 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:22.736 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:23.855 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:24.067 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:24.239 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:24.405 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:24.541 ERROR: SubjectContentController.java - 578 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:23:38.107 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:23:38.134 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:23:38.264 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:23:38.265 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:24:16.863 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:24:18.297 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:24:18.313 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:24:18.735 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:24:19.179 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:24:22.102 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:24:22.174 INFO: SubjectContentController.java - 585 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:24:22.174 ERROR: SubjectContentController.java - 597 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:24:23.150 ERROR: SubjectContentController.java - 579 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:24:24.048 ERROR: SubjectContentController.java - 579 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:24:24.274 ERROR: SubjectContentController.java - 579 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:24:24.494 ERROR: SubjectContentController.java - 579 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:24:25.400 ERROR: SubjectContentController.java - 579 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:24:26.968 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:24:26.992 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:24:27.193 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:24:27.194 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:24:34.482 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:24:35.902 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:24:35.917 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:24:36.299 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:24:36.637 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:24:39.629 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:24:39.693 INFO: SubjectContentController.java - 580 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:24:39.693 ERROR: SubjectContentController.java - 592 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:24:40.650 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:24:40.666 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:24:41.821 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:24:41.854 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:24:42.045 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:24:42.046 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:25:34.599 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:25:36.146 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:25:36.161 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:25:36.601 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:25:36.907 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:25:39.511 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:25:39.579 INFO: SubjectContentController.java - 587 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:25:39.580 ERROR: SubjectContentController.java - 599 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:25:40.560 ERROR: SubjectContentController.java - 581 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:25:41.141 ERROR: SubjectContentController.java - 581 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:25:42.568 ERROR: SubjectContentController.java - 581 - SubjectContentController.goBack - Ошибка при открытии страницы предмета: Cannot invoke "java.lang.Thread.isAlive()" because "this.loadPdf" is null
+18:25:43.257 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:25:43.282 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:25:43.473 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:25:43.474 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:28:38.773 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:28:40.253 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:28:40.268 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:28:40.683 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:28:40.999 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:28:52.301 INFO: MinioApplication.java - 142 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Привет/
+18:28:52.325 INFO: MainController.java - 134 - MainController.showNotification - Предмет "Привет" создан
+18:28:55.148 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/
+18:28:55.175 INFO: SubjectContentController.java - 582 - SubjectContentController.receiveData - Получены данные в SectionController: Привет
+18:28:55.175 ERROR: SubjectContentController.java - 594 - SubjectContentController.receiveData - Полученная команда неизвестна: Привет
+18:29:04.520 INFO: SubjectContentController.java - 162 - SubjectContentController.lambda$3 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Модели безопасности компьютерных систем\Практика II.ods
+18:29:04.533 INFO: MinioApplication.java - 204 - MinioApplication.loadingFile - Файл 1 семестр/Привет/Практика II.ods загружен в бакет mente-nova
+18:29:04.539 INFO: MainController.java - 134 - MainController.showNotification - Загружен файл "Практика II.ods"
+18:29:08.991 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/Практика II.ods
+18:29:10.506 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/
+18:29:11.498 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/Практика II.ods
+18:29:12.964 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Привет/Практика II.ods в бакете mente-nova
+18:29:12.981 INFO: MinioApplication.java - 244 - MinioApplication.deleteFile - Файл 1 семестр/Привет/Практика II.ods удален из бакета mente-nova
+18:29:12.981 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/
+18:29:13.001 INFO: SubjectContentController.java - 582 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+18:29:16.133 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:29:16.149 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:29:17.829 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Привет/
+18:29:17.848 INFO: SubjectContentController.java - 582 - SubjectContentController.receiveData - Получены данные в SectionController: Привет
+18:29:17.848 ERROR: SubjectContentController.java - 594 - SubjectContentController.receiveData - Полученная команда неизвестна: Привет
+18:29:19.433 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Привет/ в бакете mente-nova
+18:29:19.443 INFO: MinioApplication.java - 244 - MinioApplication.deleteFile - Файл 1 семестр/Привет/ удален из бакета mente-nova
+18:29:19.444 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:29:19.460 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:29:24.675 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:29:24.703 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:29:24.925 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:29:24.925 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:51:44.698 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:51:46.172 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:51:46.188 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:51:46.565 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:51:46.878 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:51:50.044 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:51:50.111 INFO: SubjectContentController.java - 601 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:51:50.111 ERROR: SubjectContentController.java - 613 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:51:52.552 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:51:52.568 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:51:53.195 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:51:53.221 INFO: SubjectContentController.java - 601 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:51:53.221 ERROR: SubjectContentController.java - 613 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:51:55.995 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:51:56.022 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:51:56.247 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:51:56.247 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:52:09.863 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:52:11.445 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:52:11.461 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:52:11.932 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:52:12.308 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:52:16.094 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:52:16.172 INFO: SubjectContentController.java - 599 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+18:52:16.172 ERROR: SubjectContentController.java - 611 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+18:52:17.526 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+18:52:18.769 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:55:18.058 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:55:19.830 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:55:25.704 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:55:25.780 INFO: SubjectContentController.java - 624 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+18:55:25.780 ERROR: SubjectContentController.java - 636 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+18:55:26.486 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+18:55:27.476 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:55:29.914 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:55:29.942 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:55:30.142 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:55:30.142 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:59:16.000 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:59:17.465 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:59:17.479 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:59:17.903 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:59:18.217 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:59:21.111 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:59:21.175 INFO: SubjectContentController.java - 668 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:59:21.175 ERROR: SubjectContentController.java - 680 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:59:22.850 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:59:22.864 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:59:23.524 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:59:23.555 INFO: SubjectContentController.java - 668 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:59:23.555 ERROR: SubjectContentController.java - 680 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:59:24.513 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:59:24.527 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:59:24.924 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:59:24.956 INFO: SubjectContentController.java - 668 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+18:59:24.957 ERROR: SubjectContentController.java - 680 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+18:59:25.470 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+18:59:26.967 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:59:30.576 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:59:30.595 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:59:31.508 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:59:31.532 INFO: SubjectContentController.java - 668 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+18:59:31.532 ERROR: SubjectContentController.java - 680 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+18:59:33.394 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:59:33.409 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:59:33.939 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:59:33.963 INFO: SubjectContentController.java - 668 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+18:59:33.963 ERROR: SubjectContentController.java - 680 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+18:59:35.130 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+18:59:35.755 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:59:38.250 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:59:38.277 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:59:38.427 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:59:38.428 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:00:28.408 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:00:29.938 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:00:29.952 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:00:30.375 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:00:30.703 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:00:33.780 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+19:00:33.851 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Введение в профессиональную деятельность
+19:00:33.851 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Введение в профессиональную деятельность
+19:00:35.014 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+19:00:35.030 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+19:00:35.534 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:00:35.557 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+19:00:35.557 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+19:00:36.537 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+19:00:37.376 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:00:38.623 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+19:00:39.394 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:00:40.315 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+19:00:44.496 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:00:45.595 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+19:00:45.607 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+19:00:46.247 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+19:00:46.274 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Английский язык
+19:00:46.274 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Английский язык
+19:00:48.796 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/
+19:00:49.990 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/(GB added )Пособие для инженеров (U 1-2).docx
+19:00:51.338 INFO: MinioApplication.java - 225 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Английский язык/Пособия/(GB added )Пособие для инженеров (U 1-2).docx в бакете mente-nova
+19:00:51.354 INFO: MinioApplication.java - 244 - MinioApplication.deleteFile - Файл 1 семестр/Английский язык/Пособия/(GB added )Пособие для инженеров (U 1-2).docx удален из бакета mente-nova
+19:00:51.355 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/
+19:00:51.374 ERROR: MinioList.java - 232 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Английский язык/Пособия/ не найден
+19:00:51.374 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+19:00:51.379 ERROR: MinioList.java - 232 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Английский язык/Пособия/ не найден
+19:00:52.518 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+19:00:54.793 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:00:54.816 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:00:54.986 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:00:54.987 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:04:23.221 INFO: MenteNovaApplication.java - 23 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:04:24.709 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:04:24.725 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:04:25.171 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:04:25.520 INFO: MinioApplication.java - 40 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:04:31.698 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:04:31.789 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+19:04:31.789 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+19:04:34.337 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+19:04:34.353 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+19:04:35.775 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:04:35.803 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:04:36.003 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:04:36.004 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
