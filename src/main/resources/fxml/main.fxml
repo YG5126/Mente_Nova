@@ -5,14 +5,16 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.Insets?>
 
-<HBox xmlns="http://javafx.com/javafx"
+<StackPane xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="mente.nova.mente_nova.controller.MainController"
       stylesheets="@../css/Main.css"
-      styleClass="index">
-
-    <fx:include source="control-panel.fxml"/>
+      fx:id="rootPane">
     
-    <VBox fx:id="mainPanel" styleClass="mainPanel" HBox.hgrow="ALWAYS"/>
+    <HBox styleClass="index">
+      <fx:include source="control-panel.fxml"/>
+      
+      <VBox fx:id="mainPanel" styleClass="mainPanel" HBox.hgrow="ALWAYS"/>
+    </HBox>
     
-</HBox>
+</StackPane>

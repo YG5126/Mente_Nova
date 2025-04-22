@@ -9,12 +9,18 @@ import javafx.animation.KeyValue;
 import javafx.util.Duration;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
+import javafx.scene.control.TextField;
+import javafx.scene.Node;
 
 /**
  * Контроллер для управления анимациями элементов интерфейса.
  * Предоставляет методы для создания эффектов при наведении и взаимодействии с элементами.
  */
 public class animationController {
+    
+    // Таймлайны для анимации поля поиска
+    private static Timeline showSearchFieldTimeline;
+    private static Timeline hideSearchFieldTimeline;
     
     /**
      * Настраивает анимацию подъема для VBox при наведении курсора.
@@ -178,6 +184,99 @@ public class animationController {
         shadow.setRadius(15);
         shadow.setColor(javafx.scene.paint.Color.color(0, 0, 0, 0.15));
         return shadow;
+    }
+
+    /**
+     * Настраивает анимацию появления и исчезновения TextField.
+     * @param textField TextField, который будет анимироваться
+     */
+    public static void setupSearchFieldAnimation(TextField textField) {
+        // Изначально поле поиска скрыто
+        textField.setOpacity(0);
+        textField.setPrefWidth(0);
+        textField.setVisible(false);
+        
+        // Анимация появления
+        showSearchFieldTimeline = new Timeline(
+            new KeyFrame(Duration.ZERO, 
+                e -> textField.setVisible(true),
+                new KeyValue(textField.opacityProperty(), 0),
+                new KeyValue(textField.prefWidthProperty(), 0)
+            ),
+            new KeyFrame(Duration.millis(350), 
+                new KeyValue(textField.opacityProperty(), 1),
+                new KeyValue(textField.prefWidthProperty(), 200)
+            )
+        );
+        
+        // Анимация исчезновения
+        hideSearchFieldTimeline = new Timeline(
+            new KeyFrame(Duration.ZERO, 
+                new KeyValue(textField.opacityProperty(), 1),
+                new KeyValue(textField.prefWidthProperty(), 200)
+            ),
+            new KeyFrame(Duration.millis(350), 
+                new KeyValue(textField.opacityProperty(), 0),
+                new KeyValue(textField.prefWidthProperty(), 0)
+            )
+        );
+        hideSearchFieldTimeline.setOnFinished(e -> textField.setVisible(false));
+    }
+    
+    /**
+     * Показывает TextField с анимацией
+     * @param textField TextField для отображения
+     */
+    public static void showSearchField(TextField textField) {
+        if (showSearchFieldTimeline == null) {
+            setupSearchFieldAnimation(textField);
+        };
+        hideSearchFieldTimeline.stop();
+        showSearchFieldTimeline.play();
+        textField.requestFocus();
+    }
+    
+    /**
+     * Скрывает TextField с анимацией
+     * @param textField TextField для скрытия
+     */
+    public static void hideSearchField(TextField textField) {
+        if (hideSearchFieldTimeline == null) {
+            setupSearchFieldAnimation(textField);
+        }
+        showSearchFieldTimeline.stop();
+        hideSearchFieldTimeline.play();
+    }
+
+    /**
+     * Анимирует появление нового элемента в контейнере
+     * @param node Элемент для анимации
+     */
+    public static void animateNewElementAppearance(Node node) {
+        // Начальные параметры - элемент невидим и уменьшен
+        node.setOpacity(0);
+        node.setScaleX(0.5);
+        node.setScaleY(0.5);
+        node.setTranslateY(20);
+        
+        // Создаем анимацию появления
+        Timeline appearTimeline = new Timeline(
+            new KeyFrame(Duration.ZERO, 
+                new KeyValue(node.opacityProperty(), 0),
+                new KeyValue(node.scaleXProperty(), 0.5),
+                new KeyValue(node.scaleYProperty(), 0.5),
+                new KeyValue(node.translateYProperty(), 20)
+            ),
+            new KeyFrame(Duration.millis(500), 
+                new KeyValue(node.opacityProperty(), 1),
+                new KeyValue(node.scaleXProperty(), 1),
+                new KeyValue(node.scaleYProperty(), 1),
+                new KeyValue(node.translateYProperty(), 0)
+            )
+        );
+        
+        // Запускаем анимацию
+        appearTimeline.play();
     }
 
 }

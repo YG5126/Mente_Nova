@@ -4,7 +4,9 @@ package mente.nova.mente_nova.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -62,7 +64,10 @@ public class SubjectContentController implements Initializable {
     private HBox pathPanel;
 
     @FXML
-    private HBox header;
+    private HBox menu;
+
+    @FXML
+    private StackPane sectionMenu;
     
     @Autowired
     private MinioApplication minio;
@@ -80,12 +85,47 @@ public class SubjectContentController implements Initializable {
         String path = ConfigManager.getValue("path");
         backButton.setOnAction(_ -> goBack());
         createPathContainer(path);
+        
+        generateActionMenu();
 
         if (path.lastIndexOf("/") == path.length() - 1) {
             path = path.substring(0, path.length() - 1);
         }
 
         setSubjectName(path.substring(path.lastIndexOf("/") + 1, path.length()));
+    }
+
+    public void generateActionMenu() {
+        sectionMenu.getChildren().clear();
+        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/image/action_menu.png")));
+        sectionMenu.getChildren().add(imageView);
+        sectionMenu.getStyleClass().add("sectionMenu");
+
+        // Создаем контекстное меню
+        ContextMenu contextMenu = new ContextMenu();
+        
+        // Добавляем пункты меню
+        MenuItem item1 = new MenuItem("Удалить предмет");
+        MenuItem item2 = new MenuItem("Загрузить файл");
+        MenuItem item3 = new MenuItem("Загрузить папку");
+
+        // Обработчики для пунктов меню
+        item1.setOnAction(e -> {
+            minio.annihilateFolder(ConfigManager.getValue("path"));
+            MainController.switchContent("section-content.fxml", "deleteFolder_" + ConfigManager.getValue("path"));
+        });
+        item2.setOnAction(e -> System.out.println("Удалить изображение!"));
+        item3.setOnAction(e -> System.out.println("Свойства изображения!"));
+
+        contextMenu.getItems().addAll(item1, item2, item3);
+
+        sectionMenu.setOnMouseClicked(event -> {
+            contextMenu.show(
+                sectionMenu, 
+                event.getScreenX(), 
+                event.getScreenY()
+            );
+        });
     }
 
     /**
@@ -241,7 +281,7 @@ public class SubjectContentController implements Initializable {
                         contentContainer.getChildren().add(errorLabel);
                     }
                 });
-                header.getChildren().add(homeIcon);
+                menu.getChildren().add(homeIcon);
 
 
                 List<PdfPageData> pagesData = renderTask.getValue();
@@ -464,7 +504,7 @@ public class SubjectContentController implements Initializable {
             }
             
             if (ConfigManager.getValue("path").equals("")) {
-                MainController.switchContent("section-content.fxml");
+                MainController.switchContent("section-content.fxml", "updateSubjects_");
             } else {
                 MainController.switchContent("subject-content.fxml");
             }
