@@ -3,6 +3,7 @@ package mente.nova.mente_nova.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.VBox;
+import mente.nova.mente_nova.minio.MinioApplication;
 import javafx.scene.Node;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
@@ -27,6 +28,9 @@ public class MainController implements Initializable {
     
     @Autowired
     private ApplicationContext applicationContext;
+
+    @Autowired
+    private MinioApplication minio;
     
     // Статическая ссылка на экземпляр контроллера
     private static MainController instance;
@@ -38,6 +42,11 @@ public class MainController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        
+        //System.out.println(minio.returnFile("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx").getName());
+        //minio.lastFileChanges(minio.returnFile("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx"));
+        minio.fileMoving("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx", "1 семестр/Информатика/Unit 2 (2.1 - 2.3).docx");
+        //minio.sizeReturn(minio.returnFile("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx"));
         // Сохраняем ссылку на экземпляр
         instance = this;
         

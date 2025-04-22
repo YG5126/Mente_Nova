@@ -2,6 +2,7 @@ package mente.nova.mente_nova;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -9,6 +10,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import mente.nova.mente_nova.minio.MinioApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
@@ -16,6 +18,10 @@ import org.tinylog.Logger;
 
 @SpringBootApplication  
 public class MenteNovaApplication extends Application {
+
+    @Autowired
+    private MinioApplication minio;
+
     private static String[] savedArgs;
     private ConfigurableApplicationContext context;
 
