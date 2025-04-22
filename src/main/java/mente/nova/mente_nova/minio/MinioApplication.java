@@ -6,7 +6,11 @@ import org.tinylog.Logger;
 
 import io.minio.*;
 import io.minio.errors.ErrorResponseException;
-
+import io.minio.errors.InsufficientDataException;
+import io.minio.errors.InternalException;
+import io.minio.errors.InvalidResponseException;
+import io.minio.errors.ServerException;
+import io.minio.errors.XmlParserException;
 
 import jakarta.annotation.PostConstruct;
 import mente.nova.mente_nova.config.ConfigManager;
@@ -16,7 +20,14 @@ import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 
 @Component
 public class MinioApplication {
@@ -27,6 +38,8 @@ public class MinioApplication {
     @Autowired
     private MinioClient minioClient;
     
+    private static final HashMap<String, List<Date>> fileChangeHistory = new HashMap<>();
+
     /**
      * Проверяет подключение к MinIO при инициализации.
      * Пытается получить список бакетов для проверки соединения.
@@ -286,6 +299,165 @@ public class MinioApplication {
         } else {
             Logger.error("Бакет " + bucketName + " не существует");
             return null;
+        }
+    }
+
+    public void sizeReturn(File file) {
+        try {
+            if ((file.exists()) && (file.isFile())) {
+                System.out.println("The File Size in bytes: " + file.length());
+            }
+            else {
+                System.out.println("The File not found");
+            }
+        } catch (SecurityException e) {
+            System.err.println("Исключение безопасности: недостаточно прав для доступа к файлу.");
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.err.println("Произошла непредвиденная ошибка при обработке файла: " + e.getMessage());
+            e.printStackTrace();
+        }    
+    }
+
+    public HashMap<String, List<Date>> lastFileChanges(File file) {
+        try {
+            if (file.exists() && file.isFile()) {
+                String filePath = file.getAbsolutePath();
+                Date lastModifiedDate = new Date(file.lastModified());
+                
+                // Получаем или создаем список изменений для файла
+                List<Date> changes = fileChangeHistory.getOrDefault(filePath, new ArrayList<>());
+                
+                // Добавляем новое изменение, если оно отличается от последнего
+                if (changes.isEmpty() || !changes.get(changes.size() - 1).equals(lastModifiedDate)) {
+                    changes.add(lastModifiedDate);
+                    fileChangeHistory.put(filePath, changes);
+                }
+                
+                // Выводим информацию о изменениях
+                System.out.println("\nИстория изменений файла: " + filePath);
+                System.out.println("Всего изменений: " + changes.size());
+                for (int i = 0; i < changes.size(); i++) {
+                    System.out.println((i + 1) + ". " + changes.get(i));
+                }
+                
+                return new HashMap<>(Collections.singletonMap(filePath, changes));
+            } else {
+                System.out.println("Файл не найден");
+                return new HashMap<>();
+            }
+        } catch (SecurityException e) {
+            System.err.println("Исключение безопасности: недостаточно прав для доступа к файлу.");
+            e.printStackTrace();
+            return new HashMap<>();
+        } catch (Exception e) {
+            System.err.println("Произошла непредвиденная ошибка при обработке файла: " + e.getMessage());
+            e.printStackTrace();
+            return new HashMap<>();
+        }
+    }
+
+    /**
+     * Перемещает файл из одного пути в другой внутри MinIO.
+     * @param serverFilePathFrom Исходный путь файла в MinIO.
+     * @param serverFilePathTo Целевой путь файла в MinIO.
+     */
+    public void fileMoving(String serverFilePathFrom, String serverFilePathTo) {
+        // Проверяем, что пути не null и не совпадают
+        if (serverFilePathFrom == null || serverFilePathTo == null || serverFilePathFrom.isEmpty() || serverFilePathTo.isEmpty()) {
+            Logger.error("Ошибка: Исходный или целевой путь не указан.");
+            return;
+        }
+        if (serverFilePathFrom.equals(serverFilePathTo)) {
+            Logger.warn("Исходный и целевой пути совпадают. Перемещение не требуется: {}", serverFilePathFrom);
+            return;
+        }
+
+        try {
+            // 1. Проверяем, существует ли исходный объект
+            try {
+                minioClient.statObject(
+                    StatObjectArgs.builder()
+                        .bucket(bucketName)
+                        .object(serverFilePathFrom)
+                        .build()
+                );
+                Logger.info("Исходный файл {} найден в бакете {}.", serverFilePathFrom, bucketName);
+            } catch (ErrorResponseException e) {
+                // Проверяем, является ли ошибка "NoSuchKey" (объект не найден)
+                if (e.errorResponse() != null && "NoSuchKey".equals(e.errorResponse().code())) {
+                    Logger.error("Ошибка перемещения: Исходный файл {} не найден в бакете {}.", serverFilePathFrom, bucketName);
+                } else {
+                    // Другая ошибка при проверке объекта
+                    Logger.error("Ошибка при проверке существования исходного файла {}: {}", serverFilePathFrom, e.getMessage());
+                }
+                // Прерываем выполнение, если исходный файл не найден или произошла другая ошибка проверки
+                return;
+            }
+
+            // 2. Копируем объект в новое место
+            Logger.info("Начало копирования {} в {}", serverFilePathFrom, serverFilePathTo);
+            minioClient.copyObject(
+                CopyObjectArgs.builder()
+                    .source(CopySource.builder()
+                        .bucket(bucketName)
+                        .object(serverFilePathFrom)
+                        .build())
+                    .bucket(bucketName)
+                    .object(serverFilePathTo)
+                    .build()
+            );
+            Logger.info("Файл {} успешно скопирован в {}.", serverFilePathFrom, serverFilePathTo);
+
+            // 3. Удаляем исходный объект после успешного копирования
+            Logger.info("Начало удаления исходного файла {}", serverFilePathFrom);
+            minioClient.removeObject(
+                RemoveObjectArgs.builder()
+                    .bucket(bucketName)
+                    .object(serverFilePathFrom)
+                    .build()
+            );
+            Logger.info("Исходный файл {} успешно удален.", serverFilePathFrom);
+
+            // Выводим сообщение об успехе в консоль
+            System.out.println("Файл \"" + serverFilePathFrom + "\" успешно перемещён в \"" + serverFilePathTo + "\"");
+
+        } catch (ErrorResponseException e) {
+            // Обработка специфичных ошибок MinIO (например, проблемы с доступом)
+            Logger.error("Ошибка ответа MinIO при перемещении файла {} в {}: Код={}, Сообщение={}", serverFilePathFrom, serverFilePathTo, e.errorResponse() != null ? e.errorResponse().code() : "N/A", e.getMessage());
+            e.printStackTrace();
+        } catch (InsufficientDataException e) {
+            Logger.error("Ошибка чтения данных при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (InternalException e) {
+            Logger.error("Внутренняя ошибка MinIO/XML при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (InvalidResponseException e) {
+            Logger.error("Неверный ответ от сервера MinIO при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (IOException e) {
+            // Общая ошибка ввода-вывода (например, сетевые проблемы)
+            Logger.error("Ошибка ввода-вывода при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (ServerException e) {
+            Logger.error("Ошибка на стороне сервера MinIO при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (XmlParserException e) {
+            // Ошибка парсинга XML ответа от MinIO
+            Logger.error("Ошибка парсинга XML ответа MinIO при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (InvalidKeyException e) {
+            // Исключение из java.security
+            Logger.error("Ошибка ключа доступа (java.security) при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            // Исключение из java.security
+            Logger.error("Ошибка алгоритма (java.security) при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            // Обработка любых других непредвиденных исключений
+            Logger.error("Непредвиденная ошибка при перемещении файла {} в {}: {}", serverFilePathFrom, serverFilePathTo, e.getMessage());
+            e.printStackTrace();
         }
     }
 
