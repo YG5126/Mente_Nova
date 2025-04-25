@@ -23,6 +23,7 @@ import javafx.concurrent.Task;
 import javafx.scene.control.ProgressIndicator;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.DirectoryChooser;
 
 import java.io.IOException;
 import java.io.File;
@@ -32,6 +33,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.awt.image.BufferedImage;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,14 +93,13 @@ public class SubjectContentController implements Initializable, DataReceiver {
         String path = ConfigManager.getValue("path");
         backButton.setOnAction(_ -> goBack(false));
         createPathContainer(path);
-        
-        generateActionMenu();
 
         if (path.lastIndexOf("/") == path.length() - 1) {
             path = path.substring(0, path.length() - 1);
         }
 
         setSubjectName(path.substring(path.lastIndexOf("/") + 1, path.length()));
+        generateActionMenu();
     }
 
     /**
@@ -112,68 +113,112 @@ public class SubjectContentController implements Initializable, DataReceiver {
 
         // Создаем контекстное меню
         ContextMenu contextMenu = new ContextMenu();
-        
-        // Добавляем пункты меню
-        MenuItem item_delete = new MenuItem("Удалить предмет");
-        MenuItem item_load_file = new MenuItem("Загрузить файл");
-        MenuItem item_load_folder = new MenuItem("Загрузить папку");
+
         if (isFolder) {
+            MenuItem item_delete = new MenuItem("Удалить папку");
+            MenuItem item_load_file = new MenuItem("Загрузить файлы");
+            MenuItem item_load_folder = new MenuItem("Загрузить папку");
+            if (ConfigManager.getValue("path").indexOf('/') == ConfigManager.getValue("path").lastIndexOf('/')) {
+                item_delete.setText("Удалить предмет");
+            }
+
+            item_delete.setOnAction(_ -> {
+                minio.annihilateFolder(ConfigManager.getValue("path"));
+                goBack(true);
+            });
+            item_load_file.setOnAction(_ -> {
+                String folderPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
+
+                // Создаем диалог выбора файла
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Mente Nova - Загрузка файла(ов)");
+
+                // Добавляем фильтры для различных типов файлов
+                FileChooser.ExtensionFilter allFilter =
+                    new FileChooser.ExtensionFilter("Все файлы", "*.*");
+                FileChooser.ExtensionFilter pdfFilter =
+                    new FileChooser.ExtensionFilter("PDF файлы (*.pdf)", "*.pdf");
+                FileChooser.ExtensionFilter docFilter =
+                    new FileChooser.ExtensionFilter("Документы Word (*.doc, *.docx)", "*.doc", "*.docx");
+                FileChooser.ExtensionFilter odtFilter =
+                    new FileChooser.ExtensionFilter("Документы Writer (*.odt)", "*.odt");
+
+                fileChooser.getExtensionFilters().addAll(
+                    allFilter, pdfFilter, docFilter, odtFilter
+                );
+
+                // Получаем Stage из любого компонента сцены
+                Stage stage = (Stage) subjectTitle.getScene().getWindow();
+
+                // Показываем диалог и получаем СПИСОК выбранных файлов
+                List<File> selectedFiles = fileChooser.showOpenMultipleDialog(stage);
+
+                if (selectedFiles != null && !selectedFiles.isEmpty()) {
+                    int successCount = 0;
+                    for (File selectedFile : selectedFiles) {
+                        if (selectedFile != null) {
+                            // Сохраняем путь к выбранному файлу
+                            String localFilePath = selectedFile.getAbsolutePath();
+                            Logger.info("Выбран файл: " + localFilePath);
+                            // Формируем путь на сервере
+                            String serverFilePath = folderPath + selectedFile.getName();
+                            // Загружаем файл
+                            minio.loadingFile(serverFilePath, localFilePath);
+                            // Создаем и добавляем карточку файла
+                            HBox subjectCard = createFileCard(selectedFile.getName(), false);
+                            animationController.animateNewElementAppearance(subjectCard);
+                            contentContainer.getChildren().add(subjectCard);
+                            successCount++;
+                        }
+                    }
+                    // Показываем общее уведомление
+                    if (successCount > 0) {
+                         MainController.showNotification("success", "Загружено файлов: " + successCount);
+                    } else {
+                         MainController.showNotification("error", "Не удалось загрузить выбранные файлы");
+                    }
+                } else {
+                    Logger.info("Выбор файла(ов) отменен");
+                }
+            });
+            item_load_folder.setOnAction(_ -> {
+                String folderPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
+
+                // Создаем диалог выбора папки (выбор только ОДНОЙ папки)
+                DirectoryChooser directoryChooser = new DirectoryChooser();
+                directoryChooser.setTitle("Mente Nova - Загрузка папки");
+
+                // Получаем Stage из любого компонента сцены
+                Stage stage = (Stage) subjectTitle.getScene().getWindow();
+
+                // Показываем диалог и получаем выбранную папку
+                File selectedFolder = directoryChooser.showDialog(stage);
+
+                if (selectedFolder != null) {
+                    // Сохраняем путь к выбранной папке
+                    String localFolderPath = selectedFolder.getAbsolutePath();
+                    Logger.info("Выбрана папка: " + localFolderPath);
+
+                    // Загружаем папку в MinIO
+                    minio.loadingFolder(folderPath + selectedFolder.getName() + "/", localFolderPath);
+
+                    // Обновляем содержимое
+                    contentContainer.getChildren().clear();
+                    loadSubjectContent();
+                } else {
+                    Logger.info("Выбор папки отменен");
+                }
+            });
+    
+            contextMenu.getItems().addAll(item_delete, item_load_file, item_load_folder);
+        } else {
             MenuItem item_delete_file = new MenuItem("Удалить файл");
             item_delete_file.setOnAction(_ -> {
                 minio.deleteFile(ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path"));
                 goBack(true);
             });
             contextMenu.getItems().add(item_delete_file);
-        }
-
-        // Обработчики для пунктов меню
-        item_delete.setOnAction(e -> {
-            minio.annihilateFolder(ConfigManager.getValue("path"));
-            MainController.switchContent("section-content.fxml", "deleteFolder_" + ConfigManager.getValue("path"));
-        });
-        item_load_file.setOnAction(_ -> {
-            String folderPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
-            
-            // Создаем диалог выбора файла
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Загрузка файла");
-            
-            // Добавляем фильтры для различных типов файлов
-            FileChooser.ExtensionFilter allFilter = 
-                new FileChooser.ExtensionFilter("Все файлы", "*.*");
-            FileChooser.ExtensionFilter pdfFilter = 
-                new FileChooser.ExtensionFilter("PDF файлы (*.pdf)", "*.pdf");
-            FileChooser.ExtensionFilter docFilter = 
-                new FileChooser.ExtensionFilter("Документы Word (*.doc, *.docx)", "*.doc", "*.docx");
-            FileChooser.ExtensionFilter odtFilter = 
-                new FileChooser.ExtensionFilter("Документы Writer (*.odt)", "*.odt");
-                
-            fileChooser.getExtensionFilters().addAll(
-                allFilter, pdfFilter, docFilter, odtFilter
-            );
-            
-            // Получаем Stage из любого компонента сцены
-            Stage stage = (Stage) subjectTitle.getScene().getWindow();
-            
-            // Показываем диалог и получаем выбранный файл
-            File selectedFile = fileChooser.showOpenDialog(stage);
-            
-            if (selectedFile != null) {
-                // Сохраняем путь к выбранному файлу
-                String localFilePath = selectedFile.getAbsolutePath();
-                Logger.info("Выбран файл: " + localFilePath);
-                minio.loadingFile(folderPath + selectedFile.getName(), localFilePath);
-                HBox subjectCard = createFileCard(selectedFile.getName(), false);
-                animationController.animateNewElementAppearance(subjectCard);
-                contentContainer.getChildren().add(subjectCard);
-                MainController.showNotification("success", "Загружен файл \"" + selectedFile.getName() + "\"");
-            } else {
-                Logger.info("Выбор файла отменен");
-            }
-        });
-        item_load_folder.setOnAction(_ -> System.out.println("Загрузка папки!"));
-
-        contextMenu.getItems().addAll(item_delete, item_load_file, item_load_folder);
+        }        
 
         sectionMenu.setOnMouseClicked(event -> {
             contextMenu.show(
@@ -547,6 +592,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
      * @return HBox с созданной карточкой
      */
     private HBox createFileCard(String fileName, boolean isDirectory) {
+        boolean isunknownFile = false;
         HBox subjectCard = new HBox();
         subjectCard.getStyleClass().add("cardStructure");
         
@@ -569,14 +615,37 @@ public class SubjectContentController implements Initializable, DataReceiver {
         Label fileNameLabel = new Label(fileName);
         fileNameLabel.getStyleClass().add("subject");
 
-        Label fileWeight = new Label("Последнее изменение: 00:00 · 1000МБ");
-        fileWeight.getStyleClass().add("description");
+        cardStructure.getChildren().addAll(fileNameLabel);
 
-        cardStructure.getChildren().addAll(fileNameLabel, fileWeight);
+        if (!isDirectory) {
+            File current = minio.returnFile(ConfigManager.getValue("semester") + " семестр/" +  ConfigManager.getValue("path") + fileName);
+            long size = minio.sizeReturn(current);
+            StringBuffer lastChanges;
+            if (size == -1) {
+                lastChanges = new StringBuffer("Формат файла не поддерживается");
+                isunknownFile = true;
+            } else {
+                HashMap<String, Integer> fileChanges = minio.lastChanges(current);
+                int volumeDepth = 0;
+                String[] listSizes = {"Б", "КБ", "МБ", "ГБ", "ТБ"};
+                lastChanges = new StringBuffer("Последнее изменение: ");
+                lastChanges.append(fileChanges.get("час") + ":" + fileChanges.get("минута") + " · ");
+                while (size/1024!=0) {
+                    volumeDepth++;
+                    size/=1024;
+                }
+                lastChanges.append(size + " " + listSizes[volumeDepth]);
+            }
+            Label fileWeight = new Label(lastChanges.toString());
+            fileWeight.getStyleClass().add("description");
+            cardStructure.getChildren().add(fileWeight);
+        }
 
         subjectCard.getChildren().addAll(imageContainer, cardStructure, arrowImage);
 
-        subjectCard.setOnMouseClicked(_ -> openSubjectCard(ConfigManager.getValue("path") + (ConfigManager.getValue("path").lastIndexOf("/") != -1 ? "" : "/") + fileName, isDirectory));
+        if (!isunknownFile) {
+            subjectCard.setOnMouseClicked(_ -> openSubjectCard(ConfigManager.getValue("path") + (ConfigManager.getValue("path").lastIndexOf("/") != -1 ? "" : "/") + fileName, isDirectory));
+        }
 
         return subjectCard;
     }
@@ -660,7 +729,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
                 contentContainer.getChildren().clear();
                 loadSubjectContent();
             } else {
-                Logger.error("Полученная команда неизвестна: " + dataString);
+                Logger.error("Полученная команда неизвестна: " + command);
             }
         } else if (data instanceof List) {
             // Обработка для списка данных

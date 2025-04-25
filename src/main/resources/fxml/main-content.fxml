@@ -8,5 +8,5 @@
       xmlns:fx="http://javafx.com/fxml">
 
     <fx:include source="section-content.fxml"/>
-    
+
 </VBox>

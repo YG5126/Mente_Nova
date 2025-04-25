@@ -742,3 +742,100 @@
 11:46:21.144 INFO: MinioServer.java - 55 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
 11:46:21.306 INFO: MinioServer.java - 60 - MinioServer.stopServer - MinIO сервер остановлен
 11:46:21.307 INFO: MenteNovaApplication.java - 55 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:09:02.549 INFO: MenteNovaApplication.java - 29 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:09:03.988 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:09:04.008 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:09:04.469 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:09:04.778 INFO: MinioApplication.java - 53 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:09:06.051 ERROR: MinioApplication.java - 389 - MinioApplication.fileMoving - Ошибка перемещения: Исходный файл 1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx не найден в бакете mente-nova.
+19:09:10.912 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:09:10.959 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+19:09:10.960 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+19:09:11.672 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+19:09:16.309 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:09:16.335 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:09:16.549 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:09:16.550 INFO: MenteNovaApplication.java - 55 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:10:06.601 INFO: MenteNovaApplication.java - 29 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:10:08.288 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:10:08.309 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:10:08.737 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:10:09.060 INFO: MinioApplication.java - 53 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:10:10.340 ERROR: MinioApplication.java - 389 - MinioApplication.fileMoving - Ошибка перемещения: Исходный файл 1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx не найден в бакете mente-nova.
+19:10:11.911 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+19:10:11.976 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Линейная алгебра и аналитическая геометрия
+19:10:11.976 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Линейная алгебра и аналитическая геометрия
+19:10:12.814 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+19:10:12.833 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+19:10:27.090 INFO: MinioApplication.java - 155 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Операционные системы/
+19:10:27.092 INFO: MainController.java - 143 - MainController.showNotification - Предмет "Операционные системы" создан
+19:10:29.263 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:10:29.279 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Операционные системы
+19:10:29.279 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Операционные системы
+19:10:35.133 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+19:10:35.146 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+19:10:35.809 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:10:35.835 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Операционные системы
+19:10:35.835 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Операционные системы
+19:10:45.846 INFO: SubjectContentController.java - 164 - SubjectContentController.lambda$3 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Проектирование баз данных\ODT\Гнесь_ПБД_Отчёт V (практическая работа №5).odt
+19:10:45.861 INFO: MinioApplication.java - 217 - MinioApplication.loadingFile - Файл 1 семестр/Операционные системы/Гнесь_ПБД_Отчёт V (практическая работа №5).odt загружен в бакет mente-nova
+19:10:45.867 INFO: MainController.java - 143 - MainController.showNotification - Загружен файл "Гнесь_ПБД_Отчёт V (практическая работа №5).odt"
+19:10:48.759 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Гнесь_ПБД_Отчёт V (практическая работа №5).odt
+19:10:50.575 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:10:51.289 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Гнесь_ПБД_Отчёт V (практическая работа №5).odt
+19:10:55.251 INFO: SubjectContentController.java - 171 - SubjectContentController.lambda$3 - Выбор файла отменен
+19:10:57.405 INFO: MinioApplication.java - 238 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Операционные системы/Гнесь_ПБД_Отчёт V (практическая работа №5).odt в бакете mente-nova
+19:10:57.424 INFO: MinioApplication.java - 257 - MinioApplication.deleteFile - Файл 1 семестр/Операционные системы/Гнесь_ПБД_Отчёт V (практическая работа №5).odt удален из бакета mente-nova
+19:10:57.424 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:10:57.443 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+19:11:15.555 INFO: SubjectContentController.java - 164 - SubjectContentController.lambda$3 - Выбран файл: C:\Users\PC\Desktop\  \Дисциплины\II курс\Операционные системы\Определения_термины_ОС_лекции_1-3.pdf
+19:11:15.565 INFO: MinioApplication.java - 217 - MinioApplication.loadingFile - Файл 1 семестр/Операционные системы/Определения_термины_ОС_лекции_1-3.pdf загружен в бакет mente-nova
+19:11:15.571 INFO: MainController.java - 143 - MainController.showNotification - Загружен файл "Определения_термины_ОС_лекции_1-3.pdf"
+19:11:17.326 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+19:11:33.624 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:11:33.652 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:11:33.884 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:11:33.886 INFO: MenteNovaApplication.java - 55 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:12:21.791 INFO: MenteNovaApplication.java - 29 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:12:23.272 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:12:23.290 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:12:23.765 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:12:24.083 INFO: MinioApplication.java - 53 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:12:25.482 ERROR: MinioApplication.java - 389 - MinioApplication.fileMoving - Ошибка перемещения: Исходный файл 1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx не найден в бакете mente-nova.
+19:12:27.193 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:12:27.266 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Операционные системы
+19:12:27.266 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Операционные системы
+19:12:28.583 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+19:12:30.525 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:12:30.977 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+19:12:31.910 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:12:32.604 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+19:12:33.158 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:12:34.234 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+19:12:46.616 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:12:46.641 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:12:46.845 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:12:46.846 INFO: MenteNovaApplication.java - 55 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:13:21.567 INFO: MenteNovaApplication.java - 29 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:13:22.980 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:13:22.998 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:13:23.380 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:13:23.680 INFO: MinioApplication.java - 53 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:13:25.044 ERROR: MinioApplication.java - 389 - MinioApplication.fileMoving - Ошибка перемещения: Исходный файл 1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx не найден в бакете mente-nova.
+19:13:28.303 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:13:28.365 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Операционные системы
+19:13:28.365 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Операционные системы
+19:13:33.321 INFO: SubjectContentController.java - 171 - SubjectContentController.lambda$3 - Выбор файла отменен
+19:13:34.175 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+19:13:48.454 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:13:50.844 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+19:13:50.859 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+19:13:52.822 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+19:13:52.850 INFO: SubjectContentController.java - 651 - SubjectContentController.receiveData - Получены данные в SectionController: Операционные системы
+19:13:52.850 ERROR: SubjectContentController.java - 663 - SubjectContentController.receiveData - Полученная команда неизвестна: Операционные системы
+19:13:55.384 INFO: MinioApplication.java - 83 - MinioApplication.annihilateFolder - Папка 1 семестр/Операционные системы/ удалена со всеми вложенными файлами
+19:13:55.399 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: deleteFolder_Операционные системы/
+19:14:01.929 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:14:01.952 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:14:02.166 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:14:02.166 INFO: MenteNovaApplication.java - 55 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ

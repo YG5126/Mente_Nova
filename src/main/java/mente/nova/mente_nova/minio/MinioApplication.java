@@ -28,6 +28,8 @@ import java.util.Collections;
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Calendar;
 
 @Component
 public class MinioApplication {
@@ -68,7 +70,7 @@ public class MinioApplication {
             serverFilePath = semester + serverFilePath;
         }
         try {
-            List<String> subjects = new MinioList(minioClient).getSubjects(serverFilePath);
+            List<String> subjects = new MinioList(minioClient).getSubjects(serverFilePath, true);
             if (subjects != null) {
             for (String subject : subjects) {
                 minioClient.removeObject(RemoveObjectArgs.builder()
@@ -259,7 +261,37 @@ public class MinioApplication {
             Logger.error("Ошибка при удалении файла: " + e.getMessage());
         }
     }
-    
+
+    /**
+     * Получает список дочерних элементов для указанного пути.
+     * Если isRecursive равно true, возвращает все элементы рекурсивно,
+     * иначе возвращает только элементы первого уровня.
+     * 
+     * @param path Путь к директории
+     * @param isRecursive Флаг рекурсивного поиска
+     * @return Список уникальных имен дочерних элементов
+     */
+    public List<String> listChildren(String path, boolean isRecursive) {
+        List<String> children = new ArrayList<>();
+
+        for (String name : new MinioList(minioClient).getSubjects(path, isRecursive)) {
+            name = name.replace(path, "");
+            if (name == "") continue;
+            List<String> splitNames = Arrays.asList(name.split("/"));
+            if (isRecursive) {
+                for (String splitName : splitNames) {
+                    if (children.contains(splitName)) continue;
+                    children.add(splitName);
+                }
+            } else {
+                if (children.contains(splitNames.get(0))) continue;
+                children.add(splitNames.get(0));
+            }
+        }
+
+        return children;
+    }
+
     /**
      * Получает список всех файлов в бакете.
      * 
@@ -302,59 +334,104 @@ public class MinioApplication {
         }
     }
 
-    public void sizeReturn(File file) {
+    public long sizeReturn(File file) {
         try {
             if ((file.exists()) && (file.isFile())) {
-                System.out.println("The File Size in bytes: " + file.length());
+                return file.length();
             }
             else {
-                System.out.println("The File not found");
+                Logger.error("Файл не найден");
             }
+            return -1;
         } catch (SecurityException e) {
-            System.err.println("Исключение безопасности: недостаточно прав для доступа к файлу.");
+            Logger.error("Исключение безопасности: недостаточно прав для доступа к файлу.");
             e.printStackTrace();
+            return -1;
         } catch (Exception e) {
-            System.err.println("Произошла непредвиденная ошибка при обработке файла: " + e.getMessage());
+            Logger.error("Произошла непредвиденная ошибка при обработке файла: " + e.getMessage());
             e.printStackTrace();
+            return -1;
         }    
     }
 
-    public HashMap<String, List<Date>> lastFileChanges(File file) {
+    /**
+     * Рекурсивно загружает папку и все её содержимое в MinIO хранилище.
+     * 
+     * @param serverFolderPath путь к папке на сервере
+     * @param localFolderPath путь к локальной папке
+     */
+    public void loadingFolder(String serverFolderPath, String localFolderPath) {
+        try {
+            File localFolder = new File(localFolderPath);
+            if (!localFolder.exists() || !localFolder.isDirectory()) {
+                Logger.error("Ошибка: Папка " + localFolderPath + " не существует или не является директорией");
+                return;
+            }
+
+            // Создаем папку в MinIO
+            createEmptyFolder(serverFolderPath);
+
+            // Рекурсивно загружаем все файлы и подпапки
+            File[] files = localFolder.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    String newServerPath = serverFolderPath + file.getName();
+                    if (file.isDirectory()) {
+                        newServerPath += "/";
+                        loadingFolder(newServerPath, file.getAbsolutePath());
+                    } else {
+                        loadingFile(newServerPath, file.getAbsolutePath());
+                    }
+                }
+            }
+            Logger.info("Папка " + localFolderPath + " успешно загружена в " + serverFolderPath);
+        } catch (Exception e) {
+            Logger.error("Ошибка при загрузке папки: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Возвращает информацию о последнем изменении файла в виде HashMap.
+     * Ключи: "Год", "месяц", "день", "день недели", "час", "минуты", "секунда".
+     * @param file Файл для проверки
+     * @return HashMap<String, Integer> с компонентами даты/времени последнего изменения или пустой HashMap в случае ошибки.
+     */
+    public HashMap<String, Integer> lastChanges(File file) {
+        HashMap<String, Integer> lastChangeInfo = new HashMap<>();
         try {
             if (file.exists() && file.isFile()) {
-                String filePath = file.getAbsolutePath();
-                Date lastModifiedDate = new Date(file.lastModified());
-                
-                // Получаем или создаем список изменений для файла
-                List<Date> changes = fileChangeHistory.getOrDefault(filePath, new ArrayList<>());
-                
-                // Добавляем новое изменение, если оно отличается от последнего
-                if (changes.isEmpty() || !changes.get(changes.size() - 1).equals(lastModifiedDate)) {
-                    changes.add(lastModifiedDate);
-                    fileChangeHistory.put(filePath, changes);
-                }
-                
-                // Выводим информацию о изменениях
-                System.out.println("\nИстория изменений файла: " + filePath);
-                System.out.println("Всего изменений: " + changes.size());
-                for (int i = 0; i < changes.size(); i++) {
-                    System.out.println((i + 1) + ". " + changes.get(i));
-                }
-                
-                return new HashMap<>(Collections.singletonMap(filePath, changes));
+                long lastModifiedMillis = file.lastModified();
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTimeInMillis(lastModifiedMillis);
+
+                lastChangeInfo.put("год", calendar.get(Calendar.YEAR));
+                lastChangeInfo.put("месяц", calendar.get(Calendar.MONTH) + 1);
+                lastChangeInfo.put("день", calendar.get(Calendar.DAY_OF_MONTH));
+                // Дни недели: 1 (Воскресенье) - 7 (Суббота).
+                lastChangeInfo.put("день недели", calendar.get(Calendar.DAY_OF_WEEK));
+                lastChangeInfo.put("час", calendar.get(Calendar.HOUR_OF_DAY));
+                lastChangeInfo.put("минута", calendar.get(Calendar.MINUTE));
+                lastChangeInfo.put("секунда", calendar.get(Calendar.SECOND));
+
+                Logger.info("Информация о последнем изменении файла '{}': год={}, месяц={}, день={}, день недели={}, час={}, минута={}, секунда={}",
+                        file.getAbsolutePath(),
+                        lastChangeInfo.get("год"),
+                        lastChangeInfo.get("месяц"),
+                        lastChangeInfo.get("день"),
+                        lastChangeInfo.get("день недели"),
+                        lastChangeInfo.get("час"),
+                        lastChangeInfo.get("минута"),
+                        lastChangeInfo.get("секунда"));
+
             } else {
-                System.out.println("Файл не найден");
-                return new HashMap<>();
+                Logger.error("Файл не найден или не является файлом: {}", file.getAbsolutePath());
             }
         } catch (SecurityException e) {
-            System.err.println("Исключение безопасности: недостаточно прав для доступа к файлу.");
-            e.printStackTrace();
-            return new HashMap<>();
+            Logger.error("Исключение безопасности: недостаточно прав для доступа к файлу '{}'. {}", file.getAbsolutePath(), e.getMessage());
         } catch (Exception e) {
-            System.err.println("Произошла непредвиденная ошибка при обработке файла: " + e.getMessage());
-            e.printStackTrace();
-            return new HashMap<>();
+            Logger.error("Произошла непредвиденная ошибка при обработке файла '{}': {}", file.getAbsolutePath(), e.getMessage());
         }
+        return lastChangeInfo;
     }
 
     /**
@@ -535,4 +612,5 @@ public class MinioApplication {
         MinioServer.stopServer();
         System.exit(0);
     }
+
 }

@@ -49,12 +49,6 @@ public class MainController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
-        //System.out.println(minio.returnFile("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx").getName());
-        //minio.lastFileChanges(minio.returnFile("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx"));
-        minio.fileMoving("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx", "1 семестр/Информатика/Unit 2 (2.1 - 2.3).docx");
-        //minio.sizeReturn(minio.returnFile("1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx"));
-        // Сохраняем ссылку на экземпляр
         instance = this;
         
         // Инициализируем notification
@@ -62,10 +56,6 @@ public class MainController implements Initializable {
         
         // Загружаем начальное содержимое
         loadContent("main-content.fxml");
-        
-        // Пример использования: можно раскомментировать для тестирования передачи данных
-        // String testData = "Тестовые данные для демонстрации";
-        // loadContent("main-content.fxml", testData);
     }
     
     /**

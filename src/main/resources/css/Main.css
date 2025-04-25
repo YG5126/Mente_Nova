@@ -323,3 +323,55 @@
     -fx-background-radius: 4px;
     -fx-alignment: center;
 }
+
+/* Стили для основного ScrollPane в main.fxml */
+.main-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.main-scroll-pane:focused {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.main-scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 12px;
+    -fx-padding: 2; /* Небольшой отступ */
+}
+
+.main-scroll-pane .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-pref-height: 0; /* Скрываем горизонтальный, даже если бы он был */
+}
+
+.main-scroll-pane .scroll-bar .thumb {
+    -fx-background-color: #20c997; /* Цвет ползунка */
+    -fx-background-radius: 6px;
+    -fx-opacity: 0.6;
+}
+
+.main-scroll-pane .scroll-bar .thumb:hover {
+    -fx-background-color: #15803d; /* Цвет ползунка при наведении */
+    -fx-opacity: 0.8;
+}
+
+.main-scroll-pane .corner {
+    -fx-background-color: transparent;
+}
+
+.main-scroll-pane .scroll-bar .increment-button,
+.main-scroll-pane .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.main-scroll-pane .scroll-bar .increment-arrow,
+.main-scroll-pane .scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-shape: " "; /* Скрываем стрелки */
+    -fx-padding: 0;
+}

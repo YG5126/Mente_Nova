@@ -4,6 +4,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
 
 <StackPane xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
@@ -13,8 +14,17 @@
     
     <HBox styleClass="index">
       <fx:include source="control-panel.fxml"/>
-      
-      <VBox fx:id="mainPanel" styleClass="mainPanel" HBox.hgrow="ALWAYS"/>
-    </HBox>
+      <ScrollPane hbarPolicy="NEVER"
+                  vbarPolicy="AS_NEEDED"
+                  fitToWidth="true"
+                  fitToHeight="true"
+                  styleClass="main-scroll-pane"
+                  pannable="true"
+                  HBox.hgrow="ALWAYS">
+          
+          <VBox fx:id="mainPanel" styleClass="mainPanel"/>
+
+        </ScrollPane>
+      </HBox>
     
 </StackPane>

@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tinylog.Logger;
 
+import io.minio.MinioClient;
 import jakarta.annotation.PostConstruct;
 
 import java.net.URL;
@@ -54,6 +55,7 @@ public class SectionController implements Initializable, DataReceiver {
 
     @Autowired
     private MinioApplication minio;
+
 
     /**
      * Инициализация списка предметов при создании контроллера.
@@ -115,11 +117,17 @@ public class SectionController implements Initializable, DataReceiver {
                     searchTextField.setPromptText("Введите название предмета");
                     searchTextField.setStyle("-fx-prompt-text-fill:#f6533c;");
                 } else {
-                    if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet)) {
+                    if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet) == false) {
+                        MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
+                    } else if (minio.listChildren(ConfigManager.getValue("semester") + " семестр/", false).contains(searchTextField.getText())) {
+                        MainController.showNotification("warning", "Предмет с заданным названием уже существует");
+                    } else if (searchTextField.getText().charAt(0) == ' ' || searchTextField.getText().charAt(0) == '_' || searchTextField.getText().charAt(0) == '-') {
+                        MainController.showNotification("warning", "Название предмета не должно начинаться со специальных символов");
+                    } else if (searchTextField.getText().length() >= 79) {
+                        MainController.showNotification("warning", "Название предмета слишком длинное");
+                    } else {
                         createSubject();
                         animationController.hideSearchField(searchTextField);
-                    } else {
-                        MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
                     }
                 }
             } else {
@@ -134,12 +142,15 @@ public class SectionController implements Initializable, DataReceiver {
                 searchTextField.setPromptText("Введите название предмета");
                 searchTextField.setStyle("-fx-prompt-text-fill:#f6533c;");
             } else {
-                if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet)) {
-                    //minio.annihilateFolder(searchTextField.getText());
+                if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet) == false) {
+                    MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
+                } else if (minio.listChildren(ConfigManager.getValue("semester") + " семестр/", false).contains(searchTextField.getText())) {
+                    MainController.showNotification("warning", "Предмет с заданным названием уже существует");
+                } else if (searchTextField.getText().charAt(0) == ' ' || searchTextField.getText().charAt(0) == '_' || searchTextField.getText().charAt(0) == '-') {
+                    MainController.showNotification("warning", "Название предмета не должно начинаться со специальных символов");
+                } else {
                     createSubject();
                     animationController.hideSearchField(searchTextField);
-                } else {
-                    MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
                 }
             }
         });
@@ -163,7 +174,7 @@ public class SectionController implements Initializable, DataReceiver {
             // Добавляем карточку в контейнер
             subjectsTilePane.getChildren().add(subjectCard);
             //Выводим уведомление о создании предмета
-            MainController.showNotification("success", "Предмет \"" + searchTextField.getText() + "\" создан");
+            Logger.info("Предмет \"" + searchTextField.getText() + "\" создан");
             // Очищаем поле ввода
             searchTextField.setText("");
         } catch (Exception e) {
@@ -255,7 +266,7 @@ public class SectionController implements Initializable, DataReceiver {
             ConfigManager.setValue("path", subjectName + "/");
             
             // Вызываем статический метод с передачей данных предмета
-            MainController.switchContent("subject-content.fxml", subjectName);
+            MainController.switchContent("subject-content.fxml");
             
         } catch (Exception e) {
             Logger.error("Ошибка при открытии страницы предмета: " + e.getMessage());
