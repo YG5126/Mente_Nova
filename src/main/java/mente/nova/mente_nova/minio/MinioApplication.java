@@ -20,11 +20,9 @@ import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
@@ -39,8 +37,6 @@ public class MinioApplication {
     //Инициализация клиента MinIO
     @Autowired
     private MinioClient minioClient;
-    
-    private static final HashMap<String, List<Date>> fileChangeHistory = new HashMap<>();
 
     /**
      * Проверяет подключение к MinIO при инициализации.

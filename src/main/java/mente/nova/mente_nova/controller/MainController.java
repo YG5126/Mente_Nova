@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import mente.nova.mente_nova.minio.MinioApplication;
 import mente.nova.mente_nova.view.Notification;
 import javafx.scene.Node;
 import javafx.fxml.FXMLLoader;
@@ -33,9 +32,6 @@ public class MainController implements Initializable {
     
     @Autowired
     private ApplicationContext applicationContext;
-
-    @Autowired
-    private MinioApplication minio;
     
     private static Notification notification;
     

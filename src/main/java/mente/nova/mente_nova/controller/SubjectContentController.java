@@ -343,7 +343,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
                         }
                         
                         // Во время выполнения задачи добавляем свой обработчик прерывания
-                        Thread.currentThread().setUncaughtExceptionHandler((thread, throwable) -> {
+                        Thread.currentThread().setUncaughtExceptionHandler((_, throwable) -> {
                             Logger.error("Ошибка в потоке загрузки PDF: " + throwable.getMessage());
                         });
                         
