@@ -216,6 +216,94 @@
     -fx-cursor: hand;
 }
 
+/* Стили меню действий */
+
+.custom-context-menu {
+    -fx-background-color: #fff; /* Темный фон */
+    -fx-padding: 5px;
+    -fx-background-radius: 5px; /* Скругленные углы */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4);
+}
+
+.menu-item {
+    -fx-cursor: hand;
+    -fx-padding: 8px 15px;
+}
+
+.menu-item .label {
+    -fx-font-size: 14px;
+}
+
+.menu-item:focused {
+    -fx-background-color: #f0fdf4; /* Цвет фона при наведении/фокусе */
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #23c55f; /* Цвет текста при наведении/фокусе */
+}
+
+.menu-item > .right-container > .arrow {
+    -fx-shape: ""; /* Убираем иконку стрелки, если есть подменю */
+    -fx-padding: 0;
+}
+
+
+/* Стили для диалога подтверждения (FXML) */
+.confirmation-dialog-pane { /* Используем класс из FXML */
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcfce7;
+    -fx-border-width: 1px;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    /* -fx-padding: 30px 40px;  Отступы определяются в FXML через <padding> */
+    /* Убираем тень */
+    /* -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 4); */
+}
+
+/* Стили для основного текста */
+.confirmation-dialog-message { /* Используем класс из FXML */
+    -fx-font-size: 15px;
+    -fx-text-fill: #166534;
+    -fx-font-weight: 500;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+/* Стили для кнопок Да/Нет */
+.confirmation-dialog-button { /* Используем класс из FXML */
+    -fx-background-color: #bbf7d0;
+    -fx-text-fill: #166534;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 18px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-min-width: 70px;
+}
+
+.confirmation-dialog-button:hover {
+    -fx-background-color: #a7f3d0;
+    -fx-border-color: #166534;
+    -fx-border-width: 1px;
+}
+
+/* Стиль для кнопки закрытия (крестик) */
+.confirmation-dialog-close-button {
+    -fx-padding: 5px;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%; /* Сохраняем для возможного будущего фона */
+    -fx-border-radius: 50%; /* Круглая рамка */
+}
+
+.confirmation-dialog-close-button:hover {
+    -fx-background-color: #a7f3d0;
+}
+
 /* PDF Стили */
 .pdf-title {
     -fx-font-size: 20px;

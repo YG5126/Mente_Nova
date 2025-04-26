@@ -24,6 +24,21 @@ import javafx.scene.control.ProgressIndicator;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.DirectoryChooser;
+import javafx.geometry.Bounds;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.DialogPane;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
+import javafx.animation.Timeline;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.scene.Cursor;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Modality;
+import javafx.fxml.FXMLLoader;
 
 import java.io.IOException;
 import java.io.File;
@@ -37,8 +52,8 @@ import java.util.HashMap;
 import java.awt.image.BufferedImage;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.tinylog.Logger;
+import org.springframework.stereotype.Component;
 
 import mente.nova.mente_nova.config.ConfigManager;
 import mente.nova.mente_nova.controller.MainController.DataReceiver;
@@ -109,31 +124,36 @@ public class SubjectContentController implements Initializable, DataReceiver {
         sectionMenu.getChildren().clear();
         ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/image/action_menu.png")));
         sectionMenu.getChildren().add(imageView);
-        sectionMenu.getStyleClass().add("sectionMenu");
+        sectionMenu.getStyleClass().add("section-menu-icon");
 
-        // Создаем контекстное меню
         ContextMenu contextMenu = new ContextMenu();
+        contextMenu.getStyleClass().add("custom-context-menu");
 
         if (isFolder) {
             MenuItem item_delete = new MenuItem("Удалить папку");
+            item_delete.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/delete_subject.png"), 18, 18, true, true)));
             MenuItem item_load_file = new MenuItem("Загрузить файлы");
+            item_load_file.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/upload_file.png"), 18, 18, true, true)));
             MenuItem item_load_folder = new MenuItem("Загрузить папку");
+            item_load_folder.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/upload_folder.png"), 18, 18, true, true)));
             if (ConfigManager.getValue("path").indexOf('/') == ConfigManager.getValue("path").lastIndexOf('/')) {
                 item_delete.setText("Удалить предмет");
             }
 
             item_delete.setOnAction(_ -> {
-                minio.annihilateFolder(ConfigManager.getValue("path"));
-                goBack(true);
+                String message = "Вы уверены что хотите удалить эт" + 
+                                 (item_delete.getText().contains("предмет") ? "от предмет?" : "у папку?");
+                showConfirmationDialog(message, () -> {
+                    minio.annihilateFolder(ConfigManager.getValue("path"));
+                    goBack(true);
+                });
             });
             item_load_file.setOnAction(_ -> {
                 String folderPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
 
-                // Создаем диалог выбора файла
                 FileChooser fileChooser = new FileChooser();
                 fileChooser.setTitle("Mente Nova - Загрузка файла(ов)");
 
-                // Добавляем фильтры для различных типов файлов
                 FileChooser.ExtensionFilter allFilter =
                     new FileChooser.ExtensionFilter("Все файлы", "*.*");
                 FileChooser.ExtensionFilter pdfFilter =
@@ -147,31 +167,24 @@ public class SubjectContentController implements Initializable, DataReceiver {
                     allFilter, pdfFilter, docFilter, odtFilter
                 );
 
-                // Получаем Stage из любого компонента сцены
                 Stage stage = (Stage) subjectTitle.getScene().getWindow();
 
-                // Показываем диалог и получаем СПИСОК выбранных файлов
                 List<File> selectedFiles = fileChooser.showOpenMultipleDialog(stage);
 
                 if (selectedFiles != null && !selectedFiles.isEmpty()) {
                     int successCount = 0;
                     for (File selectedFile : selectedFiles) {
                         if (selectedFile != null) {
-                            // Сохраняем путь к выбранному файлу
                             String localFilePath = selectedFile.getAbsolutePath();
                             Logger.info("Выбран файл: " + localFilePath);
-                            // Формируем путь на сервере
                             String serverFilePath = folderPath + selectedFile.getName();
-                            // Загружаем файл
                             minio.loadingFile(serverFilePath, localFilePath);
-                            // Создаем и добавляем карточку файла
                             HBox subjectCard = createFileCard(selectedFile.getName(), false);
                             animationController.animateNewElementAppearance(subjectCard);
                             contentContainer.getChildren().add(subjectCard);
                             successCount++;
                         }
                     }
-                    // Показываем общее уведомление
                     if (successCount > 0) {
                          MainController.showNotification("success", "Загружено файлов: " + successCount);
                     } else {
@@ -184,25 +197,19 @@ public class SubjectContentController implements Initializable, DataReceiver {
             item_load_folder.setOnAction(_ -> {
                 String folderPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
 
-                // Создаем диалог выбора папки (выбор только ОДНОЙ папки)
                 DirectoryChooser directoryChooser = new DirectoryChooser();
                 directoryChooser.setTitle("Mente Nova - Загрузка папки");
 
-                // Получаем Stage из любого компонента сцены
                 Stage stage = (Stage) subjectTitle.getScene().getWindow();
 
-                // Показываем диалог и получаем выбранную папку
                 File selectedFolder = directoryChooser.showDialog(stage);
 
                 if (selectedFolder != null) {
-                    // Сохраняем путь к выбранной папке
                     String localFolderPath = selectedFolder.getAbsolutePath();
                     Logger.info("Выбрана папка: " + localFolderPath);
 
-                    // Загружаем папку в MinIO
                     minio.loadingFolder(folderPath + selectedFolder.getName() + "/", localFolderPath);
 
-                    // Обновляем содержимое
                     contentContainer.getChildren().clear();
                     loadSubjectContent();
                 } else {
@@ -213,19 +220,30 @@ public class SubjectContentController implements Initializable, DataReceiver {
             contextMenu.getItems().addAll(item_delete, item_load_file, item_load_folder);
         } else {
             MenuItem item_delete_file = new MenuItem("Удалить файл");
+            item_delete_file.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/delete_file.png"), 18, 18, true, true)));
             item_delete_file.setOnAction(_ -> {
-                minio.deleteFile(ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path"));
-                goBack(true);
+                 String message = "Вы уверены что хотите удалить этот файл?";
+                 showConfirmationDialog(message, () -> {
+                    minio.deleteFile(ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path"));
+                    goBack(true);
+                 });
             });
             contextMenu.getItems().add(item_delete_file);
         }        
 
         sectionMenu.setOnMouseClicked(event -> {
+            Bounds boundsInScreen = sectionMenu.localToScreen(sectionMenu.getBoundsInLocal());
+
+            double screenX = boundsInScreen.getMaxX();
+            double screenY = boundsInScreen.getMaxY();
+
             contextMenu.show(
-                sectionMenu, 
-                event.getScreenX(), 
-                event.getScreenY()
+                sectionMenu.getScene().getWindow(),
+                screenX - 5,
+                screenY - 5
             );
+
+            event.consume();
         });
     }
 
@@ -737,6 +755,58 @@ public class SubjectContentController implements Initializable, DataReceiver {
             // Реализация обработки списка
         } else if (data != null) {
             Logger.info("Получены данные неизвестного типа: " + data.getClass().getName());
+        }
+    }
+
+    /**
+     * Отображает кастомное диалоговое окно подтверждения.
+     * @param message Сообщение для отображения в диалоге.
+     * @param onConfirm Действие, выполняемое при подтверждении (нажатии "Да").
+     */
+    private void showConfirmationDialog(String message, Runnable onConfirm) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/confirmation-dialog.fxml"));
+            Parent root = loader.load();
+            ConfirmationDialogController dialogController = loader.getController();
+            dialogController.setMessage(message);
+
+            Stage dialogStage = new Stage();
+            dialogStage.initStyle(StageStyle.TRANSPARENT); // Убираем стандартную рамку
+            dialogStage.initModality(Modality.APPLICATION_MODAL); // Делаем модальным
+            
+            // Устанавливаем владельца - основное окно приложения
+            Stage ownerStage = (Stage) sectionMenu.getScene().getWindow();
+            dialogStage.initOwner(ownerStage);
+
+            Scene scene = new Scene(root);
+            scene.setFill(null); // Делаем фон сцены прозрачным
+            dialogStage.setScene(scene);
+
+            // Анимация появления (опционально, можно использовать или доработать)
+            root.setOpacity(0);
+            root.setScaleX(0.9);
+            root.setScaleY(0.9);
+            Timeline fadeInTimeline = new Timeline(
+                new KeyFrame(Duration.millis(250), // Немного быстрее
+                    new KeyValue(root.opacityProperty(), 1.0),
+                    new KeyValue(root.scaleXProperty(), 1.0),
+                    new KeyValue(root.scaleYProperty(), 1.0)
+                )
+            );
+            fadeInTimeline.play();
+
+            // Показываем диалог и ждем закрытия
+            dialogStage.showAndWait();
+
+            // Проверяем результат и выполняем действие
+            if (dialogController.getResult()) {
+                onConfirm.run(); // Выполняем переданное действие
+            } else {
+                 Logger.info("Действие отменено пользователем.");
+            }
+
+        } catch (IOException e) {
+            Logger.error("Ошибка загрузки диалогового окна подтверждения: " + e.getMessage());
         }
     }
 
