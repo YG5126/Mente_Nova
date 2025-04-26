@@ -25,16 +25,11 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.DirectoryChooser;
 import javafx.geometry.Bounds;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.DialogPane;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
-import javafx.scene.Cursor;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Modality;
@@ -82,9 +77,6 @@ public class SubjectContentController implements Initializable, DataReceiver {
     private HBox pathPanel;
 
     @FXML
-    private HBox menu;
-
-    @FXML
     private StackPane sectionMenu;
     
     @Autowired
@@ -97,6 +89,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
     private Thread loadPdf;
     private Task<List<PdfPageData>> renderTask;
     private volatile boolean cancelPdfLoading = false;
+    private ContextMenu contextMenu;
     
     /**
      * Инициализация контроллера. Настраивает начальное состояние и загружает содержимое.
@@ -126,7 +119,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
         sectionMenu.getChildren().add(imageView);
         sectionMenu.getStyleClass().add("section-menu-icon");
 
-        ContextMenu contextMenu = new ContextMenu();
+        contextMenu = new ContextMenu();
         contextMenu.getStyleClass().add("custom-context-menu");
 
         if (isFolder) {
@@ -384,14 +377,15 @@ public class SubjectContentController implements Initializable, DataReceiver {
                         return;
                     }
 
-                    StackPane homeIcon = new StackPane(new ImageView(new Image(getClass().getResourceAsStream("/image/download_pdf_icon.png"))));
-                    homeIcon.setOnMouseClicked(_ -> {
+                    
+                    MenuItem save_pdf = new MenuItem("Сохранить PDF");
+                    save_pdf.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/download_pdf_icon.png"), 18, 18, true, true)));
+                    save_pdf.setOnAction(_ -> {
                         String serverPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
                         File pdfFile = minio.returnFile(serverPath);
 
                         if (pdfFile != null && pdfFile.exists()) {
-                            // Получаем Stage из компонента homeIcon
-                            Stage stage = (Stage) homeIcon.getScene().getWindow();
+                            Stage stage = (Stage) contentContainer.getScene().getWindow();
                             
                             // Создаем диалог сохранения файла
                             FileChooser fileChooser = new FileChooser();
@@ -429,7 +423,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
                             contentContainer.getChildren().add(errorLabel);
                         }
                     });
-                    menu.getChildren().add(homeIcon);
+                    contextMenu.getItems().add(save_pdf);
 
 
                     List<PdfPageData> pagesData = renderTask.getValue();
