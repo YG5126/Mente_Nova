@@ -821,3 +821,53 @@
 11:59:55.955 INFO: MinioServer.java - 55 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
 11:59:56.126 INFO: MinioServer.java - 60 - MinioServer.stopServer - MinIO сервер остановлен
 11:59:56.127 INFO: MenteNovaApplication.java - 49 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:40:26.684 INFO: MenteNovaApplication.java - 29 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:40:28.682 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:40:28.713 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:40:29.231 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:40:29.796 INFO: MinioApplication.java - 53 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:40:31.282 ERROR: MinioApplication.java - 389 - MinioApplication.fileMoving - Ошибка перемещения: Исходный файл 1 семестр/Английский язык/Unit 2 (2.1 - 2.3).docx не найден в бакете mente-nova.
+18:40:35.851 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+18:40:38.623 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:40:38.669 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:40:39.356 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+18:40:42.513 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:40:42.549 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:40:43.338 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:40:44.235 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/
+18:40:45.531 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:40:45.769 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:40:45.798 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:40:46.755 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:40:47.363 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/2Лекция 1.pdf
+18:40:53.947 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:40:54.467 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:40:54.490 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:40:56.165 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:40:58.059 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:40:58.085 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:40:58.750 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+18:41:00.565 INFO: MinioApplication.java - 83 - MinioApplication.annihilateFolder - Папка 1 семестр/Информатика/ удалена со всеми вложенными файлами
+18:41:00.588 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: deleteFolder_Информатика/
+18:41:01.956 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Введение в профессиональную деятельность/
+18:41:02.632 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:41:02.657 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:41:03.290 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Линейная алгебра и аналитическая геометрия/
+18:41:03.971 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:41:03.987 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:41:07.158 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:41:09.806 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:41:09.833 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:41:12.029 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:41:36.397 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:41:37.700 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/
+18:41:38.625 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:41:42.737 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:41:43.625 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/Пособия/
+18:41:44.206 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Английский язык/
+18:41:44.898 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:41:44.932 INFO: SectionController.java - 272 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:41:46.506 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:41:46.518 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:41:46.682 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:41:46.683 INFO: MenteNovaApplication.java - 55 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ

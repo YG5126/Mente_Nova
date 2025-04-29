@@ -31,6 +31,27 @@
 		<spring-ai.version>1.0.0-M6</spring-ai.version>
 	</properties>
 	<dependencies>
+	
+		<dependency>
+			<groupId>org.apache.odftoolkit</groupId>
+			<artifactId>odfdom-java</artifactId>
+			<version>0.8.11-incubating</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.odftoolkit</groupId>
+			<artifactId>simple-odf</artifactId>
+			<version>0.8.2-incubating</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.odftoolkit</groupId>
+			<artifactId>odftoolkit</artifactId>
+			<version>0.6.2-incubating</version>
+			<type>pom</type>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.tinylog</groupId>
@@ -123,6 +144,12 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>5.2.5</version>
 		</dependency>
 
 	</dependencies>
