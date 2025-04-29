@@ -18,6 +18,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.WritableImage;
 import javafx.scene.image.PixelWriter;
+import javafx.application.HostServices;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.scene.control.ProgressIndicator;
@@ -56,6 +57,7 @@ import mente.nova.mente_nova.minio.MinioApplication;
 import mente.nova.mente_nova.minio.MinioList.Node;
 import mente.nova.mente_nova.pdf.pdfApplication;
 import mente.nova.mente_nova.pdf.pdfApplication.PdfPageData;
+import mente.nova.mente_nova.MenteNovaApplication;
 
 /**
  * Контроллер для отображения содержимого предмета и навигации по файловой структуре.
@@ -85,6 +87,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
     @Autowired
     private pdfApplication pdf;
 
+    private HostServices hostServices;
     private boolean isFolder;
     private Thread loadPdf;
     private Task<List<PdfPageData>> renderTask;
@@ -98,6 +101,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        hostServices = MenteNovaApplication.getHostServicesInstance();
         String path = ConfigManager.getValue("path");
         backButton.setOnAction(_ -> goBack(false));
         createPathContainer(path);
@@ -214,6 +218,8 @@ public class SubjectContentController implements Initializable, DataReceiver {
         } else {
             MenuItem item_delete_file = new MenuItem("Удалить файл");
             item_delete_file.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/delete_file.png"), 18, 18, true, true)));
+            MenuItem item_open = new MenuItem("Открыть файл");
+            item_open.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("/image/open_file.png"), 18, 18, true, true)));
             item_delete_file.setOnAction(_ -> {
                  String message = "Вы уверены что хотите удалить этот файл?";
                  showConfirmationDialog(message, () -> {
@@ -221,7 +227,15 @@ public class SubjectContentController implements Initializable, DataReceiver {
                     goBack(true);
                  });
             });
-            contextMenu.getItems().add(item_delete_file);
+            item_open.setOnAction(_ -> {
+                File file = minio.returnFile(ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path"));
+                if (file != null && file.exists()) {
+                    hostServices.showDocument(file.getAbsolutePath());
+                } else {
+                    MainController.showNotification("error", "Файл не найден");
+                }
+            });
+            contextMenu.getItems().addAll(item_open, item_delete_file);
         }        
 
         sectionMenu.setOnMouseClicked(event -> {
