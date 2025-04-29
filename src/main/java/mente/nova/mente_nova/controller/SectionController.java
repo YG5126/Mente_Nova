@@ -55,6 +55,7 @@ public class SectionController implements Initializable, DataReceiver {
     @Autowired
     private MinioApplication minio;
 
+
     /**
      * Инициализация списка предметов при создании контроллера.
      * Загружает информацию о предметах и количестве файлов из MinIO.
@@ -115,11 +116,17 @@ public class SectionController implements Initializable, DataReceiver {
                     searchTextField.setPromptText("Введите название предмета");
                     searchTextField.setStyle("-fx-prompt-text-fill:#f6533c;");
                 } else {
-                    if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet)) {
+                    if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet) == false) {
+                        MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
+                    } else if (minio.listChildren(ConfigManager.getValue("semester") + " семестр/", false).contains(searchTextField.getText())) {
+                        MainController.showNotification("warning", "Предмет с заданным названием уже существует");
+                    } else if (searchTextField.getText().charAt(0) == ' ' || searchTextField.getText().charAt(0) == '_' || searchTextField.getText().charAt(0) == '-') {
+                        MainController.showNotification("warning", "Название предмета не должно начинаться со специальных символов");
+                    } else if (searchTextField.getText().length() >= 79) {
+                        MainController.showNotification("warning", "Название предмета слишком длинное");
+                    } else {
                         createSubject();
                         animationController.hideSearchField(searchTextField);
-                    } else {
-                        MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
                     }
                 }
             } else {
@@ -134,12 +141,15 @@ public class SectionController implements Initializable, DataReceiver {
                 searchTextField.setPromptText("Введите название предмета");
                 searchTextField.setStyle("-fx-prompt-text-fill:#f6533c;");
             } else {
-                if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet)) {
-                    //minio.annihilateFolder(searchTextField.getText());
+                if (BasicTools.containsOnlyAllowedChars(searchTextField.getText(), alphabet) == false) {
+                    MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
+                } else if (minio.listChildren(ConfigManager.getValue("semester") + " семестр/", false).contains(searchTextField.getText())) {
+                    MainController.showNotification("warning", "Предмет с заданным названием уже существует");
+                } else if (searchTextField.getText().charAt(0) == ' ' || searchTextField.getText().charAt(0) == '_' || searchTextField.getText().charAt(0) == '-') {
+                    MainController.showNotification("warning", "Название предмета не должно начинаться со специальных символов");
+                } else {
                     createSubject();
                     animationController.hideSearchField(searchTextField);
-                } else {
-                    MainController.showNotification("warning", "Название предмета содержит недопустимые символы");
                 }
             }
         });
@@ -163,7 +173,7 @@ public class SectionController implements Initializable, DataReceiver {
             // Добавляем карточку в контейнер
             subjectsTilePane.getChildren().add(subjectCard);
             //Выводим уведомление о создании предмета
-            MainController.showNotification("success", "Предмет \"" + searchTextField.getText() + "\" создан");
+            Logger.info("Предмет \"" + searchTextField.getText() + "\" создан");
             // Очищаем поле ввода
             searchTextField.setText("");
         } catch (Exception e) {
@@ -255,7 +265,7 @@ public class SectionController implements Initializable, DataReceiver {
             ConfigManager.setValue("path", subjectName + "/");
             
             // Вызываем статический метод с передачей данных предмета
-            MainController.switchContent("subject-content.fxml", subjectName);
+            MainController.switchContent("subject-content.fxml");
             
         } catch (Exception e) {
             Logger.error("Ошибка при открытии страницы предмета: " + e.getMessage());
@@ -274,12 +284,13 @@ public class SectionController implements Initializable, DataReceiver {
         // Обрабатываем полученные данные в зависимости от их типа
         if (data instanceof String) {
             String dataString = (String) data;
-            if (dataString.substring(0, dataString.indexOf('_')).equals("deleteFolder")) {
+            String command = dataString.indexOf('_') != -1 ?  dataString.substring(0, dataString.indexOf('_')) : dataString;
+            String message = dataString.indexOf('_') != -1 ?  dataString.substring(dataString.indexOf('_') + 1) : "";
+            if (command.equals("deleteFolder")) {
                 // Удаляем предмет
-                dataString = dataString.substring(dataString.lastIndexOf('_') + 1);
                 initSubjects();
                 generateSubjectCards();
-            } else if (dataString.substring(0, dataString.indexOf('_')).equals("updateSubjects")) {
+            } else if (command.equals("updateSubjects")) {
                 // Обновляем список предметов
                 initSubjects();
                 generateSubjectCards();

@@ -27,7 +27,7 @@
             </VBox.margin>
             <Label fx:id="subjectTitle" styleClass="title"/>
             <Region HBox.hgrow="ALWAYS"/>
-            <HBox fx:id="menu" styleClass="headerMenu">
+            <HBox styleClass="headerMenu">
                 <Button fx:id="backButton" text="Назад" styleClass="nodeButton"/>
                 <StackPane fx:id="sectionMenu"/>
             </HBox>

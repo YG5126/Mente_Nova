@@ -99,7 +99,17 @@ public class MinioList {
         }
     }
 
-    List<String> getSubjects(String path) {
+    /**
+     * Получает список объектов (файлов и папок) по указанному пути в бакете MinIO.
+     * Если isRecursive равно true, возвращает все объекты рекурсивно,
+     * иначе возвращает только объекты первого уровня.
+     * 
+     * @param path Путь к директории в бакете
+     * @param isRecursive Флаг рекурсивного поиска
+     * @return Список путей к объектам или null, если путь не найден
+     * @throws Exception в случае ошибки при получении списка объектов
+     */
+    public List<String> getSubjects(String path, boolean isRecursive) {
         try {
             boolean isExistPath = false;
             List<String> subjects = new ArrayList<>();
@@ -107,7 +117,8 @@ public class MinioList {
             Iterable<Result<Item>> results = minioClient.listObjects(
                 ListObjectsArgs.builder()
                     .bucket(bucketName)
-                    .recursive(true)
+                    .prefix(path)
+                    .recursive(isRecursive)
                     .build()
             );
 

@@ -15,6 +15,7 @@ import javafx.util.Duration;
 
 public class Notification {
     private final Timeline fadeOutTimeline;
+    private final Timeline slideInTimeline;
     private final VBox notificationBox;
     private final StackPane wrapper;
 
@@ -42,6 +43,7 @@ public class Notification {
         wrapper.setMinSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
         wrapper.setMaxSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
         wrapper.setPrefSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
+        wrapper.setTranslateX(400); // Начальная позиция за пределами экрана
         
         // Устанавливаем позиционирование wrapper в корневом StackPane (справа вверху)
         StackPane.setAlignment(wrapper, Pos.TOP_RIGHT);
@@ -50,13 +52,32 @@ public class Notification {
         // Добавляем wrapper в корневой StackPane
         rootStackPane.getChildren().add(wrapper);
         
+        // Настраиваем анимацию вылетания справа
+        slideInTimeline = new Timeline(
+            new KeyFrame(Duration.ZERO, 
+                new KeyValue(wrapper.translateXProperty(), 400),
+                new KeyValue(notificationBox.opacityProperty(), 0)
+            ),
+            new KeyFrame(Duration.seconds(0.2), 
+                new KeyValue(wrapper.translateXProperty(), 0),
+                new KeyValue(notificationBox.opacityProperty(), 1)
+            )
+        );
+        
         // Настраиваем анимацию исчезновения
         fadeOutTimeline = new Timeline(
-            new KeyFrame(Duration.ZERO, new KeyValue(notificationBox.opacityProperty(), 1)),
-            new KeyFrame(Duration.seconds(0.5), new KeyValue(notificationBox.opacityProperty(), 0))
+            new KeyFrame(Duration.ZERO, 
+                new KeyValue(notificationBox.opacityProperty(), 1),
+                new KeyValue(wrapper.translateXProperty(), 0)
+            ),
+            new KeyFrame(Duration.seconds(0.2), 
+                new KeyValue(notificationBox.opacityProperty(), 0),
+                new KeyValue(wrapper.translateXProperty(), 400)
+            )
         );
         fadeOutTimeline.setOnFinished(_ -> {
             wrapper.setVisible(false);
+            notificationBox.setOpacity(0);
             wrapper.setMouseTransparent(true); // Возвращаем прозрачность для мыши
         });
     }
@@ -74,7 +95,8 @@ public class Notification {
     public void show(String title, String message, String backgroundColor, String borderColor, String titleColor) {
         // Останавливаем текущую анимацию, если она выполняется
         fadeOutTimeline.stop();
-        notificationBox.setOpacity(1); // Делаем видимым внутренний контейнер перед анимацией
+        slideInTimeline.stop();
+        
         wrapper.setVisible(true);
         wrapper.setMouseTransparent(false); // Активируем перехват событий во время показа
         
@@ -105,9 +127,12 @@ public class Notification {
             "-fx-border-radius: 8;"
         );
         
+        // Запускаем анимацию появления
+        slideInTimeline.play();
+        
         // Запускаем таймер для автоматического скрытия
-        PauseTransition delay = new PauseTransition(Duration.seconds(3));
-        delay.setOnFinished(event -> {
+        PauseTransition delay = new PauseTransition(Duration.seconds(4));
+        delay.setOnFinished(_ -> {
             fadeOutTimeline.play();
         });
         delay.play();

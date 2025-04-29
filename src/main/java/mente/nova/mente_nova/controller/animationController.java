@@ -199,7 +199,7 @@ public class animationController {
         // Анимация появления
         showSearchFieldTimeline = new Timeline(
             new KeyFrame(Duration.ZERO, 
-                e -> textField.setVisible(true),
+                _ -> textField.setVisible(true),
                 new KeyValue(textField.opacityProperty(), 0),
                 new KeyValue(textField.prefWidthProperty(), 0)
             ),
@@ -220,7 +220,7 @@ public class animationController {
                 new KeyValue(textField.prefWidthProperty(), 0)
             )
         );
-        hideSearchFieldTimeline.setOnFinished(e -> textField.setVisible(false));
+        hideSearchFieldTimeline.setOnFinished(_ -> textField.setVisible(false));
     }
     
     /**
