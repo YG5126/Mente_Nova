@@ -17,6 +17,8 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import javafx.scene.image.PixelWriter;
 import javafx.application.HostServices;
 import javafx.application.Platform;
@@ -44,6 +46,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.awt.image.BufferedImage;
 
@@ -80,6 +83,9 @@ public class SubjectContentController implements Initializable, DataReceiver {
 
     @FXML
     private StackPane sectionMenu;
+
+    @FXML
+    private StackPane subjectContent;
     
     @Autowired
     private MinioApplication minio;
@@ -105,6 +111,8 @@ public class SubjectContentController implements Initializable, DataReceiver {
         String path = ConfigManager.getValue("path");
         backButton.setOnAction(_ -> goBack(false));
         createPathContainer(path);
+        dragAndDrop();
+        
 
         if (path.lastIndexOf("/") == path.length() - 1) {
             path = path.substring(0, path.length() - 1);
@@ -206,9 +214,9 @@ public class SubjectContentController implements Initializable, DataReceiver {
                     Logger.info("Выбрана папка: " + localFolderPath);
 
                     minio.loadingFolder(folderPath + selectedFolder.getName() + "/", localFolderPath);
-
-                    contentContainer.getChildren().clear();
-                    loadSubjectContent();
+                    HBox subjectCard = createFileCard(selectedFolder.getName(), true);
+                    animationController.animateNewElementAppearance(subjectCard);
+                    contentContainer.getChildren().add(subjectCard);
                 } else {
                     Logger.info("Выбор папки отменен");
                 }
@@ -250,6 +258,60 @@ public class SubjectContentController implements Initializable, DataReceiver {
                 screenY - 5
             );
 
+            event.consume();
+        });
+    }
+
+    private void dragAndDrop() {
+        StackPane dropOverlay = new StackPane();
+        dropOverlay.setStyle("-fx-background-color: rgba(34, 197, 94, 0.35); -fx-background-radius: 10;");
+        dropOverlay.setVisible(false);
+        dropOverlay.setMouseTransparent(true);
+
+        subjectContent.getChildren().add(dropOverlay);
+
+        subjectContent.setOnDragOver(event -> {
+            Dragboard db = event.getDragboard();
+            if (db.hasFiles()) {
+                event.acceptTransferModes(TransferMode.ANY);
+                dropOverlay.setVisible(true);
+            } else {
+                dropOverlay.setVisible(false);
+            }
+            event.consume();
+        });
+
+        subjectContent.setOnDragExited(_ -> {
+            dropOverlay.setVisible(false);
+        });
+
+        subjectContent.setOnDragDropped(event -> {
+            String folderPath = ConfigManager.getValue("semester") + " семестр/" + ConfigManager.getValue("path");
+            Dragboard db = event.getDragboard();
+            boolean success = false;
+            
+            if (db.hasFiles()) {
+                List<File> files = db.getFiles();
+                try {     
+                    for (File file : files) {              
+                        if (file.isDirectory()) {
+                            minio.loadingFolder(folderPath + file.getName() + "/", file.getAbsolutePath());
+                        } else {
+                            minio.loadingFile(folderPath + file.getName(), file.getAbsolutePath());
+                        }
+                        HBox subjectCard = createFileCard(file.getName(), file.isDirectory());
+                        animationController.animateNewElementAppearance(subjectCard);
+                        contentContainer.getChildren().add(subjectCard);
+                        success = true;
+                        Logger.info("Добавлен" + (file.isDirectory() ? "а папка" : " файл") + " с помощью DragAndDrop: " + file.getAbsolutePath());
+                    }
+                } catch (Exception e) {
+                    Logger.error("Ошибка при загрузке файлов/папки: " + e.getMessage());
+                }
+            }
+            
+            dropOverlay.setVisible(false);
+            event.setDropCompleted(success);
             event.consume();
         });
     }
@@ -683,6 +745,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
      * @param isDirectory Флаг, указывающий является ли элемент директорией
      */
     private void openSubjectCard(String path, boolean isDirectory) {
+        ArrayList<String> supportedExtensions = new ArrayList<>(Arrays.asList(".pdf"));
         if (path.equals("")) {
             MainController.switchContent("section-content.fxml", "updateSubjects");
         } else {
@@ -690,12 +753,22 @@ public class SubjectContentController implements Initializable, DataReceiver {
                 if (path.lastIndexOf("/") != path.length() - 1) {
                     ConfigManager.setValue("path", path + "/");
                 } else {
+                    if (supportedExtensions.contains(path.substring(path.lastIndexOf("."))))
                     ConfigManager.setValue("path", path);
                 }
                 MainController.switchContent("subject-content.fxml");
             } else {
-                ConfigManager.setValue("path", path);
-                MainController.switchContent("subject-content.fxml");
+                if (supportedExtensions.contains(path.substring(path.lastIndexOf(".")))) {
+                    ConfigManager.setValue("path", path);
+                    MainController.switchContent("subject-content.fxml");
+                } else {
+                    File file = minio.returnFile(ConfigManager.getValue("semester") + " семестр/" + path);
+                    if (file != null && file.exists()) {
+                        hostServices.showDocument(file.getAbsolutePath());
+                    } else {
+                        MainController.showNotification("error", "Файл с выбранным расширением не поддерживается");
+                    }
+                }
             }
         }
         

@@ -26,6 +26,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.io.File;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
+import javafx.geometry.Pos;
 
 /**
  * Контроллер для отображения списка предметов и управления секциями.
@@ -51,6 +55,9 @@ public class SectionController implements Initializable, DataReceiver {
 
     @FXML
     private StackPane sectionMenu;
+
+    @FXML
+    private StackPane sectionContent;
 
     @Autowired
     private MinioApplication minio;
@@ -84,6 +91,7 @@ public class SectionController implements Initializable, DataReceiver {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         generateTextField();
+        dragAndDrop();
         
         if (ConfigManager.getValue("semester").equals("")) {
             generateStartPanel();
@@ -162,6 +170,69 @@ public class SectionController implements Initializable, DataReceiver {
         });
     }
 
+    /**
+     * Инициализирует и настраивает функциональность Drag and Drop для загрузки файлов и папок.
+     * Файлы загружаются в директорию текущего семестра в формате: "{номер_семестра} семестр/{имя_файла}"
+     */
+    private void dragAndDrop() {
+        StackPane dropOverlay = new StackPane();
+        dropOverlay.setStyle("-fx-background-color: rgba(34, 197, 94, 0.35); -fx-background-radius: 10;");
+        dropOverlay.setVisible(false);
+        dropOverlay.setMouseTransparent(true);
+
+        sectionContent.getChildren().add(dropOverlay);
+
+        sectionContent.setOnDragOver(event -> {
+            Dragboard db = event.getDragboard();
+            boolean isSingleFolder = false;
+            if (db.hasFiles()) {
+                List<File> files = db.getFiles();
+                if (files.size() == 1 && files.get(0).isDirectory()) {
+                    isSingleFolder = true;
+                }
+            }
+
+            if (isSingleFolder) {
+                event.acceptTransferModes(TransferMode.ANY);
+                dropOverlay.setVisible(true);
+            } else {
+                dropOverlay.setVisible(false);
+            }
+            event.consume();
+        });
+
+        sectionContent.setOnDragExited(_ -> {
+            dropOverlay.setVisible(false);
+        });
+
+        sectionContent.setOnDragDropped(event -> {
+            Dragboard db = event.getDragboard();
+            boolean success = false;
+            
+            if (db.hasFiles()) {
+                List<File> files = db.getFiles();
+                if (files.size() == 1 && files.get(0).isDirectory()) {
+                    try {
+                        File folder = files.get(0);
+                        createSubject(folder.getName(), folder.getAbsolutePath());
+                        success = true;
+                    } catch (Exception e) {
+                        Logger.error("Ошибка при загрузке папки: " + e.getMessage());
+                    }
+                }
+            }
+            
+            // Скрываем подложку после сброса
+            dropOverlay.setVisible(false);
+            
+            event.setDropCompleted(success);
+            event.consume();
+        });
+    }
+
+    /**
+     * Создает новую карточку предмета и добавляет её в интерфейс.
+     */
     public void createSubject() {
         try {
             // Создаем пустую папку в minio
@@ -176,6 +247,25 @@ public class SectionController implements Initializable, DataReceiver {
             Logger.info("Предмет \"" + searchTextField.getText() + "\" создан");
             // Очищаем поле ввода
             searchTextField.setText("");
+        } catch (Exception e) {
+            Logger.error("Ошибка при создании предмета: " + e.getMessage());
+        }
+    }
+
+    public void createSubject(String subjectName, String path) {
+        try {
+            // Создаем пустую папку в minio
+            minio.createEmptyFolder(ConfigManager.getValue("semester") + " семестр/" + subjectName);
+            // Загружаем папку в minio
+            minio.loadingFolder(ConfigManager.getValue("semester") + " семестр/" + subjectName + "/", path);
+            // Создаем карточку предмета
+            VBox subjectCard = createSubjectCard(subjectName, minio.countFiles(ConfigManager.getValue("semester") + " семестр/" + subjectName + "/"));
+            // Запускаем анимацию появления карточки
+            animationController.animateNewElementAppearance(subjectCard);
+            // Добавляем карточку в контейнер
+            subjectsTilePane.getChildren().add(subjectCard);
+            //Выводим уведомление о создании предмета
+            Logger.info("Предмет \"" + subjectName + "\" создан");
         } catch (Exception e) {
             Logger.error("Ошибка при создании предмета: " + e.getMessage());
         }
@@ -257,8 +347,12 @@ public class SectionController implements Initializable, DataReceiver {
     }
 
     /**
-     * Открывает страницу с содержимым предмета.
-     * @param subjectName Название предмета
+     * Открывает страницу с содержимым выбранного предмета.
+     * Метод выполняет следующие действия:
+     * 1. Устанавливает текущий путь в ConfigManager
+     * 2. Переключает контент на страницу предмета
+     * 
+     * @param subjectName Название предмета для открытия
      */
     private void openSubjectContent(String subjectName) {
         try {

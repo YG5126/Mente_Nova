@@ -14,26 +14,28 @@
         </VBox.margin>
     </HBox>
 
-
-    <VBox styleClass="mainNode">
+    <StackPane fx:id="subjectContent">
 
         <VBox.margin>
             <Insets top="30" right="30" bottom="0" left="30"/>
         </VBox.margin>
-        
-        <HBox>
-            <VBox.margin>
-                <Insets top="0" right="0" bottom="10" left="0"/>
-            </VBox.margin>
-            <Label fx:id="subjectTitle" styleClass="title"/>
-            <Region HBox.hgrow="ALWAYS"/>
-            <HBox styleClass="headerMenu">
-                <Button fx:id="backButton" text="Назад" styleClass="nodeButton"/>
-                <StackPane fx:id="sectionMenu"/>
-            </HBox>
-        </HBox>
-        
-        <VBox fx:id="contentContainer" spacing="10" />
 
-    </VBox>
+        <VBox styleClass="mainNode">
+            
+            <HBox>
+                <VBox.margin>
+                    <Insets top="0" right="0" bottom="10" left="0"/>
+                </VBox.margin>
+                <Label fx:id="subjectTitle" styleClass="title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <HBox styleClass="headerMenu">
+                    <Button fx:id="backButton" text="Назад" styleClass="nodeButton"/>
+                    <StackPane fx:id="sectionMenu"/>
+                </HBox>
+            </HBox>
+            
+            <VBox fx:id="contentContainer" spacing="10" />
+
+        </VBox>
+    </StackPane>
 </VBox>
