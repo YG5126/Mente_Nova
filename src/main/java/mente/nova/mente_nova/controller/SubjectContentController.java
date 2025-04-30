@@ -97,8 +97,8 @@ public class SubjectContentController implements Initializable, DataReceiver {
     private boolean isFolder;
     private Thread loadPdf;
     private Task<List<PdfPageData>> renderTask;
-    private volatile boolean cancelPdfLoading = false;
     private ContextMenu contextMenu;
+    private volatile boolean cancelPdfLoading = false;
     
     /**
      * Инициализация контроллера. Настраивает начальное состояние и загружает содержимое.
@@ -733,6 +733,8 @@ public class SubjectContentController implements Initializable, DataReceiver {
 
         if (!isunknownFile) {
             subjectCard.setOnMouseClicked(_ -> openSubjectCard(ConfigManager.getValue("path") + (ConfigManager.getValue("path").lastIndexOf("/") != -1 ? "" : "/") + fileName, isDirectory));
+        } else {
+            subjectCard.setOnMouseClicked(_ -> MainController.showNotification("error", "Файл с выбранным расширением не поддерживается"));
         }
 
         return subjectCard;
