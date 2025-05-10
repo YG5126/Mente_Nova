@@ -1,7 +1,7 @@
 package mente.nova.mente_nova.config;
 
 import io.minio.MinioClient;
-import mente.nova.mente_nova.minio.MinioServer;
+import mente.nova.mente_nova.service.MinioServer;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

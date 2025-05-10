@@ -56,10 +56,10 @@ import org.springframework.stereotype.Component;
 
 import mente.nova.mente_nova.config.ConfigManager;
 import mente.nova.mente_nova.controller.MainController.DataReceiver;
-import mente.nova.mente_nova.minio.MinioApplication;
-import mente.nova.mente_nova.minio.MinioList.Node;
-import mente.nova.mente_nova.pdf.pdfApplication;
-import mente.nova.mente_nova.pdf.pdfApplication.PdfPageData;
+import mente.nova.mente_nova.service.MinioApplication;
+import mente.nova.mente_nova.service.pdfApplication;
+import mente.nova.mente_nova.service.MinioList.Node;
+import mente.nova.mente_nova.service.pdfApplication.PdfPageData;
 import mente.nova.mente_nova.MenteNovaApplication;
 
 /**
@@ -123,7 +123,8 @@ public class SubjectContentController implements Initializable, DataReceiver {
     }
 
     /**
-     * Инициализация меню действий.
+     * Генерирует контекстное меню действий для текущего элемента (файла или папки).
+     * Добавляет соответствующие пункты меню в зависимости от типа элемента.
      */
     public void generateActionMenu() {
         sectionMenu.getChildren().clear();
@@ -262,6 +263,10 @@ public class SubjectContentController implements Initializable, DataReceiver {
         });
     }
 
+    /**
+     * Настраивает функциональность drag-and-drop для загрузки файлов и папок.
+     * Обрабатывает события перетаскивания и сброса файлов в интерфейс.
+     */
     private void dragAndDrop() {
         StackPane dropOverlay = new StackPane();
         dropOverlay.setStyle("-fx-background-color: rgba(34, 197, 94, 0.35); -fx-background-radius: 10;");
@@ -816,6 +821,11 @@ public class SubjectContentController implements Initializable, DataReceiver {
         }
     }
 
+    /**
+     * Обрабатывает получение данных от других контроллеров.
+     * Реализует интерфейс DataReceiver.
+     * @param data Полученные данные
+     */
     @Override
     public void receiveData(Object data) {
         Logger.info("Получены данные в SectionController: " + data);

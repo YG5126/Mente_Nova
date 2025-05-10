@@ -1501,3 +1501,37 @@
 22:34:32.156 ERROR: MainController.java - 133 - MainController.showNotification - Файл с выбранным расширением не поддерживается
 22:34:33.496 ERROR: MainController.java - 133 - MainController.showNotification - Файл с выбранным расширением не поддерживается
 22:34:35.016 ERROR: MainController.java - 133 - MainController.showNotification - Файл с выбранным расширением не поддерживается
+22:38:13.467 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+22:38:15.447 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+22:38:19.289 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+22:38:19.387 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.436 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.476 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.492 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.507 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.518 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.560 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.573 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.584 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:19.600 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=19
+22:38:21.219 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+22:38:21.236 INFO: SectionController.java - 376 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+22:38:21.779 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+22:38:21.846 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=21
+22:38:22.803 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/03_UPX/
+22:38:22.839 WARN: MinioApplication.java - 105 - MinioApplication.returnFile - Предупреждение: файл без расширения: 1 семестр/Операционные системы/03_UPX/Makefile
+22:38:22.843 ERROR: MinioApplication.java - 120 - MinioApplication.returnFile - Ошибка при получении файла по пути 1 семестр/Операционные системы/03_UPX/Makefile из бакета mente-nova: C:\Users\PC\AppData\Local\Temp\1 семестр\Операционные системы\03_UPX\Makefile
+22:38:22.844 ERROR: MinioApplication.java - 339 - MinioApplication.sizeReturn - Файл не найден
+22:38:22.852 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\elf.c': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=22
+22:38:22.861 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\main.c': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=22
+22:38:22.872 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\upx_end.asm': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=22
+22:38:22.882 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\upx_start.asm': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=22
+22:38:25.814 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+22:38:25.873 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=25
+22:38:26.419 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Змейка/
+22:38:26.458 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\main.py': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=26
+22:38:26.469 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\state.txt': год=2025, месяц=4, день=30, день недели=4, час=22, минута=38, секунда=26
+22:38:33.609 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+22:38:33.635 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+22:38:33.874 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+22:38:33.876 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ

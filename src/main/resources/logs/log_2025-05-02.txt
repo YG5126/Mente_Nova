@@ -1,0 +1,569 @@
+10:47:27.942 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:47:29.600 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:47:29.618 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:47:30.118 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:47:30.484 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:47:34.515 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:47:34.545 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:47:34.724 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:47:34.725 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:47:48.796 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:47:50.436 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:47:50.449 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:47:50.948 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:47:51.248 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:47:51.319 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь  семестр/ не найден
+10:48:08.567 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+10:48:08.567 INFO: SectionController.java - 351 - SectionController.handleSemesterSelected - Выбран семестр: 1
+10:48:12.081 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:48:12.104 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:48:12.293 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:48:12.294 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:50:30.089 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:50:31.561 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:50:31.577 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:50:32.045 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:50:32.373 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:50:39.600 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:50:39.623 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:50:39.783 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:50:39.783 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:50:48.930 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:50:50.424 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:50:50.439 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:50:50.879 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:50:51.187 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:50:57.291 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:50:57.315 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:50:57.486 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:50:57.487 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+10:52:50.854 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+10:52:52.326 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+10:52:52.344 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+10:52:52.729 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+10:52:53.053 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+10:53:03.967 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+10:53:04.001 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+10:53:04.150 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+10:53:04.151 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:01:59.843 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:02:01.346 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:02:01.364 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:02:01.809 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:02:02.135 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:02:23.704 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+11:02:23.819 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.877 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.892 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.905 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.917 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.927 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.946 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.955 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:23.969 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=23
+11:02:24.003 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=24
+11:02:28.089 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:02:28.110 INFO: SectionController.java - 505 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:02:28.931 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+11:02:28.976 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=28
+11:02:28.989 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=28
+11:02:29.001 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.016 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.026 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.036 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.059 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.069 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.080 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:29.094 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=2, секунда=29
+11:02:30.348 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/Математический анализ_ Практические - работа №10.pdf
+11:03:11.137 INFO: SectionController.java - 505 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:03:12.162 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+11:03:12.231 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=12
+11:03:14.094 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Матрицы/
+11:03:14.142 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\C.txt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=14
+11:03:14.153 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\R.txt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=14
+11:03:14.168 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\T.txt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=14
+11:03:14.178 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\os.py': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=14
+11:03:15.963 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+11:03:16.007 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=16
+11:03:16.514 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Змейка/
+11:03:16.556 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\main.py': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=16
+11:03:16.566 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\state.txt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=16
+11:03:18.984 INFO: SectionController.java - 505 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:03:19.879 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+11:03:19.917 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=19
+11:03:19.932 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=19
+11:03:19.941 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=19
+11:03:19.951 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=19
+11:03:19.960 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.odt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=3, секунда=19
+11:04:05.090 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:04:05.126 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:04:05.291 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:04:05.292 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:09:19.658 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:09:21.491 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:09:21.510 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:09:21.920 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:09:22.252 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:09:50.588 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:09:50.615 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:09:50.803 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:09:50.803 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:10:09.845 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:10:11.477 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:10:11.494 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:10:11.944 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:10:12.252 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:10:33.449 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:10:33.473 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:10:33.632 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:10:33.633 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:11:06.614 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:11:08.264 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:11:08.290 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:11:08.739 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:11:09.129 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:11:09.229 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь  семестр/ не найден
+11:11:16.430 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:11:16.456 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:11:16.611 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:11:16.611 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:11:40.749 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:11:42.347 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:11:42.378 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:11:42.804 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:11:43.145 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:11:43.206 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь  семестр/ не найден
+11:11:52.656 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:11:52.656 INFO: SectionController.java - 360 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:11:54.844 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:11:54.865 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:11:55.028 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:11:55.029 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:23:21.702 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:23:23.219 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:23:23.237 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:23:23.724 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:23:24.071 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:23:28.350 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:23:32.289 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:23:32.289 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:23:45.782 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:23:45.806 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:23:45.966 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:23:45.967 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:24:39.789 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:24:41.339 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:24:41.358 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:24:41.776 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:24:42.099 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:24:59.574 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:25:02.207 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:25:02.208 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:25:11.383 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:25:11.408 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:25:11.606 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:25:11.607 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:26:34.678 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:26:44.157 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:26:45.670 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:26:45.684 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:26:46.119 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:26:46.452 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:26:50.664 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:26:52.118 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:26:52.118 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:26:54.501 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+11:26:54.564 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=26, секунда=54
+11:26:56.006 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:26:56.078 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:27:02.438 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:27:07.327 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 2
+11:27:07.327 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 2
+11:27:07.848 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+11:27:08.687 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:27:10.083 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:27:10.083 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:27:15.239 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:27:15.267 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:27:15.447 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:27:15.448 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:32:56.906 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:32:58.400 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:32:58.418 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:32:58.889 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:32:59.226 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:33:04.489 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:33:06.524 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 2
+11:33:06.524 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 2
+11:33:07.053 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+11:33:07.767 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:33:09.242 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:33:09.242 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:33:23.301 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+11:33:23.351 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=33, секунда=23
+11:33:24.928 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+11:34:01.455 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:34:01.483 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:34:01.676 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:34:01.677 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+11:34:24.181 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:34:25.644 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+11:34:25.661 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+11:34:26.086 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+11:34:26.399 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:35:12.626 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:35:19.183 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 2
+11:35:19.183 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 2
+11:35:19.711 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+11:35:23.459 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:35:25.757 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:35:25.758 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:35:29.181 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+11:35:30.584 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+11:35:30.584 INFO: SectionController.java - 383 - SectionController.handleSemesterSelected - Выбран семестр: 1
+11:35:43.424 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/ВОВ/
+11:35:43.427 INFO: SectionController.java - 288 - SectionController.createSubject - Предмет "ВОВ" создан
+11:35:44.675 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: ВОВ/
+11:35:49.557 INFO: MinioApplication.java - 81 - MinioApplication.annihilateFolder - Папка 1 семестр/ВОВ/ удалена со всеми вложенными файлами
+11:35:49.557 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:35:49.624 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:36:21.338 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/
+11:36:21.346 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/
+11:36:21.352 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Доп. файлы/
+11:36:21.377 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf загружен в бакет mente-nova
+11:36:21.410 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/МетодичкаПоИнформатикеИИТ.pdf загружен в бакет mente-nova
+11:36:21.424 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/ОбразецДокумента.odg загружен в бакет mente-nova
+11:36:21.434 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/ОбразецДокумента.pdf загружен в бакет mente-nova
+11:36:21.438 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Доп. файлы/Фото/
+11:36:21.448 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/JK-триггер.png загружен в бакет mente-nova
+11:36:21.459 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Двухступенчатый синхронный RS-триггер с асинхронными входами.png загружен в бакет mente-nova
+11:36:21.469 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Дешифратор 2-4.png загружен в бакет mente-nova
+11:36:21.477 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Дешифратор 3-8.png загружен в бакет mente-nova
+11:36:21.487 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Дешифратор 4-16.png загружен в бакет mente-nova
+11:36:21.497 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Динамический RS-триггер, работающий по заднему фронту, выполненный на элементах ИЛИ-НЕ.png загружен в бакет mente-nova
+11:36:21.505 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Динамический RS-триггер, работающий по переднему фронту,.png загружен в бакет mente-nova
+11:36:21.512 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/МДНФ И-НЕ.png загружен в бакет mente-nova
+11:36:21.522 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/МДНФ ИЛИ-НЕ.png загружен в бакет mente-nova
+11:36:21.530 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/МКНФ И-НЕ.png загружен в бакет mente-nova
+11:36:21.538 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/МКНФ ИЛИ-НЕ.png загружен в бакет mente-nova
+11:36:21.547 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Мультиплексор 16-1.png загружен в бакет mente-nova
+11:36:21.558 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Мультиплексор 2-1.png загружен в бакет mente-nova
+11:36:21.567 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Мультиплексор 4-1.png загружен в бакет mente-nova
+11:36:21.577 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Мультиплексор 8-1.png загружен в бакет mente-nova
+11:36:21.585 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Одноступенчатый D-триггер, выполненный на элементах И-НЕ.png загружен в бакет mente-nova
+11:36:21.596 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Одноступенчатый асинхронный RS-триггер на элементах И-НЕ.png загружен в бакет mente-nova
+11:36:21.604 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Одноступенчатый асинхронный RS-триггер на элементах ИЛИ-НЕ.png загружен в бакет mente-nova
+11:36:21.611 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Одноступенчатый синхронный RS-триггер на элементах И-НЕ .png загружен в бакет mente-nova
+11:36:21.622 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Преоброзователь кодов.png загружен в бакет mente-nova
+11:36:21.630 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Счётчик на преобразователей кодов.png загружен в бакет mente-nova
+11:36:21.639 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Счётчик с оптимальной схемой управления.png загружен в бакет mente-nova
+11:36:21.649 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Доп. файлы/Фото/Т-триггер с асинхронными входами предустановки, выполненный на основе двухступенчатого RS-триггера.png загружен в бакет mente-nova
+11:36:21.649 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Доп. файлы\Фото успешно загружена в 1 семестр/Информатика/Доп. файлы/Фото/
+11:36:21.650 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Доп. файлы успешно загружена в 1 семестр/Информатика/Доп. файлы/
+11:36:21.656 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Отчёты/
+11:36:21.661 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Отчёты/ODT-файлы/
+11:36:21.675 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт I (практическая работа №5).odt загружен в бакет mente-nova
+11:36:21.691 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт II (практическая работа №6).odt загружен в бакет mente-nova
+11:36:21.705 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт III (практическая работа №7).odt загружен в бакет mente-nova
+11:36:21.717 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт IV (практическая работа №8).odt загружен в бакет mente-nova
+11:36:21.731 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт V (практическая работа №9).odt загружен в бакет mente-nova
+11:36:21.743 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт VI (практическая работа №10).odt загружен в бакет mente-nova
+11:36:21.757 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт VII (практическая работа №11) .odt загружен в бакет mente-nova
+11:36:21.774 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/ODT-файлы/Отчёт VIII (практическая работа №12).odt загружен в бакет mente-nova
+11:36:21.774 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Отчёты\ODT-файлы успешно загружена в 1 семестр/Информатика/Отчёты/ODT-файлы/
+11:36:21.780 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Отчёты/PDF-файлы/
+11:36:21.798 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт I (практическая работа №5).pdf загружен в бакет mente-nova
+11:36:21.814 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт II (практическая работа №6).pdf загружен в бакет mente-nova
+11:36:21.831 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт III (практическая работа №7).pdf загружен в бакет mente-nova
+11:36:21.846 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт IV (практическая работа №8).pdf загружен в бакет mente-nova
+11:36:21.859 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт V (практическая работа №9).pdf загружен в бакет mente-nova
+11:36:21.871 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт VI (практическая работа №10).pdf загружен в бакет mente-nova
+11:36:21.884 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт VII (практическая работа №11) .pdf загружен в бакет mente-nova
+11:36:21.899 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Отчёты/PDF-файлы/Отчёт VIII (практическая работа №12).pdf загружен в бакет mente-nova
+11:36:21.899 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Отчёты\PDF-файлы успешно загружена в 1 семестр/Информатика/Отчёты/PDF-файлы/
+11:36:21.899 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Отчёты успешно загружена в 1 семестр/Информатика/Отчёты/
+11:36:21.903 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/
+11:36:21.908 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №1/
+11:36:21.913 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/
+11:36:21.919 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/
+11:36:21.931 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtbmp50.dll загружен в бакет mente-nova
+11:36:21.943 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtico50.dll загружен в бакет mente-nova
+11:36:21.955 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtln40.dll загружен в бакет mente-nova
+11:36:21.964 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtlnico.dll загружен в бакет mente-nova
+11:36:21.972 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtprc85.dll загружен в бакет mente-nova
+11:36:21.984 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ABTVCI40.DLL загружен в бакет mente-nova
+11:36:21.995 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ABTVME40.DLL загружен в бакет mente-nova
+11:36:22.003 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtvmf40.dll загружен в бакет mente-nova
+11:36:22.011 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtvof40.dll загружен в бакет mente-nova
+11:36:22.022 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ABTVOS40.DLL загружен в бакет mente-nova
+11:36:22.033 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ABTVST40.DLL загружен в бакет mente-nova
+11:36:22.042 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/abtvxt40.dll загружен в бакет mente-nova
+11:36:22.054 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ABTWCI40.DLL загружен в бакет mente-nova
+11:36:22.063 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ABTWOS40.DLL загружен в бакет mente-nova
+11:36:22.071 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/cgwtres.dll загружен в бакет mente-nova
+11:36:22.081 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/crtstdll.dll загружен в бакет mente-nova
+11:36:22.094 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/CURSORS.OBJ загружен в бакет mente-nova
+11:36:22.103 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/emntv50.dll загружен в бакет mente-nova
+11:36:22.113 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/emsrv50.dll загружен в бакет mente-nova
+11:36:22.124 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/emsrvmsg.dll загружен в бакет mente-nova
+11:36:22.132 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esae40.dll загружен в бакет mente-nova
+11:36:22.140 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/escgi40.dll загружен в бакет mente-nova
+11:36:22.149 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esdec40.dll загружен в бакет mente-nova
+11:36:22.159 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/eslsi40.dll загружен в бакет mente-nova
+11:36:22.167 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esmem40.dll загружен в бакет mente-nova
+11:36:22.176 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/espkg40.dll загружен в бакет mente-nova
+11:36:22.192 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/essci40.dll загружен в бакет mente-nova
+11:36:22.206 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esscissl.dll загружен в бакет mente-nova
+11:36:22.215 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esswp40.dll загружен в бакет mente-nova
+11:36:22.224 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esver40.dll загружен в бакет mente-nova
+11:36:22.235 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/esvm40.dll загружен в бакет mente-nova
+11:36:22.242 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/icotst13.dll загружен в бакет mente-nova
+11:36:22.255 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/libeay32.dll загружен в бакет mente-nova
+11:36:22.262 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/Proverka2022itii.exe загружен в бакет mente-nova
+11:36:22.286 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/Proverka2022itii.icx загружен в бакет mente-nova
+11:36:22.297 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/ssleay32.dll загружен в бакет mente-nova
+11:36:22.304 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/sslth.dll загружен в бакет mente-nova
+11:36:22.326 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/t12itfit.dat загружен в бакет mente-nova
+11:36:22.339 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/t34itfit.dat загружен в бакет mente-nova
+11:36:22.355 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/t5678itfit.dat загружен в бакет mente-nova
+11:36:22.363 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/z1.jpg загружен в бакет mente-nova
+11:36:22.369 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/z2.jpg загружен в бакет mente-nova
+11:36:22.375 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/z3.jpg загружен в бакет mente-nova
+11:36:22.383 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/z31.jpg загружен в бакет mente-nova
+11:36:22.383 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №1\AOVT2023\AOVT2023 успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/AOVT2023/
+11:36:22.384 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №1\AOVT2023 успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №1/AOVT2023/
+11:36:22.384 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №1 успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №1/
+11:36:22.393 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №1 (инструкция).txt загружен в бакет mente-nova
+11:36:22.397 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №12/
+11:36:22.406 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/12 практическая работа.txt загружен в бакет mente-nova
+11:36:22.411 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/
+11:36:22.421 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Default.prm загружен в бакет mente-nova
+11:36:22.429 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Desktop.dat загружен в бакет mente-nova
+11:36:22.454 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Flowchart.exe загружен в бакет mente-nova
+11:36:22.462 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Практическая работа №12.cpp загружен в бакет mente-nova
+11:36:22.465 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/
+11:36:22.472 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/Выкапывание картошки.pas загружен в бакет mente-nova
+11:36:22.482 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/Погода.pas загружен в бакет mente-nova
+11:36:22.492 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/Поедание ягод.pas загружен в бакет mente-nova
+11:36:22.498 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/Поиск самого большого яблока.pas загружен в бакет mente-nova
+11:36:22.506 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/Сбор пирамидки.pas загружен в бакет mente-nova
+11:36:22.514 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/Сортировка фасоли.pas загружен в бакет mente-nova
+11:36:22.514 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №12\Flowchart\Псевдокод успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/Псевдокод/
+11:36:22.514 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №12\Flowchart успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №12/Flowchart/
+11:36:22.524 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Блок Схема 12 практической работы (чёрно-белая версия).png загружен в бакет mente-nova
+11:36:22.533 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Блок Схема 12 практической работы.png загружен в бакет mente-nova
+11:36:22.552 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Блок Схема 12 практической работы.psd загружен в бакет mente-nova
+11:36:22.557 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/
+11:36:22.569 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/1.png загружен в бакет mente-nova
+11:36:22.583 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/2.png загружен в бакет mente-nova
+11:36:22.595 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/3.png загружен в бакет mente-nova
+11:36:22.604 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/4.png загружен в бакет mente-nova
+11:36:22.613 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/5.png загружен в бакет mente-nova
+11:36:22.622 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/6.png загружен в бакет mente-nova
+11:36:22.629 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/7.png загружен в бакет mente-nova
+11:36:22.630 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №12\Доп. файлы успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №12/Доп. файлы/
+11:36:22.630 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №12 успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №12/
+11:36:22.635 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №2/
+11:36:22.647 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/Logic.exe загружен в бакет mente-nova
+11:36:22.657 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/logic.ini загружен в бакет mente-nova
+11:36:22.661 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/
+11:36:22.669 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/16by4ShiftReg.circ загружен в бакет mente-nova
+11:36:22.677 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/bmem.circ загружен в бакет mente-nova
+11:36:22.686 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/cntmv.circ загружен в бакет mente-nova
+11:36:22.694 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/grDeltaMem.circ загружен в бакет mente-nova
+11:36:22.701 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/grnMem1.circ загружен в бакет mente-nova
+11:36:22.706 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/grnMem2.circ загружен в бакет mente-nova
+11:36:22.716 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/mainCore.circ загружен в бакет mente-nova
+11:36:22.724 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/prav.circ загружен в бакет mente-nova
+11:36:22.732 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/proverka21.circ загружен в бакет mente-nova
+11:36:22.740 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/proverka22.circ загружен в бакет mente-nova
+11:36:22.747 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/proverka23.circ загружен в бакет mente-nova
+11:36:22.758 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/start.circ загружен в бакет mente-nova
+11:36:22.765 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/stnMem1.circ загружен в бакет mente-nova
+11:36:22.773 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/stnMem2.circ загружен в бакет mente-nova
+11:36:22.783 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/stnMem3.circ загружен в бакет mente-nova
+11:36:22.792 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/UnyCount.circ загружен в бакет mente-nova
+11:36:22.792 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №2\LOVT2023-ИИТ успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №2/LOVT2023-ИИТ/
+11:36:22.802 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №2/readme.1st загружен в бакет mente-nova
+11:36:22.802 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №2 успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №2/
+11:36:22.807 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №3/
+11:36:22.812 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/
+11:36:22.823 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/16by4ShiftReg.circ загружен в бакет mente-nova
+11:36:22.831 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/aee34be97d160b76.circ загружен в бакет mente-nova
+11:36:22.838 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/bmem.circ загружен в бакет mente-nova
+11:36:22.847 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/cntmv.circ загружен в бакет mente-nova
+11:36:22.855 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/grDeltaMem.circ загружен в бакет mente-nova
+11:36:22.862 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/grnMem1.circ загружен в бакет mente-nova
+11:36:22.869 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/grnMem2.circ загружен в бакет mente-nova
+11:36:22.990 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/logisim-2.7.1.jar загружен в бакет mente-nova
+11:36:23.048 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/logisim-win-2.7.1.exe загружен в бакет mente-nova
+11:36:23.057 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/mainCore.circ загружен в бакет mente-nova
+11:36:23.064 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/OBC_DISH 2.0.circ загружен в бакет mente-nova
+11:36:23.074 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/OBC_DISH.circ загружен в бакет mente-nova
+11:36:23.085 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/OBC_MUX.circ загружен в бакет mente-nova
+11:36:23.095 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/OVS_TRRIGER.circ загружен в бакет mente-nova
+11:36:23.103 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/prav.circ загружен в бакет mente-nova
+11:36:23.112 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/proverka21.circ загружен в бакет mente-nova
+11:36:23.122 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/proverka22.circ загружен в бакет mente-nova
+11:36:23.131 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/proverka23.circ загружен в бакет mente-nova
+11:36:23.140 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start.circ загружен в бакет mente-nova
+11:36:23.147 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_1.circ загружен в бакет mente-nova
+11:36:23.156 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_2.circ загружен в бакет mente-nova
+11:36:23.163 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_3.circ загружен в бакет mente-nova
+11:36:23.193 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_4.circ загружен в бакет mente-nova
+11:36:23.200 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_5.circ загружен в бакет mente-nova
+11:36:23.207 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_6.circ загружен в бакет mente-nova
+11:36:23.219 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_7.circ загружен в бакет mente-nova
+11:36:23.227 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_8.circ загружен в бакет mente-nova
+11:36:23.236 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_10_9.circ загружен в бакет mente-nova
+11:36:23.246 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_11_1.circ загружен в бакет mente-nova
+11:36:23.257 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_11_2.circ загружен в бакет mente-nova
+11:36:23.266 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_11_3.circ загружен в бакет mente-nova
+11:36:23.273 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_5_1.circ загружен в бакет mente-nova
+11:36:23.282 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_5_2.circ загружен в бакет mente-nova
+11:36:23.291 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_6_1_1.circ загружен в бакет mente-nova
+11:36:23.299 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_6_1_2.circ загружен в бакет mente-nova
+11:36:23.307 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_6_2_1.circ загружен в бакет mente-nova
+11:36:23.318 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_6_2_2.circ загружен в бакет mente-nova
+11:36:23.327 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_7_1.circ загружен в бакет mente-nova
+11:36:23.336 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_7_2.circ загружен в бакет mente-nova
+11:36:23.346 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_7_3.circ загружен в бакет mente-nova
+11:36:23.357 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_8_1.circ загружен в бакет mente-nova
+11:36:23.366 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_8_2.circ загружен в бакет mente-nova
+11:36:23.374 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_8_3.circ загружен в бакет mente-nova
+11:36:23.386 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_8_3_DISH_MUX.circ загружен в бакет mente-nova
+11:36:23.395 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_8_4.circ загружен в бакет mente-nova
+11:36:23.403 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_9.circ загружен в бакет mente-nova
+11:36:23.414 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/start_9_0.circ загружен в бакет mente-nova
+11:36:23.423 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/stnMem1.circ загружен в бакет mente-nova
+11:36:23.432 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/stnMem2.circ загружен в бакет mente-nova
+11:36:23.441 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/stnMem3.circ загружен в бакет mente-nova
+11:36:23.451 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/UnyCount.circ загружен в бакет mente-nova
+11:36:23.451 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №3\LOVT2023-ИИТ успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №3/LOVT2023-ИИТ/
+11:36:23.451 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы\Практическая работа №3 успешно загружена в 1 семестр/Информатика/Практические работы/Практическая работа №3/
+11:36:23.459 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Таблица для тетради.odt загружен в бакет mente-nova
+11:36:23.468 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Информатика/Практические работы/Таблица для тетради.pdf загружен в бакет mente-nova
+11:36:23.468 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика\Практические работы успешно загружена в 1 семестр/Информатика/Практические работы/
+11:36:23.468 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\I курс\Информатика успешно загружена в 1 семестр/Информатика/
+11:36:23.522 INFO: SectionController.java - 309 - SectionController.createSubject - Предмет "Информатика" создан
+11:36:30.228 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+11:36:31.362 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/
+11:36:31.415 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=31
+11:36:31.461 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МетодичкаПоИнформатикеИИТ.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=31
+11:36:31.468 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ОбразецДокумента.odg': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=31
+11:36:31.476 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ОбразецДокумента.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=31
+11:36:44.378 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf
+11:36:47.591 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/
+11:36:47.790 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=47
+11:36:47.819 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МетодичкаПоИнформатикеИИТ.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=47
+11:36:47.832 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ОбразецДокумента.odg': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=47
+11:36:47.849 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ОбразецДокумента.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=47
+11:36:51.569 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/Фото/
+11:36:51.667 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\JK-триггер.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.681 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Двухступенчатый синхронный RS-триггер с асинхронными входами.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.694 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Дешифратор 2-4.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.708 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Дешифратор 3-8.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.722 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Дешифратор 4-16.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.736 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Динамический RS-триггер, работающий по заднему фронту, выполненный на элементах ИЛИ-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.751 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Динамический RS-триггер, работающий по переднему фронту,.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.766 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МДНФ И-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.781 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МДНФ ИЛИ-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.797 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МКНФ И-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.811 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МКНФ ИЛИ-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.827 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Мультиплексор 16-1.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.840 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Мультиплексор 2-1.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.857 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Мультиплексор 4-1.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.869 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Мультиплексор 8-1.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.885 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Одноступенчатый D-триггер, выполненный на элементах И-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.900 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Одноступенчатый асинхронный RS-триггер на элементах И-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.918 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Одноступенчатый асинхронный RS-триггер на элементах ИЛИ-НЕ.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.935 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Одноступенчатый синхронный RS-триггер на элементах И-НЕ .png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.947 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Преоброзователь кодов.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.959 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Счётчик на преобразователей кодов.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.970 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Счётчик с оптимальной схемой управления.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:36:51.983 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Т-триггер с асинхронными входами предустановки, выполненный на основе двухступенчатого RS-триггера.png': год=2025, месяц=5, день=2, день недели=6, час=11, минута=36, секунда=51
+11:37:10.278 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/
+11:37:10.345 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=10
+11:37:10.361 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\МетодичкаПоИнформатикеИИТ.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=10
+11:37:10.371 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ОбразецДокумента.odg': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=10
+11:37:10.382 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\ОбразецДокумента.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=10
+11:37:11.599 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+11:37:13.668 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:37:13.834 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:37:18.130 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+11:37:20.515 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:37:20.690 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:37:35.431 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+11:37:35.484 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=35
+11:37:35.505 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=35
+11:37:35.514 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=35
+11:37:35.523 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=35
+11:37:35.531 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.odt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=37, секунда=35
+11:38:07.226 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/
+11:38:07.289 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Шаблоны) Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=7
+11:38:07.302 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=7
+11:38:09.501 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/Фото (PNG)/
+11:38:10.415 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/Фото (PNG)/1 семестр/
+11:38:10.462 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Основы информационной безопасности/Практика/Фото (PNG)/1 семестр/ не найден
+11:38:11.069 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/Фото (PNG)/
+11:38:11.440 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/
+11:38:11.486 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Шаблоны) Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=11
+11:38:11.509 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=11
+11:38:12.009 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+11:38:12.053 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=12
+11:38:12.063 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=12
+11:38:12.072 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=12
+11:38:12.083 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=12
+11:38:12.092 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.odt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=12
+11:38:14.587 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:38:14.729 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:38:18.711 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+11:38:18.757 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=18
+11:38:18.766 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=18
+11:38:18.773 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=18
+11:38:18.782 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=18
+11:38:18.789 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.odt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=18
+11:38:24.064 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:38:24.189 INFO: SectionController.java - 503 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:38:25.253 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+11:38:25.305 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=25
+11:38:26.145 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/03_UPX/
+11:38:26.180 WARN: MinioApplication.java - 105 - MinioApplication.returnFile - Предупреждение: файл без расширения: 1 семестр/Операционные системы/03_UPX/Makefile
+11:38:26.182 ERROR: MinioApplication.java - 120 - MinioApplication.returnFile - Ошибка при получении файла по пути 1 семестр/Операционные системы/03_UPX/Makefile из бакета mente-nova: C:\Users\PC\AppData\Local\Temp\1 семестр\Операционные системы\03_UPX\Makefile
+11:38:26.182 ERROR: MinioApplication.java - 339 - MinioApplication.sizeReturn - Файл не найден
+11:38:26.191 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\elf.c': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=26
+11:38:26.200 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\main.c': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=26
+11:38:26.209 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\upx_end.asm': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=26
+11:38:26.216 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\upx_start.asm': год=2025, месяц=5, день=2, день недели=6, час=11, минута=38, секунда=26
+11:38:28.777 ERROR: MainController.java - 133 - MainController.showNotification - Файл с выбранным расширением не поддерживается
+11:42:47.487 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+11:42:49.226 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+11:46:36.715 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+11:46:36.836 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=36
+11:46:36.858 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=36
+11:46:36.873 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=36
+11:46:36.892 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.docx': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=36
+11:46:36.906 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.odt': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=36
+11:46:37.881 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:46:38.142 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:46:38.446 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+11:46:38.533 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.552 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.571 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.598 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.620 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.634 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.662 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.677 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.691 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:38.707 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=5, день=2, день недели=6, час=11, минута=46, секунда=38
+11:46:39.481 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:46:39.670 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:46:40.028 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+11:46:40.933 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+11:46:41.086 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+11:46:41.678 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+11:46:41.718 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+11:46:41.957 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+11:46:41.958 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ

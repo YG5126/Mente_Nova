@@ -6,6 +6,9 @@ import javafx.scene.effect.DropShadow;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
+import javafx.animation.ParallelTransition;
+import javafx.animation.TranslateTransition;
+import javafx.animation.FadeTransition;
 import javafx.util.Duration;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
@@ -17,10 +20,6 @@ import javafx.scene.Node;
  * Предоставляет методы для создания эффектов при наведении и взаимодействии с элементами.
  */
 public class animationController {
-    
-    // Таймлайны для анимации поля поиска
-    private static Timeline showSearchFieldTimeline;
-    private static Timeline hideSearchFieldTimeline;
     
     /**
      * Настраивает анимацию подъема для VBox при наведении курсора.
@@ -187,65 +186,63 @@ public class animationController {
     }
 
     /**
-     * Настраивает анимацию появления и исчезновения TextField.
-     * @param textField TextField, который будет анимироваться
+     * Анимирует переключение между кнопкой "Изменить семестр" и полем поиска.
+     * Использует только Fade-анимацию (появление/исчезновение на месте).
+     * @param semesterButton Узел с кнопкой семестра (Button)
+     * @param searchField Узел с полем поиска (TextField)
+     * @param showSearch true, если нужно показать поле поиска, false - скрыть
      */
-    public static void setupSearchFieldAnimation(TextField textField) {
-        // Изначально поле поиска скрыто
-        textField.setOpacity(0);
-        textField.setPrefWidth(0);
-        textField.setVisible(false);
+    public static void animateSearchToggle(Node semesterButton, Node searchField, boolean showSearch) {
+        final Duration duration = Duration.millis(500); // Увеличена длительность для плавности
+
+        ParallelTransition parallelTransition = new ParallelTransition();
+
+        if (showSearch) {
+            // Скрываем кнопку семестра
+            FadeTransition semesterFadeOut = new FadeTransition(duration, semesterButton);
+            semesterFadeOut.setFromValue(1.0);
+            semesterFadeOut.setToValue(0.0);
+            semesterFadeOut.setOnFinished(event -> {
+                semesterButton.setVisible(false); // Устанавливаем после анимации
+                semesterButton.setManaged(false);
+            });
+
+            // Показываем поле поиска
+            searchField.setOpacity(0.0); // Начальная прозрачность
+            searchField.setVisible(true);  // Устанавливаем до анимации
+            searchField.setManaged(true);
+            FadeTransition searchFadeIn = new FadeTransition(duration, searchField);
+            searchFadeIn.setFromValue(0.0);
+            searchFadeIn.setToValue(1.0);
+            searchFadeIn.setOnFinished(event -> searchField.requestFocus()); // Фокус после анимации
+
+            parallelTransition.getChildren().addAll(semesterFadeOut, searchFadeIn);
         
-        // Анимация появления
-        showSearchFieldTimeline = new Timeline(
-            new KeyFrame(Duration.ZERO, 
-                _ -> textField.setVisible(true),
-                new KeyValue(textField.opacityProperty(), 0),
-                new KeyValue(textField.prefWidthProperty(), 0)
-            ),
-            new KeyFrame(Duration.millis(350), 
-                new KeyValue(textField.opacityProperty(), 1),
-                new KeyValue(textField.prefWidthProperty(), 200)
-            )
-        );
-        
-        // Анимация исчезновения
-        hideSearchFieldTimeline = new Timeline(
-            new KeyFrame(Duration.ZERO, 
-                new KeyValue(textField.opacityProperty(), 1),
-                new KeyValue(textField.prefWidthProperty(), 200)
-            ),
-            new KeyFrame(Duration.millis(350), 
-                new KeyValue(textField.opacityProperty(), 0),
-                new KeyValue(textField.prefWidthProperty(), 0)
-            )
-        );
-        hideSearchFieldTimeline.setOnFinished(_ -> textField.setVisible(false));
-    }
-    
-    /**
-     * Показывает TextField с анимацией
-     * @param textField TextField для отображения
-     */
-    public static void showSearchField(TextField textField) {
-        if (showSearchFieldTimeline == null) {
-            setupSearchFieldAnimation(textField);
-        };
-        hideSearchFieldTimeline.stop();
-        showSearchFieldTimeline.play();
-        textField.requestFocus();
-    }
-    
-    /**
-     * Скрывает TextField с анимацией
-     * @param textField TextField для скрытия
-     */
-    public static void hideSearchField(TextField textField) {
-        if (hideSearchFieldTimeline == null) {
-            setupSearchFieldAnimation(textField);
+        } else {
+            // Скрываем поле поиска
+            FadeTransition searchFadeOut = new FadeTransition(duration, searchField);
+            searchFadeOut.setFromValue(1.0);
+            searchFadeOut.setToValue(0.0);
+            searchFadeOut.setOnFinished(event -> {
+                searchField.setVisible(false); // Устанавливаем после анимации
+                searchField.setManaged(false);
+                if (searchField instanceof TextField) { 
+                    ((TextField)searchField).setText(""); 
+                }
+            });
+
+            // Показываем кнопку семестра
+            semesterButton.setOpacity(0.0); // Начальная прозрачность
+            semesterButton.setVisible(true);  // Устанавливаем до анимации
+            semesterButton.setManaged(true);
+            FadeTransition semesterFadeIn = new FadeTransition(duration, semesterButton);
+            semesterFadeIn.setFromValue(0.0);
+            semesterFadeIn.setToValue(1.0);
+
+            parallelTransition.getChildren().addAll(searchFadeOut, semesterFadeIn);
         }
-        showSearchFieldTimeline.stop();
-        hideSearchFieldTimeline.play();
+
+        parallelTransition.play();
     }
 
     /**
