@@ -834,6 +834,7 @@ public class SubjectContentController implements Initializable, DataReceiver {
         if (data instanceof String) {
             String dataString = (String) data;
             String command = dataString.indexOf('_') != -1 ?  dataString.substring(0, dataString.indexOf('_')) : dataString;
+            @SuppressWarnings("unused")
             String message = dataString.indexOf('_') != -1 ?  dataString.substring(dataString.indexOf('_') + 1) : "";
             if (command.equals("updateSubjects")) {
                 // Обновляем список предметов

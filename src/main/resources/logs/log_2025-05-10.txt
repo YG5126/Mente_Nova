@@ -431,3 +431,72 @@
 14:00:28.440 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
 14:00:28.741 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
 14:00:28.743 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+16:32:57.090 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+16:32:59.260 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+16:32:59.278 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+16:32:59.997 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+16:33:00.529 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+16:33:21.057 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+16:33:21.087 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+16:33:21.355 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+16:33:21.356 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+17:18:50.639 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+17:18:52.587 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+17:18:52.605 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+17:18:53.204 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+17:18:53.830 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+17:19:02.089 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+17:19:02.120 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+17:19:02.386 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+17:19:02.387 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:49:14.763 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:49:16.875 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:49:16.905 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:49:17.543 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:49:18.020 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:49:22.625 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+19:50:27.266 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:50:27.294 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:50:27.556 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:50:27.557 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+19:53:25.038 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+19:53:26.791 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+19:53:26.810 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+19:53:27.354 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+19:53:27.785 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+19:53:27.966 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь  семестр/ не найден
+19:53:31.409 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+19:53:31.409 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+19:53:54.696 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Программирование на языке Джава/
+19:53:54.701 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Программирование на языке Джава/
+19:53:54.778 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/JavaPrg16_Instructions.pdf загружен в бакет mente-nova
+19:53:54.814 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf загружен в бакет mente-nova
+19:53:54.877 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/Questions_Java.pdf загружен в бакет mente-nova
+19:53:54.930 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/Questions_Java_summary.pdf загружен в бакет mente-nova
+19:53:54.935 INFO: MinioApplication.java - 153 - MinioApplication.createEmptyFolder - Пустая папка успешно создана: 1 семестр/Программирование на языке Джава/ПнЯД 8/
+19:53:54.959 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД 8/Loan.java загружен в бакет mente-nova
+19:53:54.978 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД 8/README.md загружен в бакет mente-nova
+19:53:54.994 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД 8/TestLoanClass.java загружен в бакет mente-nova
+19:53:55.083 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД 8/Практическая работа №8.pdf загружен в бакет mente-nova
+19:53:55.083 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\II курс\Программирование на языке Джава\ПнЯД 8 успешно загружена в 1 семестр/Программирование на языке Джава/ПнЯД 8/
+19:53:55.109 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД практика 2.docx загружен в бакет mente-nova
+19:53:55.131 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД практика 3.docx загружен в бакет mente-nova
+19:53:55.182 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД практика 4.pdf загружен в бакет mente-nova
+19:53:55.242 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД практика 5.pdf загружен в бакет mente-nova
+19:53:55.315 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_1.pdf загружен в бакет mente-nova
+19:53:55.386 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_10.pdf загружен в бакет mente-nova
+19:53:55.441 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_11.pdf загружен в бакет mente-nova
+19:53:55.492 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_12.pdf загружен в бакет mente-nova
+19:53:55.544 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_13.pdf загружен в бакет mente-nova
+19:53:55.589 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_14.pdf загружен в бакет mente-nova
+19:53:55.644 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_15.pdf загружен в бакет mente-nova
+19:53:55.701 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_16.pdf загружен в бакет mente-nova
+19:53:55.762 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_7.pdf загружен в бакет mente-nova
+19:53:55.811 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практика_9.pdf загружен в бакет mente-nova
+19:53:55.828 INFO: MinioApplication.java - 215 - MinioApplication.loadingFile - Файл 1 семестр/Программирование на языке Джава/ПнЯД_практические_занятия.docx загружен в бакет mente-nova
+19:53:55.829 INFO: MinioApplication.java - 383 - MinioApplication.loadingFolder - Папка C:\Users\PC\Desktop\  \Дисциплины\II курс\Программирование на языке Джава успешно загружена в 1 семестр/Программирование на языке Джава/
+19:53:55.902 INFO: SectionController.java - 306 - SectionController.createSubject - Предмет "Программирование на языке Джава" создан
+19:54:46.144 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+19:54:46.173 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+19:54:46.408 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+19:54:46.409 INFO: MenteNovaApplication.java - 53 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ

@@ -126,7 +126,7 @@ public class SectionController implements Initializable, DataReceiver {
 
         changeSemester.setVisible(true);
         changeSemester.setManaged(true);
-        changeSemester.setOnAction(event -> {
+        changeSemester.setOnAction(_ -> {
             ConfigManager.setValue("semester", "");
             generateStartPanel();
         });
@@ -349,7 +349,7 @@ public class SectionController implements Initializable, DataReceiver {
         semesterSelectionPanel.getChildren().addAll(titleBox, comboBoxContainer);
         subjectsTilePane.getChildren().add(semesterSelectionPanel);
         
-        semesterComboBox.setOnAction(event -> {
+        semesterComboBox.setOnAction(_ -> {
             selectedSemester = semesterComboBox.getValue();
             if (selectedSemester != null) {
                 // Определяем номер семестра
@@ -384,7 +384,7 @@ public class SectionController implements Initializable, DataReceiver {
         fadeOut.setFromValue(1);
         fadeOut.setToValue(0);
         
-        fadeOut.setOnFinished(e -> {
+        fadeOut.setOnFinished(_ -> {
             subjectsTilePane.getChildren().clear(); // Очищаем после анимации
             
             // Настраиваем основной вид
@@ -503,6 +503,7 @@ public class SectionController implements Initializable, DataReceiver {
         if (data instanceof String) {
             String dataString = (String) data;
             String command = dataString.indexOf('_') != -1 ?  dataString.substring(0, dataString.indexOf('_')) : dataString;
+            @SuppressWarnings("unused")
             String message = dataString.indexOf('_') != -1 ?  dataString.substring(dataString.indexOf('_') + 1) : "";
             if (command.equals("deleteFolder")) {
                 // Удаляем предмет

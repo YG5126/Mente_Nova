@@ -7,7 +7,6 @@ import javafx.scene.effect.DropShadow;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.ParallelTransition;
-import javafx.animation.TranslateTransition;
 import javafx.animation.FadeTransition;
 import javafx.util.Duration;
 import javafx.scene.layout.VBox;
@@ -202,7 +201,7 @@ public class animationController {
             FadeTransition semesterFadeOut = new FadeTransition(duration, semesterButton);
             semesterFadeOut.setFromValue(1.0);
             semesterFadeOut.setToValue(0.0);
-            semesterFadeOut.setOnFinished(event -> {
+            semesterFadeOut.setOnFinished(_ -> {
                 semesterButton.setVisible(false); // Устанавливаем после анимации
                 semesterButton.setManaged(false);
             });
@@ -214,7 +213,7 @@ public class animationController {
             FadeTransition searchFadeIn = new FadeTransition(duration, searchField);
             searchFadeIn.setFromValue(0.0);
             searchFadeIn.setToValue(1.0);
-            searchFadeIn.setOnFinished(event -> searchField.requestFocus()); // Фокус после анимации
+            searchFadeIn.setOnFinished(_ -> searchField.requestFocus()); // Фокус после анимации
 
             parallelTransition.getChildren().addAll(semesterFadeOut, searchFadeIn);
         
@@ -223,7 +222,7 @@ public class animationController {
             FadeTransition searchFadeOut = new FadeTransition(duration, searchField);
             searchFadeOut.setFromValue(1.0);
             searchFadeOut.setToValue(0.0);
-            searchFadeOut.setOnFinished(event -> {
+            searchFadeOut.setOnFinished(_ -> {
                 searchField.setVisible(false); // Устанавливаем после анимации
                 searchField.setManaged(false);
                 if (searchField instanceof TextField) { 
