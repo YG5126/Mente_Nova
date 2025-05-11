@@ -45,7 +45,7 @@ Mente Nova — это настольное приложение, разрабо�
 1. Клонируйте репозиторий:
 
    ```bash
-   git clone https://github.com/yourusername/mente-nova.git
+   git clone https://github.com/YG5126/Mente_Nova
    ```
 2. Перейдите в директорию проекта:
 
