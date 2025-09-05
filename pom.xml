@@ -12,7 +12,7 @@
 	<artifactId>mente_nova</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mente_nova</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Organizer of educational materials</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -29,96 +29,56 @@
 	<properties>
 		<java.version>23</java.version>
 		<spring-ai.version>1.0.0-M6</spring-ai.version>
+		<javafx.version>24.0.1</javafx.version>
+		<javafx.maven.plugin.version>0.0.8</javafx.maven.plugin.version>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>org.tinylog</groupId>
 			<artifactId>tinylog-impl</artifactId>
 			<version>2.8.0-M1</version>
 			<type>jar</type>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.tinylog</groupId>
 			<artifactId>tinylog-api</artifactId>
 			<version>2.8.0-M1</version>
 			<type>jar</type>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.apache.pdfbox</groupId>
 			<artifactId>pdfbox</artifactId>
 			<version>3.0.4</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-base</artifactId>
-			<version>23.0.2</version>
+			<version>24.0.1</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-graphics</artifactId>
-			<version>23.0.2</version>
+			<version>24.0.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
-			<version>23.0.2</version>
+			<version>24.0.1</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-fxml</artifactId>
-			<version>23.0.2</version>
+			<version>24.0.1</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.openjfx</groupId>
-			<artifactId>javafx-base</artifactId>
-			<version>23.0.2</version>
-			<classifier>linux</classifier>
-		</dependency>
-
-		<dependency>
-			<groupId>org.openjfx</groupId>
-			<artifactId>javafx-graphics</artifactId>
-			<version>23.0.2</version>
-			<classifier>linux</classifier>
-		</dependency>
-
-		<dependency>
-			<groupId>org.openjfx</groupId>
-			<artifactId>javafx-controls</artifactId>
-			<version>23.0.2</version>
-			<classifier>linux</classifier>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.openjfx</groupId>
-			<artifactId>javafx-fxml</artifactId>
-			<version>23.0.2</version>
-			<classifier>linux</classifier>
-		</dependency>
-
 		<dependency>
 			<groupId>io.minio</groupId>
 			<artifactId>minio</artifactId>
 			<version>8.5.7</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -129,35 +89,29 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-pdf-document-reader</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.ai</groupId>
 			<artifactId>spring-ai-tika-document-reader</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.odftoolkit</groupId>
 			<artifactId>odfdom-java</artifactId>
@@ -173,7 +127,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -186,15 +139,34 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<jvmArguments>
+						<arg>--add-modules</arg>
+						<arg>javafx.controls,javafx.fxml,javafx.base,javafx.graphics</arg>
+						<arg>--add-exports</arg>
+						<arg>javafx.base/com.sun.javafx.runtime=ALL-UNNAMED</arg>
+						<arg>--add-exports</arg>
+						<arg>javafx.graphics/com.sun.javafx.application=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.graphics/com.sun.javafx.application=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.base/com.sun.javafx.binding=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.base/com.sun.javafx.event=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</arg>
+					</jvmArguments>
+				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -203,21 +175,51 @@
 					<target>23</target>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<failOnError>false</failOnError>
+					<failOnWarnings>false</failOnWarnings>
+					<additionalOptions>-Xdoclint:none</additionalOptions>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.openjfx</groupId>
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.8</version>
 				<configuration>
 					<mainClass>mente.nova.mente_nova.MenteNovaApplication</mainClass>
+					<executable>${java.home}/bin/java</executable>
 					<options>
+						<option>--module-path</option>
+						<option>${project.basedir}/javafx-sdk-24.0.1/lib</option>
 						<option>--add-modules</option>
-						<option>javafx.controls,javafx.fxml</option>
+						<option>javafx.controls,javafx.fxml,javafx.base,javafx.graphics</option>
 					</options>
+					<jfxArgs>
+						<arg>--add-modules</arg>
+						<arg>javafx.controls,javafx.fxml,javafx.base,javafx.graphics</arg>
+						<arg>--add-exports</arg>
+						<arg>javafx.base/com.sun.javafx.runtime=ALL-UNNAMED</arg>
+						<arg>--add-exports</arg>
+						<arg>javafx.graphics/com.sun.javafx.application=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.graphics/com.sun.javafx.application=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.controls/com.sun.javafx.scene.control.behavior=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.base/com.sun.javafx.binding=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.base/com.sun.javafx.event=ALL-UNNAMED</arg>
+						<arg>--add-opens</arg>
+						<arg>javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED</arg>
+					</jfxArgs>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
-
 </project>

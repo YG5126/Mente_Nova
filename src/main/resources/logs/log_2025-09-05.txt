@@ -1,0 +1,102 @@
+18:06:33.185 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:06:34.578 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:06:34.636 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:06:36.197 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:06:36.544 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:06:41.942 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+18:06:43.022 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:06:43.319 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:06:44.160 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+18:06:44.268 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.284 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.299 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.312 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.323 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.332 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.353 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.361 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.372 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.385 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=44
+18:06:44.937 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:06:45.203 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:06:46.806 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+18:06:48.385 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+18:06:48.385 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+18:06:49.944 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+18:06:49.991 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=49
+18:06:50.000 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=50
+18:06:50.007 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=50
+18:06:50.016 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.docx': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=50
+18:06:50.023 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Эссе.odt': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=50
+18:06:50.793 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+18:06:51.048 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+18:06:54.367 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+18:06:54.424 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=54
+18:06:55.055 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/03_UPX/
+18:06:55.097 WARN: MinioApplication.java - 105 - MinioApplication.returnFile - Предупреждение: файл без расширения: 1 семестр/Операционные системы/03_UPX/Makefile
+18:06:55.100 ERROR: MinioApplication.java - 120 - MinioApplication.returnFile - Ошибка при получении файла по пути 1 семестр/Операционные системы/03_UPX/Makefile из бакета mente-nova: C:\Users\PC\AppData\Local\Temp\1 семестр\Операционные системы\03_UPX\Makefile
+18:06:55.100 ERROR: MinioApplication.java - 339 - MinioApplication.sizeReturn - Файл не найден
+18:06:55.108 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\elf.c': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=55
+18:06:55.114 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\main.c': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=55
+18:06:55.121 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\upx_end.asm': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=55
+18:06:55.131 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\PC\AppData\Local\Temp\upx_start.asm': год=2025, месяц=9, день=5, день недели=6, час=18, минута=6, секунда=55
+18:06:55.665 ERROR: MainController.java - 133 - MainController.showNotification - Файл с выбранным расширением не поддерживается
+18:07:03.786 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+18:07:06.180 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:07:06.198 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:07:06.404 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:07:06.405 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:14:57.394 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:14:59.037 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:14:59.054 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:14:59.517 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:14:59.921 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:15:05.957 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:15:05.975 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:15:06.208 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:15:06.209 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:15:30.555 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:15:32.213 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:15:32.234 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:15:32.746 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:15:33.093 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:15:38.214 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:15:38.232 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:15:38.474 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:15:38.475 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:16:00.314 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:16:01.780 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:16:01.796 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:16:02.283 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:16:02.656 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:16:10.969 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:16:10.984 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:16:11.212 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:16:11.212 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:16:39.210 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:16:40.694 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:16:40.711 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:16:41.188 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:16:41.533 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:16:50.260 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:16:50.275 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:16:50.501 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:16:50.503 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:19:49.625 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:19:51.347 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:19:51.365 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:19:51.931 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:19:52.350 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:19:56.732 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:19:56.753 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:19:56.988 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:19:56.989 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+18:20:14.308 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+18:20:15.911 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+18:20:15.929 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+18:20:16.411 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+18:20:16.782 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+18:20:47.904 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+18:20:47.921 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+18:20:48.137 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+18:20:48.137 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ

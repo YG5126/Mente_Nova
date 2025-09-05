@@ -44,6 +44,7 @@ public class MenteNovaApplication extends Application {
         primaryStage.setMinWidth(1000);
         primaryStage.setScene(new Scene(root, 1000, 600));
         primaryStage.show();
+        System.out.println("НАЧАЛО РАБОТЫ");
     }
 
     @Override
