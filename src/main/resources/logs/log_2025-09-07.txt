@@ -1,0 +1,568 @@
+08:40:50.232 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+08:40:52.165 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+08:40:52.183 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+08:40:57.789 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+08:40:58.288 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+08:41:07.266 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: хуйня/
+08:41:12.610 INFO: MinioApplication.java - 81 - MinioApplication.annihilateFolder - Папка 1 семестр/хуйня/ удалена со всеми вложенными файлами
+08:41:12.613 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+08:41:13.639 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+08:41:23.010 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+08:41:23.219 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=41, секунда=23
+08:41:35.986 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+08:42:22.428 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:42:27.754 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+08:42:27.772 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+08:42:28.018 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+08:42:28.021 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+08:51:52.951 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+08:51:55.345 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+08:51:55.360 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+08:51:56.203 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+08:51:56.748 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+08:51:57.073 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь  семестр/ не найден
+08:52:02.627 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+08:52:02.629 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+08:52:16.899 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+08:52:19.020 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/
+08:52:19.219 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=52, секунда=19
+08:52:19.300 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МетодичкаПоИнформатикеИИТ.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=52, секунда=19
+08:52:19.319 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ОбразецДокумента.odg': год=2025, месяц=9, день=7, день недели=1, час=8, минута=52, секунда=19
+08:52:19.339 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ОбразецДокумента.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=52, секунда=19
+08:52:23.517 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+08:52:28.852 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:52:30.661 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 7
+08:52:30.661 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 7
+08:52:31.307 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 7 семестр/ не найден
+08:54:02.309 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:10.463 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 5
+08:54:10.463 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 5
+08:54:11.120 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 5 семестр/ не найден
+08:54:12.583 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:14.208 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 4
+08:54:14.208 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 4
+08:54:14.852 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 4 семестр/ не найден
+08:54:16.910 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:18.504 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 3
+08:54:18.504 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 3
+08:54:19.140 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 3 семестр/ не найден
+08:54:20.910 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:22.280 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 2
+08:54:22.280 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 2
+08:54:22.915 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:54:23.703 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:24.848 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+08:54:24.848 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+08:54:29.815 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:31.248 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 2
+08:54:31.248 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 2
+08:54:31.892 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:54:33.009 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+08:54:33.025 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+08:54:33.227 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+08:54:33.228 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+08:54:38.361 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+08:54:40.790 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+08:54:40.805 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+08:54:41.622 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+08:54:42.159 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+08:54:42.500 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:54:43.864 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:54:46.751 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:54:48.474 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+08:54:48.475 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+08:55:05.231 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:55:06.685 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 2
+08:55:06.685 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 2
+08:55:07.337 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:55:29.163 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+08:55:29.178 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+08:55:29.379 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+08:55:29.381 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+08:58:42.326 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+08:58:44.709 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+08:58:44.724 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+08:58:45.517 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+08:58:46.030 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+08:58:46.362 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:58:47.740 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 2 семестр/ не найден
+08:58:50.927 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+08:58:52.488 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+08:58:52.488 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+08:59:11.318 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+08:59:11.556 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.603 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.647 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.673 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.696 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.717 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.762 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.783 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.805 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:11.831 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=8, минута=59, секунда=11
+08:59:15.967 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/Математический анализ_ Практические - работа №10.pdf
+08:59:42.762 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+09:20:26.154 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+09:20:28.294 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+09:20:28.306 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+09:20:28.840 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+09:20:29.248 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+09:26:36.087 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+09:26:38.499 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+09:26:38.513 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+09:26:39.318 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+09:26:39.836 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+09:26:53.973 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+09:26:53.989 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+09:26:54.198 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+09:26:54.200 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+09:27:17.003 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+09:27:19.414 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+09:27:19.428 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+09:27:20.184 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+09:27:20.713 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+09:27:28.683 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+09:27:30.986 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/
+09:27:31.179 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf': год=2025, месяц=9, день=7, день недели=1, час=9, минута=27, секунда=31
+09:27:31.238 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МетодичкаПоИнформатикеИИТ.pdf': год=2025, месяц=9, день=7, день недели=1, час=9, минута=27, секунда=31
+09:27:31.259 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ОбразецДокумента.odg': год=2025, месяц=9, день=7, день недели=1, час=9, минута=27, секунда=31
+09:27:31.276 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ОбразецДокумента.pdf': год=2025, месяц=9, день=7, день недели=1, час=9, минута=27, секунда=31
+09:27:33.241 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/МетодичкаПоИнформатикеИИТ.pdf
+09:27:43.976 ERROR: SubjectContentController.java - 542 - SubjectContentController.call - Ошибка при обработке изображений PDF: Cannot invoke "java.util.List.iterator()" because "this.val$pagesData" is null
+09:27:43.977 ERROR: SubjectContentController.java - 612 - SubjectContentController.lambda$loadPDFFileContent$5 - Ошибка при обработке PDF: Cannot invoke "java.util.List.iterator()" because "this.val$pagesData" is null
+09:27:52.285 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+09:27:58.237 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+09:27:58.252 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+09:27:58.498 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+09:27:58.500 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+09:36:43.193 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+09:36:45.531 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+09:36:45.545 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+09:36:46.199 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+09:36:46.616 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+09:36:53.950 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+09:36:55.849 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Практические работы/
+09:36:56.034 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Практическая работа №1 (инструкция).txt': год=2025, месяц=9, день=7, день недели=1, час=9, минута=36, секунда=56
+09:36:56.072 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Таблица для тетради.odt': год=2025, месяц=9, день=7, день недели=1, час=9, минута=36, секунда=56
+09:36:56.093 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Таблица для тетради.pdf': год=2025, месяц=9, день=7, день недели=1, час=9, минута=36, секунда=56
+09:36:59.543 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+09:37:01.865 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/
+09:37:02.066 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Определения_термины_ОС_лекции_1-3.pdf': год=2025, месяц=9, день=7, день недели=1, час=9, минута=37, секунда=2
+09:37:04.490 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Операционные системы/Определения_термины_ОС_лекции_1-3.pdf
+09:37:16.665 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+09:37:16.680 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+09:37:16.903 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+09:37:16.906 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:13:00.448 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:13:02.565 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:13:02.577 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:13:04.947 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:13:05.533 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:13:11.559 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+15:13:11.730 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.755 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.774 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.794 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.812 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.829 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.860 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.877 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.898 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:11.917 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=11
+15:13:17.142 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+15:13:19.376 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Программирование на языке Джава/
+15:13:19.494 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.508 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JavaPrg16_Instructions.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.524 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.541 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java_summary.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.563 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 2.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.577 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 3.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.590 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.603 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 5.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.621 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.640 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.656 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_11.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.668 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.684 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.698 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_14.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.711 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_15.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.728 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_16.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.743 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.756 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:19.769 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практические_занятия.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=19
+15:13:31.114 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Программирование на языке Джава/JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf
+15:13:35.409 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Программирование на языке Джава/
+15:13:35.577 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.594 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JavaPrg16_Instructions.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.613 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.640 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java_summary.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.683 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 2.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.702 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 3.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.718 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.737 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 5.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.755 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.772 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.789 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_11.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.806 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.823 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.841 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_14.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.859 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_15.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.877 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_16.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.895 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.912 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:35.928 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практические_занятия.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=35
+15:13:44.334 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+15:13:47.641 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Программирование на языке Джава/
+15:13:47.799 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.816 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JavaPrg16_Instructions.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.833 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.851 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java_summary.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.873 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 2.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.891 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 3.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.907 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.923 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 5.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.942 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.959 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.977 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_11.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:47.994 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=47
+15:13:48.011 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:13:48.027 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_14.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:13:48.044 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_15.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:13:48.062 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_16.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:13:48.080 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:13:48.100 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:13:48.119 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практические_занятия.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=13, секунда=48
+15:14:17.250 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:14:17.266 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:14:17.497 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:14:17.498 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:14:40.009 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:14:42.458 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:14:42.473 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:14:43.130 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:14:43.693 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:16:37.038 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:16:38.966 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:16:38.978 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:16:39.611 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:16:40.015 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:16:44.803 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Технология разработки программных приложений/
+15:16:50.788 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+15:16:51.792 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+15:17:19.032 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:17:19.048 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:17:19.269 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:17:19.271 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:18:01.069 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:18:03.420 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:18:03.435 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:18:04.251 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:18:04.781 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:18:10.127 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+15:18:10.362 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.409 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.452 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.477 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.500 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.520 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.563 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.584 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.608 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:10.638 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=18, секунда=10
+15:18:15.878 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:18:15.894 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:18:16.100 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:18:16.101 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:20:01.528 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:20:03.384 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:20:03.396 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:20:04.051 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:20:04.458 INFO: MinioApplication.java - 47 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:20:11.698 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:20:11.715 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:20:11.937 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:20:11.939 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:20:18.377 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:20:20.712 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:20:20.727 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:20:21.565 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:20:22.083 INFO: MinioApplication.java - 47 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:20:27.377 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+15:20:28.965 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/
+15:20:29.150 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ВопросыКЭкзаменуПоИнформатикеДляИТиКАБО(2021).pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=29
+15:20:29.193 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МетодичкаПоИнформатикеИИТ.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=29
+15:20:29.213 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ОбразецДокумента.odg': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=29
+15:20:29.234 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ОбразецДокумента.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=29
+15:20:32.469 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/Доп. файлы/Фото/
+15:20:32.643 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JK-триггер.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.664 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Двухступенчатый синхронный RS-триггер с асинхронными входами.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.684 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Дешифратор 2-4.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.704 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Дешифратор 3-8.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.723 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Дешифратор 4-16.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.744 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Динамический RS-триггер, работающий по заднему фронту, выполненный на элементах ИЛИ-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.763 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Динамический RS-триггер, работающий по переднему фронту,.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.782 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МДНФ И-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.817 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МДНФ ИЛИ-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.847 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МКНФ И-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.864 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\МКНФ ИЛИ-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.883 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Мультиплексор 16-1.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.901 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Мультиплексор 2-1.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.918 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Мультиплексор 4-1.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.938 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Мультиплексор 8-1.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.957 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Одноступенчатый D-триггер, выполненный на элементах И-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.976 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Одноступенчатый асинхронный RS-триггер на элементах И-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:32.996 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Одноступенчатый асинхронный RS-триггер на элементах ИЛИ-НЕ.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=32
+15:20:33.013 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Одноступенчатый синхронный RS-триггер на элементах И-НЕ .png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=33
+15:20:33.030 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Преоброзователь кодов.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=33
+15:20:33.048 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Счётчик на преобразователей кодов.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=33
+15:20:33.066 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Счётчик с оптимальной схемой управления.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=33
+15:20:33.084 INFO: MinioApplication.java - 411 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Т-триггер с асинхронными входами предустановки, выполненный на основе двухступенчатого RS-триггера.png': год=2025, месяц=9, день=7, день недели=1, час=15, минута=20, секунда=33
+15:20:38.966 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:20:38.982 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:20:39.202 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:20:39.205 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:20:59.795 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:21:01.886 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:21:01.898 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:21:02.485 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:21:02.911 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:21:09.571 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 
+15:21:11.120 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа semester установлено: 1
+15:21:11.121 INFO: SectionController.java - 380 - SectionController.handleSemesterSelected - Выбран семестр: 1
+15:21:16.438 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Программирование на языке Джава/
+15:21:16.649 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.672 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JavaPrg16_Instructions.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.706 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.725 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java_summary.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.751 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 2.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.783 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 3.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.803 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.823 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 5.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.844 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.865 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.884 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_11.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.904 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.925 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.945 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_14.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.971 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_15.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:16.991 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_16.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=16
+15:21:17.010 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=17
+15:21:17.029 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=17
+15:21:17.047 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практические_занятия.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=21, секунда=17
+15:21:21.885 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:21:21.901 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:21:22.113 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:21:22.116 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:22:38.999 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:22:41.380 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:22:41.399 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:22:42.256 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:22:42.745 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:22:48.587 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:22:48.602 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:22:48.809 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:22:48.810 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:24:44.818 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:24:47.220 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:24:47.234 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:24:48.048 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:24:48.566 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:24:53.737 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+15:24:53.965 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=53
+15:24:54.016 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.042 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.068 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.090 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.111 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.156 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.176 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.200 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:24:54.226 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=24, секунда=54
+15:25:04.485 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/Математический анализ_ Практические - работа №10.pdf
+15:25:13.754 INFO: MinioApplication.java - 236 - MinioApplication.deleteFile - Проверка существования файла 1 семестр/Математический анализ/Математический анализ_ Практические - работа №10.pdf в бакете mente-nova
+15:25:13.789 INFO: MinioApplication.java - 255 - MinioApplication.deleteFile - Файл 1 семестр/Математический анализ/Математический анализ_ Практические - работа №10.pdf удален из бакета mente-nova
+15:25:13.790 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+15:25:13.996 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=13
+15:25:14.024 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.048 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.072 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.094 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.136 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.155 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.180 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.208 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.230 INFO: SubjectContentController.java - 836 - SubjectContentController.receiveData - Получены данные в SectionController: updateSubjects
+15:25:14.405 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.436 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.461 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.483 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.504 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.545 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.568 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.594 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:14.619 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=25, секунда=14
+15:25:27.259 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/Математический анализ_ Практические - работа №13.pdf
+15:25:41.605 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:25:41.622 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:25:41.833 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:25:41.835 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:26:54.568 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:26:56.968 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:26:56.983 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:26:57.659 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:26:58.205 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:27:05.428 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Программирование на языке Джава/
+15:27:05.633 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JAVA_Список_вопросов_к_экзамену_по_дисциплине.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.657 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\JavaPrg16_Instructions.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.677 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.697 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Questions_Java_summary.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.721 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 2.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.741 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 3.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.760 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.779 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД практика 5.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.798 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.818 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_10.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.837 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_11.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.856 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.875 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.899 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_14.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.918 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_15.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.937 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_16.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.957 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:05.981 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практика_9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=5
+15:27:06.013 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\ПнЯД_практические_занятия.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=27, секунда=6
+15:27:32.440 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:27:32.458 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:27:32.750 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:27:32.753 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:29:04.644 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:29:07.014 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:29:07.028 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:29:07.852 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:29:08.414 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:29:14.166 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+15:29:14.443 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.473 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.496 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.517 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.536 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.575 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.595 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.615 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:14.639 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=29, секунда=14
+15:29:15.938 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+15:29:16.987 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+15:29:20.421 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:29:20.437 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:29:20.650 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:29:20.652 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:33:40.580 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:33:42.965 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:33:42.985 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:33:43.738 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:33:44.149 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:33:52.831 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/
+15:33:54.523 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/folder_10/
+15:33:54.683 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Информатика/folder_10/ не найден
+15:33:57.098 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/folder_10/folder_6/
+15:33:57.276 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Информатика/folder_10/folder_6/ не найден
+15:33:58.281 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/folder_10/folder_6/folder_10/
+15:33:58.439 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Информатика/folder_10/folder_6/folder_10/ не найден
+15:33:58.970 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/folder_10/folder_6/folder_10/folder_7/
+15:33:59.133 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Информатика/folder_10/folder_6/folder_10/folder_7/ не найден
+15:33:59.537 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Информатика/folder_10/folder_6/folder_10/folder_7/folder_9/
+15:33:59.690 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Информатика/folder_10/folder_6/folder_10/folder_7/folder_9/ не найден
+15:34:04.509 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:34:04.525 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:34:04.736 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:34:04.738 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:36:05.495 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:36:07.865 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:36:07.878 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:36:08.506 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:36:08.938 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:36:13.587 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Математический анализ/
+15:36:13.810 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические - работа №13.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:13.855 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_ Практические- работа №9.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:13.881 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические - работа №8.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:13.904 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №1.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:13.925 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №2.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:13.972 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №3.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:13.993 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №4.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=13
+15:36:14.017 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические -работа №6-№7.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=14
+15:36:14.043 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Математический анализ_Практические-работа №12.pdf': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=14
+15:36:15.380 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: 
+15:36:16.419 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects_
+15:36:21.965 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+15:36:22.130 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=22
+15:36:22.147 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=22
+15:36:22.166 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=22
+15:36:22.191 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=22
+15:36:22.208 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.odt': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=22
+15:36:24.422 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/
+15:36:24.590 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Шаблоны) Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=24
+15:36:24.613 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=24
+15:36:25.621 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+15:36:25.802 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=25
+15:36:25.822 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=25
+15:36:25.841 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=25
+15:36:25.864 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=25
+15:36:25.882 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.odt': год=2025, месяц=9, день=7, день недели=1, час=15, минута=36, секунда=25
+15:36:27.690 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:36:27.715 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:36:28.173 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:36:28.176 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:36:53.316 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:36:55.700 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:36:55.714 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:36:56.545 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:36:57.042 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:37:01.889 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+15:37:02.103 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=2
+15:37:02.123 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=2
+15:37:02.143 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=2
+15:37:02.164 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=2
+15:37:02.180 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.odt': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=2
+15:37:03.615 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/
+15:37:03.822 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Шаблоны) Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=3
+15:37:03.849 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=37, секунда=3
+15:37:04.558 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/folder_6/
+15:37:04.723 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Основы информационной безопасности/Практика/folder_6/ не найден
+15:37:05.381 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/folder_6/folder_9/
+15:37:05.537 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Основы информационной безопасности/Практика/folder_6/folder_9/ не найден
+15:37:06.055 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/folder_6/folder_9/folder_2/
+15:37:06.211 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Основы информационной безопасности/Практика/folder_6/folder_9/folder_2/ не найден
+15:37:07.012 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:37:07.029 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:37:07.236 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:37:07.237 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
+15:37:53.197 INFO: MenteNovaApplication.java - 26 - MenteNovaApplication.main - НАЧАЛО РАБОТЫ
+15:37:55.628 INFO: MinioServer.java - 28 - MinioServer.startServer - Запуск MinIO сервера...
+15:37:55.643 INFO: MinioServer.java - 34 - MinioServer.startServer - Ожидание запуска MinIO сервера...
+15:37:56.447 INFO: MinioServer.java - 39 - MinioServer.startServer - MinIO сервер запущен
+15:37:56.984 INFO: MinioApplication.java - 51 - MinioApplication.init - Подключение к MinIO успешно установлено
+15:38:05.740 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+15:38:05.945 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=5
+15:38:05.968 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=5
+15:38:05.988 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=5
+15:38:06.012 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=6
+15:38:06.030 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.odt': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=6
+15:38:07.249 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/
+15:38:07.460 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Шаблоны) Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=7
+15:38:07.490 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=7
+15:38:09.360 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/folder_2/
+15:38:09.524 ERROR: MinioList.java - 243 - MinioList.buildBucketTree - Ошибка: указанный путь 1 семестр/Основы информационной безопасности/Практика/folder_2/ не найден
+15:38:14.487 INFO: SectionController.java - 500 - SectionController.receiveData - Получены данные в SectionController: updateSubjects
+15:38:16.766 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/
+15:38:16.937 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика I) Анализ_степени_конфиденциальности_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=16
+15:38:16.954 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика II) Акт классификаци_Гнесь.DOCX': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=16
+15:38:16.972 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Практика III) Таблица сравнения антивирусных средств защиты_Гнесь.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=16
+15:38:16.994 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.docx': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=16
+15:38:17.014 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Эссе.odt': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=17
+15:38:18.184 INFO: ConfigManager.java - 83 - ConfigManager.setValue - Значение для ключа path установлено: Основы информационной безопасности/Практика/
+15:38:18.374 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\(Шаблоны) Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=18
+15:38:18.400 INFO: MinioApplication.java - 412 - MinioApplication.lastChanges - Информация о последнем изменении файла 'C:\Users\dmitr\AppData\Local\Temp\Проектирование структурной схемы коопреативной сети.psd': год=2025, месяц=9, день=7, день недели=1, час=15, минута=38, секунда=18
+15:38:21.116 INFO: MinioServer.java - 57 - MinioServer.stopServer - Остановка MinIO сервера...
+15:38:21.132 INFO: MinioServer.java - 63 - MinioServer.stopServer - Ожидание остановки MinIO сервера...
+15:38:21.339 INFO: MinioServer.java - 68 - MinioServer.stopServer - MinIO сервер остановлен
+15:38:21.340 INFO: MenteNovaApplication.java - 54 - MenteNovaApplication.stop - КОНЕЦ РАБОТЫ
