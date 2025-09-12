@@ -88,8 +88,8 @@ public class animationController {
                 new KeyValue(label.scaleYProperty(), 1.0)
             ),
             new KeyFrame(Duration.millis(300), 
-                new KeyValue(label.scaleXProperty(), 1.05),  // увеличение по ширине на 5%
-                new KeyValue(label.scaleYProperty(), 1.05)  // увеличение по высоте на 5%
+                new KeyValue(label.scaleXProperty(), 0.1),  // увеличение по ширине на 5% // Ошибка
+                new KeyValue(label.scaleYProperty(), 0.1)  // увеличение по высоте на 5%
             )
         );
         

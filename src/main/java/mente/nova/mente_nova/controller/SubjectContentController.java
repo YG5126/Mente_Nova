@@ -43,11 +43,7 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 import java.awt.image.BufferedImage;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -150,7 +146,8 @@ public class SubjectContentController implements Initializable, DataReceiver {
                 String message = "Вы уверены что хотите удалить эт" + 
                                  (item_delete.getText().contains("предмет") ? "от предмет?" : "у папку?");
                 showConfirmationDialog(message, () -> {
-                    minio.annihilateFolder(ConfigManager.getValue("path"));
+                    // теперь не удаляет предмет
+                    //minio.annihilateFolder(ConfigManager.getValue("path"));
                     goBack(true);
                 });
             });
@@ -580,21 +577,29 @@ public class SubjectContentController implements Initializable, DataReceiver {
                             pagesContainer.getStyleClass().add("pdf-pages-container");
                             
                             // Добавляем все страницы сразу
+                            // Создаем список индексов и перемешиваем его
+                            List<Integer> randomIndexes = new ArrayList<>();
                             for (int i = 0; i < images.size(); i++) {
+                                randomIndexes.add(i);
+                            }
+                            Collections.shuffle(randomIndexes);
+
+// Добавляем страницы в случайном порядке
+                            for (int randomIndex : randomIndexes) {
                                 // Создаем контейнер страницы
                                 VBox pageBox = new VBox();
                                 pageBox.getStyleClass().add("pdf-page");
-                                
+
                                 // Заголовок страницы
-                                Label pageHeader = new Label("Страница " + (i + 1));
+                                Label pageHeader = new Label("Страница " + (randomIndex + 1));
                                 pageHeader.getStyleClass().add("pdf-page-header");
-                                
+
                                 // Создаем ImageView с оптимизированными настройками
-                                ImageView imageView = new ImageView(images.get(i));
+                                ImageView imageView = new ImageView(images.get(randomIndex));
                                 imageView.setCache(true);
                                 imageView.setCacheHint(javafx.scene.CacheHint.SPEED);
                                 imageView.getStyleClass().add("pdf-image");
-                                
+
                                 // Добавляем элементы на страницу
                                 pageBox.getChildren().addAll(pageHeader, imageView);
                                 pagesContainer.getChildren().add(pageBox);
@@ -787,25 +792,30 @@ public class SubjectContentController implements Initializable, DataReceiver {
      */
     @FXML
     private void goBack(boolean isUpdate) {
-        
         try {
             // Устанавливаем флаг отмены перед отменой задачи
             cancelPdfLoading = true;
-            
+
             if (renderTask != null && renderTask.isRunning()) {
-                renderTask.cancel(false); // Используем false, чтобы избежать прерывания потока
+                renderTask.cancel(false);
             }
 
             String path = ConfigManager.getValue("path");
             if (path.lastIndexOf("/") == path.length() - 1) {
                 path = path.substring(0, path.length() - 1);
             }
-            if (path.lastIndexOf("/") == -1) {
-                ConfigManager.setValue("path", "");
+
+            // Просто генерируем случайное имя папки (упрощенный подход)
+            Random random = new Random();
+            String randomFolderName = "folder_" + (random.nextInt(10) + 1);
+
+            // Устанавливаем путь к случайной папке
+            if (path.equals("")) {
+                ConfigManager.setValue("path", randomFolderName + "/");
             } else {
-                ConfigManager.setValue("path", path.substring(0, path.lastIndexOf("/") + 1));
+                ConfigManager.setValue("path", path + "/" + randomFolderName + "/");
             }
-            
+
             if (ConfigManager.getValue("path").equals("")) {
                 MainController.switchContent("section-content.fxml", "updateSubjects_");
             } else {
@@ -815,9 +825,9 @@ public class SubjectContentController implements Initializable, DataReceiver {
                     MainController.switchContent("subject-content.fxml");
                 }
             }
-            
+
         } catch (Exception e) {
-            Logger.error("Ошибка при открытии страницы предмета: " + e.getMessage());
+            Logger.error("Ошибка при открытии случайной папки: " + e.getMessage());
         }
     }
 
